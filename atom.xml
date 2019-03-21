@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-21T17:47:27.316Z</updated>
+  <updated>2019-03-21T18:00:54.099Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,23 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>about</title>
-    <link href="http://yoursite.com/2019/03/22/404/"/>
-    <id>http://yoursite.com/2019/03/22/404/</id>
-    <published>2019-03-21T16:29:06.000Z</published>
-    <updated>2019-03-21T17:47:27.316Z</updated>
+    <title>The Second semester of Taiwan Tech</title>
+    <link href="http://yoursite.com/2019/03/22/The-Second-semester-of-Taiwan-Tech/"/>
+    <id>http://yoursite.com/2019/03/22/The-Second-semester-of-Taiwan-Tech/</id>
+    <published>2019-03-21T17:56:58.000Z</published>
+    <updated>2019-03-21T18:00:54.099Z</updated>
     
-    <content type="html"><![CDATA[<div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid"><br><div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px"><br><img alt src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width="90" height="100"><br></div><br><div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000"><br>本文链接：<a href="<%= post.link %>">&lt;%= post.title %&gt;</a> <br><br>作者：<br><a href="http://williamren97.github.io/" target="_blank" rel="noopener">williamren97</a> <br>出处：<br><a href="http://williamren97.github.io/" target="_blank" rel="noopener">http://williamren97.github.io/</a><br><br>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a><br>国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名<br><a href="http://williamren97.github.io/" target="_blank" rel="noopener">williamren97</a>及链接。<br><script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script><br></div><br></div>]]></content>
+    <content type="html"><![CDATA[<h3 id="在國立台灣科技大學的第二個學期"><a href="#在國立台灣科技大學的第二個學期" class="headerlink" title="在國立台灣科技大學的第二個學期"></a>在國立台灣科技大學的第二個學期</h3><h2 id="這個學期修了31學分，（阿不對-其實是30學分）"><a href="#這個學期修了31學分，（阿不對-其實是30學分）" class="headerlink" title="這個學期修了31學分，（阿不對 其實是30學分）"></a>這個學期修了31學分，（阿不對 其實是30學分）</h2>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;div style=&quot;font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 
-      
+      這是我在國立台灣科技大學的第二個學期
     
     </summary>
     
+      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
+    
+    
+      <category term="Taiwan" scheme="http://yoursite.com/tags/Taiwan/"/>
+    
+      <category term="Taiwan Tech" scheme="http://yoursite.com/tags/Taiwan-Tech/"/>
     
   </entry>
   
