@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/03/22/The-Second-semester-of-Taiwan-Tech/</loc>
+    
+    <lastmod>2019-04-25T13:35:37.746Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/04/19/Prepare-for-application/</loc>
     
     <lastmod>2019-04-19T12:57:59.481Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2019/04/19/Algorithm/</loc>
     
     <lastmod>2019-04-19T12:57:57.158Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/03/22/The-Second-semester-of-Taiwan-Tech/</loc>
-    
-    <lastmod>2019-04-19T12:56:36.831Z</lastmod>
     
   </url>
   
