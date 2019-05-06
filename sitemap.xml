@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/04/19/Prepare-for-application/</loc>
+    
+    <lastmod>2019-05-06T13:20:33.692Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/04/19/Algorithm/</loc>
+    
+    <lastmod>2019-05-05T14:22:29.793Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/04/EAT/</loc>
     
     <lastmod>2019-05-04T15:32:54.235Z</lastmod>
@@ -26,20 +40,6 @@
     <loc>http://yoursite.com/2019/04/28/Java/</loc>
     
     <lastmod>2019-04-28T15:03:29.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/19/Prepare-for-application/</loc>
-    
-    <lastmod>2019-04-19T12:57:59.481Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/19/Algorithm/</loc>
-    
-    <lastmod>2019-04-19T12:57:57.158Z</lastmod>
     
   </url>
   
