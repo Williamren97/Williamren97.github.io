@@ -96,3 +96,10 @@ feed:
 #sitemap
 sitemap:
   path: sitemap.xml
+  
+#可能需要被删除
+backup：
+     type：git 
+    repository：
+        github：git@github.com：williamren97/williamren97.github.io.git，master 
+       gitcafe：git@github.com：williamren97/williamren97.github.io.git，master
