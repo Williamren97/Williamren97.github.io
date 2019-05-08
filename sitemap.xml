@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-05-08T14:15:46.377Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/03/22/The-Second-semester-of-Taiwan-Tech/</loc>
     
     <lastmod>2019-05-08T06:30:52.190Z</lastmod>
