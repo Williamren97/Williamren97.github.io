@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[EAT]]></title>
+    <url>%2F2019%2F05%2F04%2FEAT%2F</url>
+    <content type="text"><![CDATA[TAIPEI韓國燒烤 西瓜🍉燒酒 ON TAP英式酒吧（不收服務費） 韓式火鍋-紅通通 居酒屋_延吉街老色鬼炸雞 生日紀念日約會]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[C PLUS PLUS]]></title>
+    <url>%2F2019%2F05%2F03%2FC-PLUS-PLUS%2F</url>
+    <content type="text"><![CDATA[在問了和看了巨巨們的刷題經驗和心得以後，最後選擇了使用C PLUS PLUS作為刷題語言，JAVA速度可能比較慢。 雖然我是對JAVA比較熟悉，不過作為一名半路出家的CS學生和SDE，多掌握幾們語言，更何況，語言都是有共通性的，這兩種語言也剛好是OOP語言。 通過菜鳥教程學習通過setw( )實現數組數據表格化，其中的數值為設定內容的間隔值。12345678910111213141516171819202122232425#include &lt;iostream&gt;using namespace std;#include &lt;iomanip&gt;using std::setw;int main ()&#123; int n[ 10 ]; // n 是一个包含 10 个整数的数组 // 初始化数组元素 for ( int i = 0; i &lt; 10; i++ ) &#123; n[ i ] = i + 100; // 设置元素 i 为 i + 100 &#125; cout &lt;&lt; "Element" &lt;&lt; setw( 13 ) &lt;&lt; "Value" &lt;&lt; endl; // 输出数组中每个元素的值 for ( int j = 0; j &lt; 10; j++ ) &#123; cout &lt;&lt; setw( 7 )&lt;&lt; j &lt;&lt; setw( 13 ) &lt;&lt; n[ j ] &lt;&lt; endl; &#125; return 0;&#125; 生成随机数1234567891011//在许多情况下，需要生成随机数。关于随机数生成器，有两个相关的函数。一个是 rand()，该函数只返回一个伪随机数。生成随机数之前必须先调用 srand() 函数。// 设置种子 srand( (unsigned)time( NULL ) ); /* 生成 10 个随机数 */ for( i = 0; i &lt; 10; i++ ) &#123; // 生成实际的随机数 j= rand(); cout &lt;&lt;"随机数： " &lt;&lt; j &lt;&lt; endl; &#125;]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java]]></title>
+    <url>%2F2019%2F04%2F28%2FJava%2F</url>
+    <content type="text"><![CDATA[面試應該查看的相關資料牛客网Java面试宝典 jvm虛擬機 Thinking in java [北航大佬收集的资源，里面有jvm虚拟机什么的]（https://space.bilibili.com/73012391）圣地 相關工程實作指導牛人计划——叶神Java知乎类资讯网站实战（高级） 牛人计划——叶神Java知乎类资讯网站实战（高级） 工程視頻講解[北航大佬收集的资源，里面有jvm虚拟机什么的]（https://space.bilibili.com/73012391/channel/detail?cid=71336）]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Algorithm]]></title>
+    <url>%2F2019%2F04%2F19%2FAlgorithm%2F</url>
+    <content type="text"><![CDATA[入門資料 UCB的神课 CS61B，CS61B这个课属于进阶版的java基础班（和CS61A是一个系列的，61A会讲一些基本JAVA的语法），主要讲数据结构，不过这课load还是很重的，作业和Pj都是精挑细选，经过岁月打磨出来的精品。 CS 61B Data Structures, Spring 2019 CS 61B. Data Structures Syllabus 台灣目錄：演算法與資料結構 UQER量化交易 簡單的演算法筆記 – 第一集 大佬們的刷題日記和講解关关刷题日记 https://blog.csdn.net/scarlett_guan/article/list/1?t=1&amp; 花花酱 leetcode刷题日记 有youtube视频 算法导论 第15章 动态规划 小旭讲解 LeetCode 53. Maximum Subarray 分治策略 參考資料和書籍📚《算法之美——隐匿在数据结构背后的语言》，全文目录、“45个算法”目录、“22个经典问题目录”。记录学习代码实现，参考：http://www.cnblogs.com/ranjiewen/p/6082573.html 這裡是刷題倉庫和相關資料[工作信息] 刷题经验贴 相關活動交大算法冬令营]]></content>
+      <categories>
+        <category>Foundation</category>
+      </categories>
+      <tags>
+        <tag>Foundation</tag>
+        <tag>Algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Prepare for Application]]></title>
+    <url>%2F2019%2F04%2F19%2FPrepare-for-application%2F</url>
+    <content type="text"><![CDATA[學術生涯指導亞裔移民教授 選校定位[申请总结] 19fall cs phd 退学重申/背景提升/选校策略/科研相关 定位 华五| SE | 中** | 大厂做Spark 3年 | 全聚德 求建议如何寫你的CV和SOP CV SOP寫作心得 留學申請(10) - 讓別人一眼就了解你的CV 女博士的申請記錄（她的部落格） 這裡是女博士的申請文件 UCSD教授給出的指導建議(重要) UCSD教授和他的學生在申請斯坦佛博士學位時使用的SOP Advice for Foreign Students Wishing to Pursue Graduate Study in Computer Science at UCSC by Professor Jim Whitehead 生活與學習在美國eduPASS：在美国学习的SmartStudent指南 找工作[找工就业] [工作信息] 30+公司 MLE 面试准备经验分享，已有Uber, DiDi, 蚂蚁Offer]]></content>
+      <categories>
+        <category>Application</category>
+      </categories>
+      <tags>
+        <tag>Language</tag>
+        <tag>Application Material</tag>
+        <tag>Oversea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TOFEL]]></title>
+    <url>%2F2019%2F04%2F19%2FTOFEL%2F</url>
+    <content type="text"><![CDATA[托福寫作心得https://www.esl-lab.com/arches/arches-rd1.htmesl_lab托福听力在线练习]]></content>
+      <categories>
+        <category>Application</category>
+      </categories>
+      <tags>
+        <tag>Language</tag>
+        <tag>Application Material</tag>
+        <tag>Oversea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Multimedia]]></title>
+    <url>%2F2019%2F04%2F06%2FMultimedia%2F</url>
+    <content type="text"><![CDATA[來自台灣師範大學關於多媒體系統的介紹 通過以下🔗訪問 台灣師範大學 多媒體相關資料 3B1B官方双语 形象展示傅里叶变换 3B1B官方雙語 观看待不确定性原理：不只是量子现象哦 3Blue1Brown官網-一個動畫化數學問題的網站 南韓🇰🇷小姐姐教你學傅立葉 超蚌的！！！ 我們需要更多的南韓小姐姐！]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+      <tags>
+        <tag>Taiwan</tag>
+        <tag>Taiwan Tech</tag>
+        <tag>Math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[The Second semester of Taiwan Tech]]></title>
+    <url>%2F2019%2F03%2F22%2FThe-Second-semester-of-Taiwan-Tech%2F</url>
+    <content type="text"><![CDATA[國立台灣科技大學 108/2- 這個學期修了31學分，（阿不對 其實是30學分）- 因為有養生醫學這種涼課就把東南亞文化課退掉，而且那個授課的兼任老師也相對的會夾雜著自己的想法進去（台灣怎樣怎樣之類，相對的來說不夠客觀。）在這裏也要感謝我的舍友李世乐同學，本著肥水不流外人田，大家好才是真的好等三好青年原則講課轉贈給了我。讓我得以從資工系繁重的必修選修課程中脫身。- 可能需要去考一個AWS的證書電影清單Learn Git Branching Online](https://learngitbranching.js.org)## 【录取数据-CS】卡耐基梅隆大学 CMU Computer Sciences Master计算机科学硕士（2018Fall)利用Github分支备份Hexo源文件 - Thinking In JavaCMU MSIT-SE/MSE个人感受分享新竹交通大學計算機系筆記Taiwan Tech筆記台灣老哥的資料結構和演算法https://regapp.nctu.edu.tw/Views/User/UserLogin交通大學線上提交申請文件115家电子科技企业待遇## Burndown chart- CS2006301 計算機組織 Computer OrganizationMidterm 4.16Homework2 4.9台灣不知道哪個學校的練習題韓國老哥給出很詳細的課本練習題解答簡單的筆記台科版筆記浮點數轉換- CS3001301 演算法 AlgorithmsMidterm 4.16Project2 4.10韓國老哥演算法筆記算法导论笔记动态规划DP详解-钢条切割的分析与实现- CS3007701 多媒體資訊系統導論 Introduction to Multimedia Information Systems Midterm 4.11破破爛爛的未名筆記Histogram Equalization 直方圖等化和CDF PDF- CS3010301 資料庫系統 Database Systems3/28 Mid-term will be held on 4/23 in class.3/28 Homework 2 posted.3/21 Homework 1 posted.2/19 First class- CS3020301 編譯器設計 Compiler Design判斷語言是否Regular北京大学“理论计算机科学基础”课程印度🇮🇳 Neso Academy CS499A001 實務專題(上) Special Projects (I) CS5144701 深度學習實務 Practices of Deep Learning BA2911701 談判學 Negotiation CC1309301 經典與創意 Classics and Creativity PE139B053 體育(重量訓練)(下) Physical Education(Weight Training) (II) TCG029301 臨終關懷社區實習 Practical Training in Community for Hospice and Palliative CareMidterm report 5/1 TCG047301 養生醫學 Fitness and Health for Good Life TCG068301 領導與生活 Leadership and LifeFinal 6/17Assignment2 5/20Group meeting 4/22Assignment1 4/1 每當在臉書或者日韓主流聊天聊天工具，賴的新聞媒體上看到中國台灣以及日韓等媒體對我國偏見嚴重的報導。還是感覺很氣憤。畢竟媒體播一次兩次你可能不相信 三人成虎，人言可畏。肉眼親自看到的不一定是真的，但是沒通過肉眼直接現場看到的東西，我是萬萬不敢相信的。就算天朝有很多不好的地方，但是我們畢竟是天朝人。你跟外人講怎樣怎樣差，在一個他沒有親身體驗過的情況下，一句開玩笑的話可能會被他以為是真相。 慢慢的，我好像明白了立場的含義。]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+      <tags>
+        <tag>Taiwan</tag>
+        <tag>Taiwan Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F21%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" 關於HEXO超全的建站內容More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
