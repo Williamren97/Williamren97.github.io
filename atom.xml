@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-11T07:52:43.027Z</updated>
+  <updated>2019-05-12T08:46:01.981Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>培養與鍛鍊程式設計的邏輯腦</title>
+    <link href="http://yoursite.com/2019/05/12/%E5%9F%B9%E9%A4%8A%E8%88%87%E9%8D%9B%E9%8D%8A%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E7%9A%84%E9%82%8F%E8%BC%AF%E8%85%A6/"/>
+    <id>http://yoursite.com/2019/05/12/培養與鍛鍊程式設計的邏輯腦/</id>
+    <published>2019-05-12T08:41:24.000Z</published>
+    <updated>2019-05-12T08:46:01.981Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Chapter1-Incremental-Method"><a href="#Chapter1-Incremental-Method" class="headerlink" title="Chapter1 Incremental Method"></a>Chapter1 Incremental Method</h2><h3 id="case-1"><a href="#case-1" class="headerlink" title="case 1"></a>case 1</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="keyword">int</span> sum  = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> x;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">summation</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    x = summation();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">summation</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">5</span>] = &#123;<span class="number">3</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">-8</span>, <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">        sum += <span class="built_in">array</span>[i];</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      打造出程式設計師的邏輯大腦 本書可作為CPE大學程式能力檢定最佳參考入門用書。內容共整理了10個基礎的演算法設計技巧，以10個章節分別介紹。每個章節藉由大量的實際範例，讓您直接體會這些技巧的運用方式。這些技巧不單只用來設計演算法，也能當作解決問題的基本原則。而各章節末皆有一連串精心設計的習題，建議您細細品味，嘗試手腦並用解決這些習題，相信有意想不到的收穫。 本書能提供您更多元的思考方式，並提升自我的程式設計概念與邏輯思考的功力。內容拋開複雜的數學理論，以簡易的範例進行說明，您可以輕鬆讀完本書，並了解各種演算法背後的基本道理，之後面對新的問題時，即能無往不利。 【延伸閱讀】 近年來，國內大學資訊相關科系，為了確保學生具備程式設計的能力，聯合推出了CPE大學程式能力檢定，不少學校將之視為畢業必須達到的門檻，同時也被許多研究所當作是推甄的評分標準之一。 CPE的考試內容，除了要求基本的程式設計能力之外，尚還包含了資料結構與演算法。說穿了，就是要求學生必須培養邏輯能力。 博碩文化早先之前出版的《培養與鍛鍊程式設計的邏輯腦：世界級程式設計大賽的知識、心得與解題分享》一書，收集了眾多國外常見的考題與作者用心想出的解法，並意外成為CPE的最佳參考書籍。 而對於剛學會程式設計，未接受過扎實演算法訓練的學生來說，直接看CPE考題，有時會難以記憶解法，追根究柢是因為對於演算法所採用的方法不理解的緣故。因此，我們規劃了這本書，針對演算法的部分，分門別類、由淺入深地進行介紹，相信這本書，可以幫助眾多想要考好CPE的學生。 這本書與早先出版的另一本邏輯腦書籍在定位上有所不同，本書著重在「培養」，而另一本書則是著重在「鍛鍊」。這兩本書提供了學生對應CPE檢定的完整學習路徑，尤其CPE的題庫超過千題，想要完全靠死記來應付，實在有所困難，而透過本書的學習，相信能讓讀者在遇到陌生考題時，併發出更多解題思緒的靈感。
+    
+    </summary>
+    
+      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="Book" scheme="http://yoursite.com/tags/Book/"/>
+    
+  </entry>
   
   <entry>
     <title>GRE</title>
