@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CV AND SOP]]></title>
+    <url>%2F2019%2F05%2F14%2FCV-AND-SOP%2F</url>
+    <content type="text"><![CDATA[NWU同学的CV]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[System Design]]></title>
+    <url>%2F2019%2F05%2F14%2FSystem-Design%2F</url>
+    <content type="text"><![CDATA[系統設計救星! 一天內手把手教你面試System design]]></content>
+      <categories>
+        <category>Foundation</category>
+      </categories>
+      <tags>
+        <tag>Foundation</tag>
+        <tag>System Design</tag>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Design Pattern]]></title>
     <url>%2F2019%2F05%2F12%2FDesign-Patterns%2F</url>
     <content type="text"><![CDATA[台湾老哥总结的设计模式 相关资料 大话设计模式]]></content>
@@ -78,7 +96,7 @@
   <entry>
     <title><![CDATA[Prepare for Application]]></title>
     <url>%2F2019%2F04%2F19%2FPrepare-for-application%2F</url>
-    <content type="text"><![CDATA[學術生涯指導亞裔移民教授 選校定位[申请总结] 19fall cs phd 退学重申/背景提升/选校策略/科研相关 定位 华五| SE | 中** | 大厂做Spark 3年 | 全聚德 求建议如何寫你的CV和SOP CV SOP寫作心得 留學申請(10) - 讓別人一眼就了解你的CV 女博士的申請記錄（她的部落格） 這裡是女博士的申請文件 UCSD教授給出的指導建議(重要) UCSD教授和他的學生在申請斯坦佛博士學位時使用的SOP Advice for Foreign Students Wishing to Pursue Graduate Study in Computer Science at UCSC by Professor Jim Whitehead 生活與學習在美國eduPASS：在美国学习的SmartStudent指南 找工作[找工就业] [工作信息] 30+公司 MLE 面试准备经验分享，已有Uber, DiDi, 蚂蚁Offer]]></content>
+    <content type="text"><![CDATA[學術生涯指導 亞裔移民教授 出国三年以上的人，讲讲自己对出国的感悟 说说这些年，DIY申请中犯的错误 選校定位經驗帖 [申请总结] 19fall cs phd 退学重申/背景提升/选校策略/科研相关 定位 华五| SE | 中** | 大厂做Spark 3年 | 全聚德 求建议 學校信息 Northwestern University CE/CS整体介绍&amp;不完全课程介绍（NWU, NU, 西北） QUARTER UCSD QUARTER CMU CMU SV-SE 學校定位彩票+冲刺：主申： UCSD CMU SV-SE 保底： NEU TOFEL卡100 NWU CE转CS容易 彩票+冲刺： 哥大，UCLA，UMich，Rice，Duke，Purdue主申：USC，OSU,UCI,Uva,ASU,NEU,NYU,Tufts,Pitt保底：GWU，UFL 如何寫你的CV和SOPCV SOP寫作心得 留學申請(10) - 讓別人一眼就了解你的CV 女博士的申請記錄（她的部落格） 這裡是女博士的申請文件 UCSD教授給出的指導建議(重要) UCSD教授和他的學生在申請斯坦佛博士學位時使用的SOP Advice for Foreign Students Wishing to Pursue Graduate Study in Computer Science at UCSC by Professor Jim Whitehead 生活與學習在美國eduPASS：在美国学习的SmartStudent指南 找工作[找工就业] [工作信息] 30+公司 MLE 面试准备经验分享，已有Uber, DiDi, 蚂蚁Offer]]></content>
       <categories>
         <category>Application</category>
       </categories>
@@ -91,7 +109,7 @@
   <entry>
     <title><![CDATA[TOFEL]]></title>
     <url>%2F2019%2F04%2F19%2FTOFEL%2F</url>
-    <content type="text"><![CDATA[托福寫作心得https://www.esl-lab.com/arches/arches-rd1.htmesl_lab托福听力在线练习]]></content>
+    <content type="text"><![CDATA[听 ESL_Lab托福听力在线练习 说 口语网站 读写 托福寫作心得]]></content>
       <categories>
         <category>Application</category>
       </categories>
