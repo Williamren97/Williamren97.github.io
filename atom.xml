@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-17T12:10:37.781Z</updated>
+  <updated>2019-05-20T14:55:58.195Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,20 @@
     <link href="http://yoursite.com/2019/05/17/BRUSH/"/>
     <id>http://yoursite.com/2019/05/17/BRUSH/</id>
     <published>2019-05-17T12:10:37.000Z</published>
-    <updated>2019-05-17T12:10:37.781Z</updated>
+    <updated>2019-05-20T14:55:58.195Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="http://blog.greenwicher.com/2017/01/03/codeforces-problemset/" target="_blank" rel="noopener">Codeforces科学刷题指南，一图一表便够了</a></li></ul>]]></content>
     
     <summary type="html">
     
+      Algorithm Set
+    
     </summary>
     
+    
+      <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
     
   </entry>
   
