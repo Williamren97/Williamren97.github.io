@@ -788,6 +788,12 @@ pre .javascript .function {
 .post-body .note.danger h6 {
   color: #d9534f;
 }
+.pdfobject-container {
+  height: 500px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
 .page-number-basic,
 .pagination .prev,
 .pagination .next,
@@ -1135,7 +1141,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1bd0b5;
+  background: #ff58be;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
