@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-28T14:39:01.079Z</updated>
+  <updated>2019-10-03T11:11:55.395Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Recommend System</title>
+    <link href="http://yoursite.com/2019/10/03/Recommend-System/"/>
+    <id>http://yoursite.com/2019/10/03/Recommend-System/</id>
+    <published>2019-10-03T09:50:23.000Z</published>
+    <updated>2019-10-03T11:11:55.395Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Special-Projects"><a href="#Special-Projects" class="headerlink" title="Special Projects"></a>Special Projects</h1><h2 id="Previous"><a href="#Previous" class="headerlink" title="Previous"></a>Previous</h2><p>The Uni require all the undergraduate student to reach out the Special Projects.</p><h2 id="Mission"><a href="#Mission" class="headerlink" title="Mission:"></a>Mission:</h2><p>Recommend systems based on the Collaborative Filtering</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ul><li><p><a href="https://zhuanlan.zhihu.com/p/27908027" target="_blank" rel="noopener">Intro CNN</a></p></li><li><p><a href></a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Special-Projects&quot;&gt;&lt;a href=&quot;#Special-Projects&quot; class=&quot;headerlink&quot; title=&quot;Special Projects&quot;&gt;&lt;/a&gt;Special Projects&lt;/h1&gt;&lt;h2 id=&quot;Previous&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>108_FALL</title>
