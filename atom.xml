@@ -98,9 +98,9 @@
     </summary>
     
     
-      <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
-    
       <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
+    
+      <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
     
   </entry>
   
@@ -194,9 +194,9 @@
       <category term="Foundation" scheme="http://yoursite.com/categories/Foundation/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Design Patterns" scheme="http://yoursite.com/tags/Design-Patterns/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -291,9 +291,9 @@
       <category term="Foundation" scheme="http://yoursite.com/categories/Foundation/"/>
     
     
-      <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
-    
       <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
+    
+      <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
     
   </entry>
   
