@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-11T08:50:28.784Z</updated>
+  <updated>2019-10-18T06:42:15.134Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>108FALL</title>
+    <link href="http://yoursite.com/2019/10/18/108FALL/"/>
+    <id>http://yoursite.com/2019/10/18/108FALL/</id>
+    <published>2019-10-18T06:29:50.000Z</published>
+    <updated>2019-10-18T06:42:15.134Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CS5095701-Advanced-Database-Systems"><a href="#CS5095701-Advanced-Database-Systems" class="headerlink" title="CS5095701 Advanced Database Systems"></a>CS5095701 Advanced Database Systems</h1><ul><li><p><a href="http://faculty.csie.ntust.edu.tw/~ywu/cs5095701/index.html" target="_blank" rel="noopener">CourseInfo</a></p></li><li><p><a href="https://docs.google.com/presentation/d/1HP7sgi0ClYdZmHQpGbO5SYVTYlU4V5MpYIx4xEOi4Co/edit" target="_blank" rel="noopener">PrensentationSlides</a></p></li></ul><h2 id="Project-proposal"><a href="#Project-proposal" class="headerlink" title="Project proposal:"></a>Project proposal:</h2><p>You are required to propose a database related research project in this course. You are encouraged to have a publication as a goal for your project. A list of project ideas is listed below.</p><h2 id="You-proposal-should-include-the-following-aspects"><a href="#You-proposal-should-include-the-following-aspects" class="headerlink" title="You proposal should include the following aspects:"></a>You proposal should include the following aspects:</h2><ul><li><p>importance of the proposed project</p></li><li><p>your algorithm and ideas</p></li><li><p>main contributions</p></li><li><p>the design of the software you propose to build</p></li><li><p>how you propose to evaluate your ideas</p></li><li><p>the design of the experiments</p></li><li><p>literature survey</p></li></ul><h3 id="You-will-present-to-the-class-about-your-proposal-5-minutes-and-write-a-proposal-report-2-4-pages-in-IEEE-format"><a href="#You-will-present-to-the-class-about-your-proposal-5-minutes-and-write-a-proposal-report-2-4-pages-in-IEEE-format" class="headerlink" title="You will present to the class about your proposal (~ 5 minutes) and write a proposal report (2~4 pages in IEEE format)."></a>You will present to the class about your proposal (~ 5 minutes) and write a proposal report (2~4 pages in IEEE format).</h3><h1 id="CS5014701-電腦與機器人視覺-Computer-and-Robot-Vision"><a href="#CS5014701-電腦與機器人視覺-Computer-and-Robot-Vision" class="headerlink" title="CS5014701 電腦與機器人視覺 Computer and Robot Vision"></a>CS5014701 電腦與機器人視覺 Computer and Robot Vision</h1><ul><li><p><a href="https://docs.google.com/presentation/d/1IGnx-zBDaD7oFmCo3vJa4of-yKDxCmiLzA4EswjaXX0/edit" target="_blank" rel="noopener">Everybody Dance NOW<br></a></p></li><li><p><a href="https://docs.google.com/presentation/d/1KySt5eAGNONS2xu5TM4nkeAA_78sE_DKQ-Eq6oCJjJE/edit#slide=id.p" target="_blank" rel="noopener">Joint Discriminative and Generative Learning for Person Re-identification</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;CS5095701-Advanced-Database-Systems&quot;&gt;&lt;a href=&quot;#CS5095701-Advanced-Database-Systems&quot; class=&quot;headerlink&quot; title=&quot;CS5095701 Advanced Dat
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>LIAR</title>
@@ -60,8 +81,8 @@
   
   <entry>
     <title>108_FALL</title>
-    <link href="http://yoursite.com/2019/09/28/108_FALL/"/>
-    <id>http://yoursite.com/2019/09/28/108_FALL/</id>
+    <link href="http://yoursite.com/2019/09/28/Prepare4Interview/"/>
+    <id>http://yoursite.com/2019/09/28/Prepare4Interview/</id>
     <published>2019-09-28T13:42:12.000Z</published>
     <updated>2019-09-28T14:39:01.079Z</updated>
     
@@ -98,9 +119,9 @@
     </summary>
     
     
-      <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
-    
       <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
+    
+      <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
     
   </entry>
   
@@ -291,9 +312,9 @@
       <category term="Foundation" scheme="http://yoursite.com/categories/Foundation/"/>
     
     
-      <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
-    
       <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
+    
+      <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
     
   </entry>
   
