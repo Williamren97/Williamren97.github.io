@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-23T05:53:40.546Z</updated>
+  <updated>2019-11-05T06:10:32.273Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CV</title>
+    <link href="http://yoursite.com/2019/11/05/CV/"/>
+    <id>http://yoursite.com/2019/11/05/CV/</id>
+    <published>2019-11-05T06:10:01.000Z</published>
+    <updated>2019-11-05T06:10:32.273Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://medium.com/@xiaosean5408/pix2pixhd%E7%B0%A1%E4%BB%8B-high-resolution-image-synthesis-and-semantic-manipulation-with-conditional-gans-2099bd492f5" target="_blank" rel="noopener">pix2pixHD簡介 — High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://medium.com/@xiaosean5408/pix2pixhd%E7%B0%A1%E4%BB%8B-high-resolution-image-synthesis-and-semantic-manipulation-with-cond
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>108FALL</title>
