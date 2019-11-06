@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-06T06:17:58.408Z</updated>
+  <updated>2019-11-06T06:25:40.057Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://yoursite.com/2019/11/06/SDN-OpenFlow/"/>
     <id>http://yoursite.com/2019/11/06/SDN-OpenFlow/</id>
     <published>2019-11-06T06:00:03.000Z</published>
-    <updated>2019-11-06T06:17:58.408Z</updated>
+    <updated>2019-11-06T06:25:40.057Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Pre-requisites"><a href="#Pre-requisites" class="headerlink" title="Pre-requisites:"></a>Pre-requisites:</h2><p><a href="https://wiki.onosproject.org/display/ONOS/Basic+ONOS+Tutorial" target="_blank" rel="noopener"><code>Basic ONOS Tutorial</code></a></p><p><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener"><code>VirtualBox</code></a></p><p><a href="https://www.youtube.com/watch?v=l25Ukkmk6Sk" target="_blank" rel="noopener"><code>OpenFlow</code></a></p><h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration:"></a>Configuration:</h3><p><a href="https://jingyan.baidu.com/article/e2284b2b61a2efe2e6118d39.html" target="_blank" rel="noopener">JDK Configuration in Ubuntu</a></p><p><a href="https://blog.csdn.net/u010558281/article/details/78419321" target="_blank" rel="noopener">Install ONOS on Ubuntu</a></p><h3 id="Linux-Command"><a href="#Linux-Command" class="headerlink" title="Linux Command:"></a>Linux Command:</h3><p>modification file in Linux <code>gedit</code></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Pre-requisites"><a href="#Pre-requisites" class="headerlink" title="Pre-requisites:"></a>Pre-requisites:</h2><p><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener"><code>VirtualBox</code></a></p><h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration:"></a>Configuration:</h3><p><a href="https://jingyan.baidu.com/article/e2284b2b61a2efe2e6118d39.html" target="_blank" rel="noopener">JDK Configuration in Ubuntu</a></p><p><a href="https://blog.csdn.net/u010558281/article/details/78419321" target="_blank" rel="noopener">Install ONOS on Ubuntu</a></p><h3 id="Using-Linux-command"><a href="#Using-Linux-command" class="headerlink" title="Using Linux command:"></a>Using Linux command:</h3><p>modification file in Linux <code>gedit</code></p><h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ul><li><p><a href="https://wiki.onosproject.org/display/ONOS/Basic+ONOS+Tutorial" target="_blank" rel="noopener"><code>Basic ONOS Tutorial</code></a></p></li><li><p><a href="https://www.youtube.com/watch?v=l25Ukkmk6Sk" target="_blank" rel="noopener"><code>OpenFlow</code></a></p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Pre-requisites&quot;&gt;&lt;a href=&quot;#Pre-requisites&quot; class=&quot;headerlink&quot; title=&quot;Pre-requisites:&quot;&gt;&lt;/a&gt;Pre-requisites:&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://wik
+        &lt;h2 id=&quot;Pre-requisites&quot;&gt;&lt;a href=&quot;#Pre-requisites&quot; class=&quot;headerlink&quot; title=&quot;Pre-requisites:&quot;&gt;&lt;/a&gt;Pre-requisites:&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www
       
     
     </summary>
