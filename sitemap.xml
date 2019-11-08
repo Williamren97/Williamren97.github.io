@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/04/19/Algorithm/</loc>
+    
+    <lastmod>2019-11-08T09:55:33.085Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/11/06/SDN-OpenFlow/</loc>
     
-    <lastmod>2019-11-08T09:41:48.129Z</lastmod>
+    <lastmod>2019-11-08T09:42:48.273Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2019/11/05/CV/</loc>
     
     <lastmod>2019-11-05T06:55:17.236Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/19/Algorithm/</loc>
-    
-    <lastmod>2019-11-05T05:50:52.641Z</lastmod>
     
   </url>
   
