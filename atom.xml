@@ -289,9 +289,9 @@
       <category term="Foundation" scheme="http://yoursite.com/categories/Foundation/"/>
     
     
-      <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
-    
       <category term="Foundation" scheme="http://yoursite.com/tags/Foundation/"/>
+    
+      <category term="Algorithms" scheme="http://yoursite.com/tags/Algorithms/"/>
     
   </entry>
   
