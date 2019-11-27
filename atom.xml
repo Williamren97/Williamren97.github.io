@@ -216,9 +216,9 @@
       <category term="Foundation" scheme="http://yoursite.com/categories/Foundation/"/>
     
     
-      <category term="Design Patterns" scheme="http://yoursite.com/tags/Design-Patterns/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Design Patterns" scheme="http://yoursite.com/tags/Design-Patterns/"/>
     
   </entry>
   
@@ -254,9 +254,9 @@
     <link href="http://yoursite.com/2019/04/28/Java/"/>
     <id>http://yoursite.com/2019/04/28/Java/</id>
     <published>2019-04-28T14:58:01.000Z</published>
-    <updated>2019-10-30T12:30:45.871Z</updated>
+    <updated>2019-11-27T07:22:05.591Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="JAVE-SE"><a href="#JAVE-SE" class="headerlink" title="JAVE SE"></a>JAVE SE</h2><h2 id="JAVE-EE"><a href="#JAVE-EE" class="headerlink" title="JAVE EE"></a>JAVE EE</h2><p>证交法有价证券<br>董事的义务和责任<br>独立董事的任职条件与顺序<br>公司增加资本的方法有哪些<br>短线交易<br>内线交易（使用对象有哪些）<br>一个发行公司申请上市的相关规定<br>承销商的功能<br>询价圈的定义<br>上市柜的公开的定期资讯有哪些<br>证交法 规范</p><h2 id="resource"><a href="#resource" class="headerlink" title="resource"></a>resource</h2><p><a href="https://mp.weixin.qq.com/s/n_1LxAhC6eJYUzKEFQVLCg?fbclid=IwAR0AnEbur30uRGL3qmPDTsXhDF1lkK0J2pYR30AkJTbe3trd7JUTBoB1r5I" target="_blank" rel="noopener">面镜</a></p><ul><li><p>jvm虛擬機</p></li><li><p>Thinking in java</p></li></ul><p><a href="https://www.zhihu.com/question/31437847/answer/689399219?utm_source=qq&amp;utm_medium=social&amp;utm_oi=973611927536181248" target="_blank" rel="noopener">基础题目</a></p><p><a href="https://www.nowcoder.com/tutorial/94/4206176d637541fa92c784a4f547e979" target="_blank" rel="noopener">牛客网Java面试宝典</a></p><p>[北航大佬收集的资源，里面有jvm虚拟机什么的]（<a href="https://space.bilibili.com/73012391）" target="_blank" rel="noopener">https://space.bilibili.com/73012391）</a><br>圣地</p><h2 id="相關工程實作指導"><a href="#相關工程實作指導" class="headerlink" title="相關工程實作指導"></a>相關工程實作指導</h2><p><a href="https://www.bilibili.com/video/av38318433/?p=1" target="_blank" rel="noopener">牛人计划——叶神Java知乎类资讯网站实战（高级）</a></p><p>牛人计划——叶神Java知乎类资讯网站实战（高级）</p><h2 id="工程視頻講解"><a href="#工程視頻講解" class="headerlink" title="工程視頻講解"></a>工程視頻講解</h2><p>[北航大佬收集的资源，里面有jvm虚拟机什么的]（<a href="https://space.bilibili.com/73012391/channel/detail?cid=71336）" target="_blank" rel="noopener">https://space.bilibili.com/73012391/channel/detail?cid=71336）</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="JAVE-SE"><a href="#JAVE-SE" class="headerlink" title="JAVE SE"></a>JAVE SE</h2><p><a href="https://segmentfault.com/a/1190000016611415" target="_blank" rel="noopener">乐观锁、悲观锁，这一篇就够了！</a></p><h2 id="JAVE-EE"><a href="#JAVE-EE" class="headerlink" title="JAVE EE"></a>JAVE EE</h2><h2 id="resource"><a href="#resource" class="headerlink" title="resource"></a>resource</h2><p><a href="https://mp.weixin.qq.com/s/n_1LxAhC6eJYUzKEFQVLCg?fbclid=IwAR0AnEbur30uRGL3qmPDTsXhDF1lkK0J2pYR30AkJTbe3trd7JUTBoB1r5I" target="_blank" rel="noopener">面镜</a></p><ul><li><p>jvm虛擬機</p></li><li><p>Thinking in java</p></li></ul><p><a href="https://www.zhihu.com/question/31437847/answer/689399219?utm_source=qq&amp;utm_medium=social&amp;utm_oi=973611927536181248" target="_blank" rel="noopener">基础题目</a></p><p><a href="https://www.nowcoder.com/tutorial/94/4206176d637541fa92c784a4f547e979" target="_blank" rel="noopener">牛客网Java面试宝典</a></p><p>[北航大佬收集的资源，里面有jvm虚拟机什么的]（<a href="https://space.bilibili.com/73012391）" target="_blank" rel="noopener">https://space.bilibili.com/73012391）</a><br>圣地</p><h2 id="相關工程實作指導"><a href="#相關工程實作指導" class="headerlink" title="相關工程實作指導"></a>相關工程實作指導</h2><p><a href="https://www.bilibili.com/video/av38318433/?p=1" target="_blank" rel="noopener">牛人计划——叶神Java知乎类资讯网站实战（高级）</a></p><p>牛人计划——叶神Java知乎类资讯网站实战（高级）</p><h2 id="工程視頻講解"><a href="#工程視頻講解" class="headerlink" title="工程視頻講解"></a>工程視頻講解</h2><p>[北航大佬收集的资源，里面有jvm虚拟机什么的]（<a href="https://space.bilibili.com/73012391/channel/detail?cid=71336）" target="_blank" rel="noopener">https://space.bilibili.com/73012391/channel/detail?cid=71336）</a></p>]]></content>
     
     <summary type="html">
     
