@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Algorithms, Part I | Princeton Online]]></title>
+    <url>%2F2020%2F01%2F16%2FAlgorithms-Part-I-Princeton-Online%2F</url>
+    <content type="text"><![CDATA[Princeton Online courseYou can find all the code and comments details in this RepositoryWhat algorithms and data structures will be covered in this course?The first part will focus on the basic data structure, sorting, and searching. Topics include: parallel search algorithm, binary search, stack, queue, backpack, insert sort, select sort, hill sort, fast sort, three-way fast sort, merge sort, heap sort, binary heap, binary search tree, red-black tree , Split link and linear probe hash tables, Graham scans, kd trees. The second part will focus on graph and string processing algorithms. Topics include: depth-first search, width-first search, topology sorting, Kosaraju-Sharir algorithm, Kruskal algorithm, Prim algorithm, Dijkistra algorithm, Bellman-Ford algorithm, Ford-Fulkerson algorithm, LSD cardinality ranking algorithm, MSD cardinality ranking algorithm, three-way Cardinality fast sorting algorithm, multi-path trie algorithm, ternary search trie algorithm, Knuth-Morris-Pratt algorithm, Boyer-Moore algorithm, Rabin-Karp algorithm, regular matching, run-length encoding, Huffman encoding, LZW compression, Burrows-Wheeler transform . The Imp of Algorithm in Princeton University.]]></content>
+      <tags>
+        <tag>Algorithms,</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SDN_OpenFlow]]></title>
     <url>%2F2019%2F11%2F06%2FSDN-OpenFlow%2F</url>
     <content type="text"><![CDATA[107 SDNa10715005 任偉Boot onosproject Configuration Json file and Create Topo using command line 已經解決ONOS GUI中的topology Ping 成功的畫面 Switch s3的forwarding table 還沒有解決h1 ping h2產生有兩條路徑的topology 讓ping packet走較長的路徑 原来是 现在想让他变成 Pre-requisites:VirtualBox Configuration:JDK Configuration in Ubuntu Install ONOS on Ubuntu Using Linux command:modification file in Linux gedit Reference: Basic ONOS Tutorial OpenFlow]]></content>
@@ -71,8 +79,8 @@
         <category>Foundation</category>
       </categories>
       <tags>
-        <tag>Design Patterns</tag>
         <tag>Java</tag>
+        <tag>Design Patterns</tag>
       </tags>
   </entry>
   <entry>

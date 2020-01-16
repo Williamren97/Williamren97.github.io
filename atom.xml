@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-08T09:42:48.273Z</updated>
+  <updated>2020-01-16T14:29:42.054Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Algorithms, Part I | Princeton Online</title>
+    <link href="http://yoursite.com/2020/01/16/Algorithms-Part-I-Princeton-Online/"/>
+    <id>http://yoursite.com/2020/01/16/Algorithms-Part-I-Princeton-Online/</id>
+    <published>2020-01-16T14:19:13.000Z</published>
+    <updated>2020-01-16T14:29:42.054Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Princeton-Online-course"><a href="#Princeton-Online-course" class="headerlink" title="Princeton Online course"></a><a href="https://algs4.cs.princeton.edu/" target="_blank" rel="noopener">Princeton Online course</a></h2><h2 id="You-can-find-all-the-code-and-comments-details-in-this-Repository"><a href="#You-can-find-all-the-code-and-comments-details-in-this-Repository" class="headerlink" title="You can find all the code and comments details in this Repository"></a><a href="https://github.com/Williamren97/Alg4" target="_blank" rel="noopener">You can find all the code and comments details in this Repository</a></h2><h3 id="What-algorithms-and-data-structures-will-be-covered-in-this-course"><a href="#What-algorithms-and-data-structures-will-be-covered-in-this-course" class="headerlink" title="What algorithms and data structures will be covered in this course?"></a>What algorithms and data structures will be covered in this course?</h3><h4 id="The-first-part-will-focus-on-the-basic-data-structure-sorting-and-searching"><a href="#The-first-part-will-focus-on-the-basic-data-structure-sorting-and-searching" class="headerlink" title="The first part will focus on the basic data structure, sorting, and searching."></a>The first part will focus on the basic data structure, sorting, and searching.</h4><ul><li>Topics include: parallel search algorithm, binary search, stack, queue, backpack, insert sort, select sort, hill sort, fast sort, three-way fast sort, merge sort, heap sort, binary heap, binary search tree, red-black tree , Split link and linear probe hash tables, Graham scans, kd trees.</li></ul><h4 id="The-second-part-will-focus-on-graph-and-string-processing-algorithms"><a href="#The-second-part-will-focus-on-graph-and-string-processing-algorithms" class="headerlink" title="The second part will focus on graph and string processing algorithms."></a>The second part will focus on graph and string processing algorithms.</h4><ul><li>Topics include: depth-first search, width-first search, topology sorting, Kosaraju-Sharir algorithm, Kruskal algorithm, Prim algorithm, Dijkistra algorithm, Bellman-Ford algorithm, Ford-Fulkerson algorithm, LSD cardinality ranking algorithm, MSD cardinality ranking algorithm, three-way Cardinality fast sorting algorithm, multi-path trie algorithm, ternary search trie algorithm, Knuth-Morris-Pratt algorithm, Boyer-Moore algorithm, Rabin-Karp algorithm, regular matching, run-length encoding, Huffman encoding, LZW compression, Burrows-Wheeler transform .</li></ul><h4 id="The-Imp-of-Algorithm-in-Princeton-University"><a href="#The-Imp-of-Algorithm-in-Princeton-University" class="headerlink" title="The Imp of Algorithm in Princeton University."></a>The Imp of Algorithm in Princeton University.</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Princeton-Online-course&quot;&gt;&lt;a href=&quot;#Princeton-Online-course&quot; class=&quot;headerlink&quot; title=&quot;Princeton Online course&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://
+      
+    
+    </summary>
+    
+    
+      <category term="Algorithms," scheme="http://yoursite.com/tags/Algorithms/"/>
+    
+  </entry>
   
   <entry>
     <title>SDN_OpenFlow</title>
@@ -216,9 +239,9 @@
       <category term="Foundation" scheme="http://yoursite.com/categories/Foundation/"/>
     
     
-      <category term="Design Patterns" scheme="http://yoursite.com/tags/Design-Patterns/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Design Patterns" scheme="http://yoursite.com/tags/Design-Patterns/"/>
     
   </entry>
   
