@@ -66,17 +66,18 @@
   };
 </script>
 
-  <meta name="description" content="If not Me, Who? If not now, When?">
-<meta property="og:type" content="website">
-<meta property="og:title" content="REN WEI&#39;S BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/Taiwan-Tech/index.html">
+  <meta name="description" content="对于操作系统而言，进程是整个现代操作系统的根本，操作系統是以进程为单位执行任务。随着技术发展，在执行一些细小任务，且本身无需分配单独资源时，进程的实现机制依然会繁琐的将资源分割，这样造成浪费，而且还消耗时间，所以就有了专门的多任务技术被创造出来——线程。 线程的特点就是在不需要独立资源的情况下就可以运行。如此一来会极大节省资源开销，以及处理时间。 进程和线程的主要差别在于它们是不同的操作系统资源管">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Difference between Process and Thread">
+<meta property="og:url" content="http://yoursite.com/2020/02/05/The-Difference-between-Process-and-Thread/index.html">
 <meta property="og:site_name" content="REN WEI&#39;S BLOG">
-<meta property="og:description" content="If not Me, Who? If not now, When?">
+<meta property="og:description" content="对于操作系统而言，进程是整个现代操作系统的根本，操作系統是以进程为单位执行任务。随着技术发展，在执行一些细小任务，且本身无需分配单独资源时，进程的实现机制依然会繁琐的将资源分割，这样造成浪费，而且还消耗时间，所以就有了专门的多任务技术被创造出来——线程。 线程的特点就是在不需要独立资源的情况下就可以运行。如此一来会极大节省资源开销，以及处理时间。 进程和线程的主要差别在于它们是不同的操作系统资源管">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-05T15:13:35.600Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="REN WEI&#39;S BLOG">
-<meta name="twitter:description" content="If not Me, Who? If not now, When?">
-  <link rel="canonical" href="http://yoursite.com/tags/Taiwan-Tech/">
+<meta name="twitter:title" content="The Difference between Process and Thread">
+<meta name="twitter:description" content="对于操作系统而言，进程是整个现代操作系统的根本，操作系統是以进程为单位执行任务。随着技术发展，在执行一些细小任务，且本身无需分配单独资源时，进程的实现机制依然会繁琐的将资源分割，这样造成浪费，而且还消耗时间，所以就有了专门的多任务技术被创造出来——线程。 线程的特点就是在不需要独立资源的情况下就可以运行。如此一来会极大节省资源开销，以及处理时间。 进程和线程的主要差别在于它们是不同的操作系统资源管">
+  <link rel="canonical" href="http://yoursite.com/2020/02/05/The-Difference-between-Process-and-Thread/">
 
 
 <script id="page-configurations">
@@ -84,13 +85,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Tag: Taiwan Tech | REN WEI'S BLOG</title>
+  <title>The Difference between Process and Thread | REN WEI'S BLOG</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140000048-1"></script>
   <script>
@@ -288,91 +289,194 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block tag">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Taiwan Tech<small>Tag</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/05/The-Difference-between-Process-and-Thread/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">The Difference between Process and Thread
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-02-05 16:41:49 / Modified: 23:13:35" itemprop="dateCreated datePublished" datetime="2020-02-05T16:41:49+08:00">2020-02-05</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/02/05/The-Difference-between-Process-and-Thread/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/02/05/The-Difference-between-Process-and-Thread/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p>对于操作系统而言，进程是整个现代操作系统的根本，操作系統是以进程为单位执行任务。随着技术发展，在执行一些细小任务，且本身无需分配单独资源时，进程的实现机制依然会繁琐的将资源分割，这样造成浪费，而且还消耗时间，所以就有了专门的多任务技术被创造出来——线程。 线程的特点就是在不需要独立资源的情况下就可以运行。如此一来会极大节省资源开销，以及处理时间。</p>
+<p>进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。</p>
+<p>我们有如下对比图片：</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Process   进程</th>
+<th style="text-align:right">Thread线程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>引入目的</td>
+<td style="text-align:center">可以并发执行，提高资源的利用率和系统吞吐量</td>
+<td style="text-align:right">调高并发执行的速度，进一步提高资源的利用率和系统吞吐量</td>
+</tr>
+<tr>
+<td>并发性</td>
+<td style="text-align:center">较低</td>
+<td style="text-align:right">较高</td>
+</tr>
+<tr>
+<td>基本属性（调度）</td>
+<td style="text-align:center">资源拥有的基本单位是进程，独立调度/分配的基本单位是进程</td>
+<td style="text-align:right">资源拥有的基本单位是进程，独立调度/分配的基本单位是线程</td>
+</tr>
+<tr>
+<td>基本状态</td>
+<td style="text-align:center">就绪；执行；等待</td>
+<td style="text-align:right">就绪；执行；等待</td>
+</tr>
+<tr>
+<td>系统开销</td>
+<td style="text-align:center">创建/撤销/切换时开销较大</td>
+<td style="text-align:right">创建/撤销/切换时开销较小</td>
+</tr>
+<tr>
+<td>系统操作</td>
+<td style="text-align:center">创建；撤销；切换</td>
+<td style="text-align:right">创建；撤销；切换</td>
+</tr>
+<tr>
+<td>存在状态</td>
+<td style="text-align:center">进程控制块PCB</td>
+<td style="text-align:right">进程控制块PCB，进程控制块TCB</td>
+</tr>
+</tbody>
+</table>
+<h4 id="但是对于-Linux-来说，它只支持轻量级进程，不支持线程，对于-Linux-而言："><a href="#但是对于-Linux-来说，它只支持轻量级进程，不支持线程，对于-Linux-而言：" class="headerlink" title="但是对于 Linux 来说，它只支持轻量级进程，不支持线程，对于 Linux 而言："></a>但是对于 Linux 来说，它只支持轻量级进程，不支持线程，对于 Linux 而言：</h4><ul>
+<li>系统启动后的 第一个进程是 init，它的 PID 是 1。init 是唯一一个由系统内核直接运行的进程。</li>
+<li>除了 init 之外，每个进程都有 父进程（PPID 标识）</li>
+<li>每个进程还有四个 与用户和组相关的识别号<br>1.实际用户识别号 （real user ID，RUID）<br>2.实际组识别号 （real group ID，RGID）<br>3.有效用户识别号 （effect user ID，EUID）<br>4.有效组识别号 （effect group ID，EGID</li>
+</ul>
+<p>######在 Linux 内核 2.4 版以前，线程的实现和管理方式就是完全按照进程方式实现的。在 2.6 版内核以后才有了单独的线程实现,为了弥补不支持线程的缺陷，Linux 引入线程组的概念，即该组中第一个轻量级进程的 PID，它被存入进程描述符的 tgid 字段中。<code>getpid()</code>系统调用返回当前进程的 tgid 值而不是 pid 值，因此，一个多线程应用的所有线程共享相同的 PID。</p>
+<ul>
+<li><code>fork()</code>系统调用是Unix下以自身进程创建子进程的系统调用，一次调用，两次返回，如果返回是0，则是子进程，如果返回值&gt;0，则是父进程（返回值是子进程的pid）,如果fork出错，返回一个负值.</li>
+<li>在<code>fork()</code>的调用处，整个父进程空间会原模原样地复制到子进程中，包括指令，变量值，程序调用栈，环境变量，缓冲区，等等。</li>
+<li><code>fork()</code>函数会把它所在语句以后的语句复制到一个子进程里，单独执行。</li>
+<li><p>如果<code>printf</code>函数最后没有<code>&quot;\n&quot;</code>，则输出缓冲区不会被立即清空，而fork函数会把输出缓冲区里的内容也都复制到子进程里</p>
+</li>
+<li><p>进程的执行过程是线状的，尽管中间会发生中断或暂停，但该进程所拥有的资源只为该线状执行过程服务。一旦发生进程上下文切换，这些资源都是要被保护起来的。</p>
+</li>
+<li>线程的改变只代表了 CPU 执行过程的改变，而没有发生进程所拥有的资源变化。</li>
+<li>计算机内的软硬件资源的分配与线程无关，线程只能共享它所属进程的资源。</li>
+<li>进程拥有一个完整的虚拟地址空间，不依赖于线程而独立存在；反之，线程是进程的一部分，没有自己的地址空间，与进程内的其他线程一起共享分配给该进程的所有资源。</li>
+<li>线程中执行时一般都要进行同步和互斥，因为他们共享同一进程的所有资源。</li>
+</ul>
+<p><strong>文章来源:</strong><br><a href="https://zhuanlan.zhihu.com/p/60558136" target="_blank" rel="noopener">进程和线程有哪些区别与联系？力扣（LeetCode）</a></p>
 
-  
-  
+    </div>
 
-  
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-22T01:56:58+08:00"
-              content="2019-03-22">
-          03-22
-        </time>
-      </div>
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2019/03/22/107_FALL/" itemprop="url">
-            <span itemprop="name">107_FALL</span>
-          </a>
+      
+
+      <footer class="post-footer">
+
         
-      </h2>
 
-    </header>
-  </article>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/02/04/Everything-About-HashMap/" rel="next" title="Everything About HashMap">
+                  <i class="fa fa-chevron-left"></i> Everything About HashMap
+                </a>
+              
+            </div>
 
+            <span class="post-nav-divider"></span>
 
-
-    </div>
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/" rel="prev" title="The data structure and algorithm behind the MySQL index">
+                  The data structure and algorithm behind the MySQL index <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -387,6 +491,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -399,6 +508,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#但是对于-Linux-来说，它只支持轻量级进程，不支持线程，对于-Linux-而言："><span class="nav-number">1.</span> <span class="nav-text">但是对于 Linux 来说，它只支持轻量级进程，不支持线程，对于 Linux 而言：</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 

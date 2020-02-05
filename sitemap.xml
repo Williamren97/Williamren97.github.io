@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/</loc>
+    
+    <lastmod>2020-02-05T15:21:56.461Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/05/The-Difference-between-Process-and-Thread/</loc>
+    
+    <lastmod>2020-02-05T15:13:35.600Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/02/04/Everything-About-HashMap/</loc>
     
-    <lastmod>2020-02-04T12:29:36.232Z</lastmod>
+    <lastmod>2020-02-04T12:33:00.803Z</lastmod>
     
   </url>
   
