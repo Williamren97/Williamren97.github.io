@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6093907171303162",
+    enable_page_level_ads: true
+  });
+</script>
+<script data-ad-client="ca-pub-6093907171303162" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="REN WEI'S BLOG" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="JVM原理速记复习Java虚拟机总结思维导图面试必备 Java虚拟机一、运行时数据区域线程私有程序计数器记录正在执行的虚拟机字节码指令的地址（如果正在执行的是Native方法则为空），是唯一一个没有规定OOM（OutOfMemoryError）的区域。Java虚拟机栈每个Java方法在执行的同时会创建一个栈桢用于存储局部变量表、操作数栈、动态链接、方法出口等信息。从方法调用直到执行完成的过程，对应">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Principle of JVM">
+<meta property="og:url" content="http://yoursite.com/2020/02/08/Principle-of-JVM/index.html">
+<meta property="og:site_name" content="REN WEI&#39;S BLOG">
+<meta property="og:description" content="JVM原理速记复习Java虚拟机总结思维导图面试必备 Java虚拟机一、运行时数据区域线程私有程序计数器记录正在执行的虚拟机字节码指令的地址（如果正在执行的是Native方法则为空），是唯一一个没有规定OOM（OutOfMemoryError）的区域。Java虚拟机栈每个Java方法在执行的同时会创建一个栈桢用于存储局部变量表、操作数栈、动态链接、方法出口等信息。从方法调用直到执行完成的过程，对应">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://images.cnblogs.com/cnblogs_com/neverth/1592425/o_191116143745Java%E8%99%9A%E6%8B%9F%E6%9C%BA-min.png">
+<meta property="og:updated_time" content="2020-02-07T18:15:30.203Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Principle of JVM">
+<meta name="twitter:description" content="JVM原理速记复习Java虚拟机总结思维导图面试必备 Java虚拟机一、运行时数据区域线程私有程序计数器记录正在执行的虚拟机字节码指令的地址（如果正在执行的是Native方法则为空），是唯一一个没有规定OOM（OutOfMemoryError）的区域。Java虚拟机栈每个Java方法在执行的同时会创建一个栈桢用于存储局部变量表、操作数栈、动态链接、方法出口等信息。从方法调用直到执行完成的过程，对应">
+<meta name="twitter:image" content="https://images.cnblogs.com/cnblogs_com/neverth/1592425/o_191116143745Java%E8%99%9A%E6%8B%9F%E6%9C%BA-min.png">
+  <link rel="canonical" href="http://yoursite.com/2020/02/08/Principle-of-JVM/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Principle of JVM | REN WEI'S BLOG</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140000048-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-140000048-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">REN WEI'S BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-projects">
+      
+    
+
+    <a href="/Projects" rel="section"><i class="menu-item-icon fa fa-fw fa-Projects"></i> <br>Projects</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-book">
+      
+    
+
+    <a href="/Book" rel="section"><i class="menu-item-icon fa fa-fw fa-Book"></i> <br>Book</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/08/Principle-of-JVM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Principle of JVM
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-02-08 02:08:41 / Modified: 02:15:30" itemprop="dateCreated datePublished" datetime="2020-02-08T02:08:41+08:00">2020-02-08</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/02/08/Principle-of-JVM/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/02/08/Principle-of-JVM/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="JVM原理速记复习Java虚拟机总结思维导图面试必备"><a href="#JVM原理速记复习Java虚拟机总结思维导图面试必备" class="headerlink" title="JVM原理速记复习Java虚拟机总结思维导图面试必备"></a>JVM原理速记复习Java虚拟机总结思维导图面试必备</h1><p><div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown"></div></p>
+<p><img src="https://images.cnblogs.com/cnblogs_com/neverth/1592425/o_191116143745Java%E8%99%9A%E6%8B%9F%E6%9C%BA-min.png" alt="JVM"><br><br></p><h1 id="java虚拟机">Java虚拟机</h1><br><h2 id="一运行时数据区域">一、运行时数据区域</h2><br><h3 id="线程私有">线程私有</h3><br><ul><br><li><p>程序计数器</p><br><ul><br><li>记录正在执行的虚拟机字节码指令的地址（如果正在执行的是Native方法则为空），是唯一一个没有规定OOM（OutOfMemoryError）的区域。</li><br></ul></li><br><li><p>Java虚拟机栈</p><br><ul><br><li>每个Java方法在执行的同时会创建一个栈桢用于存储局部变量表、操作数栈、动态链接、方法出口等信息。从方法调用直到执行完成的过程，对应着一个栈桢在Java虚拟机栈中入栈和出栈的过程。（局部变量包含基本数据类型、对象引用reference和returnAddress类型）</li><br></ul></li><br><li><p>本地方法栈</p><br><ul><br><li>本地方法栈与Java虚拟机栈类似，它们之间的区别只不过是本地方法栈为Native方法服务。</li><br></ul></li><br></ul><br><h3 id="线程公有">线程公有</h3><br><ul><br><li><p>Java堆（GC区）（Java Head）</p><br><ul><br><li>几乎所有的对象实例都在这里分配内存，是垃圾收集器管理的主要区域。分为新生代和老年代。对于新生代又分为Eden空间、From Survivor空间、To Survivor空间。</li><br></ul></li><br><li><p>JDK1.7 方法区（永久代）</p><br><ul><br><li>用于存放已被加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。<br><br>对这块区域进行垃圾回收的主要目的是对常量池的回收和对类的卸载，但是一般难以实现。<br><br>HotSpot虚拟机把它当做永久代来进行垃圾回收。但很难确定永久代的大小，因为它受到很多因素的影响，并且每次Full GC之后永久代的大小都会改变，所以经常抛出OOM异常。<br><br>从JDK1.8开始，移除永久代，并把方法区移至元空间。</li><br><li><p>运行时常量池</p><br><ul><br><li>是方法区的一部分<br><br>Class文件中的常量池（编译器生成的字面量和符号引用）会在类加载后被放入这个区域。<br><br>允许动态生成，例如String类的intern()</li><br></ul></li><br></ul></li><br><li><p>JDK1.8 元空间</p><br><ul><br><li>原本存在方法区（永久代）的数据，一部分移到了Java堆里面，一部分移到了本地内存里面（即元空间）。元空间存储类的元信息，静态变量和常量池等放入堆中。</li><br></ul></li><br><li><p>直接内存</p><br><ul><br><li>在NIO中，会使用Native函数库直接分配堆外内存。</li><br></ul></li><br></ul><br><h2 id="二hotspot虚拟机">二、HotSpot虚拟机</h2><br><h3 id="对象的创建">对象的创建</h3><br><ul><br><li>当虚拟机遇到一条new指令时</li><br></ul><br><ol><br><li>检查参数能否在常量池中找到符号引用，并检查这个符号引用代表的类是否已经被加载、解析和初始过，没有的话先执行相应的类加载过程。</li><br><li>在类加载检查通过之后，接下来虚拟机将为新生对象分配内存。</li><br><li>内存分配完成之后，虚拟机需要将分配到的内存空间都初始化为零值（不包括对象头）。</li><br><li>对对象头进行必要的设置。</li><br><li>执行构造方法按照程序员的意愿进行初始化。</li><br></ol><br><h3 id="对象的内存布局">对象的内存布局</h3><br><ul><br><li><ol><br><li>对象头</li><br></ol><br><ul><br><li><ol><br><li>第一部分用于存储对象自身的运行时数据，如哈希码、GC分代年龄、锁状态标识、线程持有的锁、偏向线程ID、偏向实现戳等。</li><br></ol></li><br><li><ol><br><li>第二部分是类型指针，即对象指向它的类元数据的指针（如果使用直接对象指针访问），虚拟机通过这个指针来确定这个对象是哪个类的实例。</li><br></ol></li><br><li><ol><br><li>如果对象是一个Java数组的话，还需要第三部分记录数据长度的数据。</li><br></ol></li><br></ul></li><br><li><ol><br><li>实例数据</li><br></ol><br><ul><br><li>是对象真正存储的有效信息，也就是在代码中定义的各种类型的字段内容。</li><br></ul></li><br><li><ol><br><li>对齐填充</li><br></ol><br><ul><br><li>不是必然存在的，仅仅起着占位符的作用。<br><br>HotSpot需要对象的大小必须是8字节的整数倍。</li><br></ul></li><br></ul><br><h3 id="对象的访问定位">对象的访问定位</h3><br><ul><br><li><p>句柄访问</p><br><ul><br><li>在Java堆中划分出一块内存作为句柄池。<br><br>Java栈上的对象引用reference中存储的就是对象的句柄地址，而句柄中包含了到对象实例数据的指针和到对象类型数据的指针。<br><br>对象实例数据在Java堆中，对象类型数据在方法区（永久代）中。<br><br>优点：在对象被移动时只会改变句柄中的实例数据指针，而对象引用本身不需要修改。</li><br></ul></li><br><li><p>直接指针访问（HotSpot使用）</p><br><ul><br><li>Java栈上的对象引用reference中存储的就是对象的直接地址。<br><br>在堆中的对象实例数据就需要包含到对象类型数据的指针。<br><br>优点：节省了一次指针定位的时间开销，速度更快。</li><br></ul></li><br></ul><br><h2 id="三垃圾收集">三、垃圾收集</h2><br><h3 id="概述">概述</h3><br><ul><br><li>垃圾收集主要是针对Java堆和方法区。<br><br>程序计数器、Java虚拟机栈个本地方法栈三个区域属于线程私有，线程或方法结束之后就会消失，因此不需要对这三个区域进行垃圾回收。</li><br></ul><br><h3 id="判断对象是否可以被回收">判断对象是否可以被回收</h3><br><ul><br><li><p>第一次标记（缓刑）</p><br><ul><br><li><p>引用计数算法</p><br><ul><br><li>给对象添加一个引用计数器，当对象增加一个引用时引用计数值++，引用失效时引用计数值–，引用计数值为0时对象可以被回收。</li><br></ul></li><br></ul></li><br></ul><br><p>但是它难以解决对象之间的相互循环引用的情况，此时这个两个对象引用计数值为1，但是永远无法用到这两个对象。</p>
+
+<ul>
+<li><p>可达性分析算法（Java使用）</p>
+<ul>
+<li>以一系列GC Roots的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链，当一个对象到GC Roots没有任何引用链相连是，则证明此对象不可用，可以被回收。<p>GC Roots对象包括</p><br><ol><br><li>虚拟机栈（栈桢中的本地变量表）中引用的对象。</li><br><li>方法区中共类静态属性引用的对象。</li><br><li>方法区中常量引用的对象。</li><br><li>本地方法栈中JNI（即一般说的Native方法）引用的对象。</li><br></ol><br><ul><br><li><p>第二次标记</p><br><ul><br><li>当对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过。<br><br>如果对象在finalize方法中重新与引用链上的任何一个对象建立关联则将不会被回收。</li><br><li><p>finalize()</p><br><ul><br><li>任何一个对象的finalize()方法都只会被系统调用一次。<br><br>它的出现是一个妥协，运行代价高昂，不确定性大，无法保证各个对象的调用顺序。<br><br>finalize()能做的所有工作使用try-finally或者其他方式都可以做的更好，完全可以忘记在这个函数的存在。</li><br></ul></li><br></ul></li><br></ul><br><h3 id="方法区的回收">方法区的回收</h3><br><ul><br><li>在方法区进行垃圾回收的性价比一般比较低。<br><br>主要回收两部分，废弃常量和无用的类。</li><br></ul><br><p>满足无用的类三个判断条件才仅仅代表可以进行回收，不是必然关系，可以使用-Xnoclassgc参数控制。</p><br><ol><br><li>该类的所有实例都已经被回收，也就是Java堆中不存在该类的任何实例。</li><br><li>加载该类的ClassLoader已经被回收。</li><br><li>该类对应的java.lang.Class对象没有在任何地方被引用，无法在任何地方通过反射访问到该类的方法。</li><br></ol><br><h3 id="引用类型">引用类型</h3><br><ul><br><li><ol><br><li>强引用</li><br></ol><br><ul><br><li>使用new一个新对象的方式来创建强引用。<br><br>只要强引用还存在，被引用的对象则永远不会被回收。</li><br></ul></li><br><li><ol><br><li>软引用</li><br></ol><br><ul><br><li>使用SoftReference类来实现软引用。<br><br>用来描述一些还有用但是并非必须的对象，被引用的对象在将要发生内存溢出异常之前会被回收。</li><br></ul></li><br><li><ol><br><li>弱引用</li><br></ol><br><ul><br><li>使用WeakReference类来实现弱引用。<br><br>强度比软引用更弱一些，被引用的对象在下一次垃圾收集时会被回收。</li><br></ul></li><br><li><ol><br><li>虚引用</li><br></ol><br><ul><br><li>使用PhantomReference类来实现虚引用。<br><br>最弱的引用关系，不会对被引用的对象生存时间构成影响，也无法通过虚引用来取得一个对象实例。<br><br>唯一目的就是能在这个对象被收集器回收时收到一个系统通知。</li><br></ul></li><br></ul><br><h3 id="垃圾收集算法">垃圾收集算法</h3><br><ul><br><li><ol><br><li>标记 - 清除</li><br></ol><br><ul><br><li>首先标记出所有需要回收的对象，在标记完成后统一回收被标记的对象并取消标记。</li><br></ul></li><br></ul><br><p>不足：</p><br><ol><br><li>效率问题，标记和清除两个过程的效率都不高。</li><br><li>空间问题，标记清除之后会产生大量不连续的内存碎片，没有连续内存容纳较大对象而不得不提前触发另一次垃圾收集。</li><br></ol><br><ul><br><li><ol><br><li>标记 - 整理</li><br></ol><br><ul><br><li>和标记 - 清除算法一样，但标记之后让所有存活对象都向一段移动，然后直接清理掉端边界以外的内存。<br><br>解决了标记 - 清除算法的空间问题，但需要移动大量对象，还是存在效率问题。</li><br></ul></li><br><li><ol><br><li>复制</li><br></ol><br><ul><br><li>将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用多的内存空间一次清理掉。<br><br>代价是将内存缩小为原来的一般，太高了。</li><br></ul></li><br></ul><br><p>现在商业虚拟机都采用这种算法用于新生代。<br><br>因为新生代中的对象98%都是朝生暮死，所以将内存分为一块较大的Eden空间和两块较小的Survivor空间，每次使用Eden和其中一块Survivor空间。<br><br>当回收时，如果另外一块Survivor空间没有足够的空间存放存活下来的对象时，这些对象将直接通过分配担保机制进入老年代。</p><br><ul><br><li><ol><br><li>分代收集</li><br></ol><br><ul><br><li>一般把Java堆分为新生代和老年代。<br><br>在新生代中使用复制算法，在老年代中使用标记 -清除 或者 标记 - 整理 算法来进行回收。</li><br></ul></li><br></ul><br><h3 id="hotspot的算法实现">HotSpot的算法实现</h3><br><ul><br><li><p>枚举根节点（GC Roots）</p><br><ul><br><li>目前主流Java虚拟机使用的都是准确式GC。<br><br>GC停顿的时候，虚拟机可以通过OopMap数据结构（映射表）知道，在对象内的什么偏移量上是什么类型的数据，而且特定的位置记录着栈和寄存器中哪些位置是引用。因此可以快速且准确的完成GC Roots枚举。</li><br></ul></li><br><li><p>安全点</p><br><ul><br><li>为了节省GC的空间成本，并不会为每条指令都生成OopMap，只是在“特定的位置”记录OopMap，这些位置称为安全点。</li><br></ul></li><br></ul><br><p>程序执行只有到达安全点时才能暂停，到达安全点有两种方案。</p><br><ol><br><li>抢断式中断（几乎不使用）。GC时，先把所有线程中断，如果有线程不在安全点，就恢复该线程，让他跑到安全点。</li><br><li>主动式中断（主要使用）。GC时，设置一个标志，各个线程执行到安全点时轮询这个标志，发现标志为直则挂起线程。</li><br></ol><br><p>但是当线程sleep或blocked时无法响应JVM的中断请求走到安全点中断挂起，所以引出安全区域。</p><br><ul><br><li><p>安全区域</p><br><ul><br><li>安全区域是指在一段代码片段之中，引用关系不会发生变化，是扩展的安全点。</li><br></ul></li><br></ul><br><p>线程进入安全区域时表示自己进入了安全区域，这个发生GC时，JVM就不需要管这个线程。<br><br>线程离开安全区域时，检查系统是否完成GC过程，没有就等待可以离开安全区域的信号为止，否者继续执行。</p><br><h3 id="垃圾收集器">垃圾收集器</h3><br><ul><br><li><p>新生代</p><br><ul><br><li><ol><br><li>serial收集器</li><br></ol><br><ul><br><li>它是单线程收集器，只会使用一个线程进行垃圾收集工作，更重要的是它在进行垃圾收集时，必须暂停其他所有的工作线程。</li><br></ul></li><br></ul></li><br></ul><br><p>优点：对比其他单线程收集器简单高效，对于单个CPU环境来说，没有线程交互的开销，因此拥有最高的单线程收集效率。</p><br><p>它是Client场景下默认新生代收集器，因为在该场景下内存一般来说不会很大。</p></li>
+<li><ol start="2">
+<li>parnew收集器</li>
+</ol>
+</li>
+<li><p>它是Serial收集器的多线程版本，公用了相当多的代码。</p>
+<p>在单CPU环境中绝对不会有比Serial收集器更好的效果，甚至在2个CPU环境中也不能百分之百超越。</p><br><p>它是Server场景下默认的新生代收集器，主要因为除了Serial收集器，只用它能与CMS收集器配合使用。</p></li>
+<li><ol start="3">
+<li>parallel scavenge收集器</li>
+</ol>
+</li>
+<li><p>“吞吐优先”收集器，与ParNew收集器差不多。</p>
+<p>但是其他收集器的目标是尽可能缩短垃圾收集时用户线程停顿的时间，而它的目标是达到一个可控制的吞吐量。这里的吞吐量指CPU用于运行用户程序的时间占总时间的比值。</p><br><ul><br><li><p>老年代</p><br><ul><br><li><ol><br><li>serial old收集器</li><br></ol><br><ul><br><li>是Serial收集器老年代版本。</li><br></ul></li><br></ul></li><br></ul><br><p>也是给Client场景下的虚拟机使用的。</p></li>
+<li><ol start="5">
+<li>parallel old收集器</li>
+</ol>
+</li>
+<li><p>是Parallel Scavenge收集器的老年代版本。</p>
+<p>在注重吞吐量已经CPU资源敏感的场合，都可以优先考虑Parallel Scavenge和Parallel Old收集器。</p></li>
+<li><ol start="6">
+<li>cms收集器</li>
+</ol>
+</li>
+<li><p>Concurrent Mark Sweep收集器是一种以获取最短回收停顿时间为目标的收集器。</p>
+</li>
+<li><p>运作过程</p>
+<ul>
+<li><ol>
+<li>初始标记（最短）。仍需要暂停用户线程。只是标记一下GC Roots能直接关联到的对象，速度很快<br><ol><br><li>并发标记（耗时最长）。进行GC Roots Tracing（根搜索算法）的过程。</li><br><li>重新标记。修正并发标记期间因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录。比初始标记长但远小于并发标记时间。</li><br><li>并发清除</li><br></ol><p>1 和4 两个步骤并没有带上并发两个字，即这两个步骤仍要暂停用户线程。</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>并发收集、低停顿。<br><ol><br><li>CMS收集器对CPU资源非常敏感。虽然不会导致用户线程停顿，但是占用CPU资源会使应用程序变慢。</li><br><li>无法处理浮动垃圾。在并发清除阶段新垃圾还会不断的产生，所以GC时要控制“-XX:CMSinitiatingOccupancyFraction参数”预留足够的内存空间给这些垃圾，当预留内存无法满足程序需要时就会出现”Concurrent Mode Failure“失败，临时启动Serial Old收集。</li><br><li>由于使用标记 - 清除算法，收集之后会产生大量空间碎片。</li><br></ol><br><ul><br><li><ol><br><li>g1收集器</li><br></ol><br><ul><br><li>Garbage First是一款面向服务端应用的垃圾收集器</li><br><li><p>运作过程</p><br><ul><br><li><ol><br><li>初始标记</li><br></ol></li><br></ul></li><br></ul></li><br></ul><br><ol><br><li>并发标记</li><br><li>最终标记</li><br><li>删选标记</li><br></ol><br><h2 id="五类加载机制">五、类加载机制</h2><br><h3 id="概述-1">概述</h3><br><ul><br><li>虚拟机把描述类的数据从Class问价加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型。<br><br>Java应用程序的高度灵活性就是依赖运行期动态加载和动态连接实现的。</li><br></ul><br><h3 id="类的生命周期">类的生命周期</h3><br><ul><br><li>加载 -&gt; 连接（验证 -&gt; 准备 -&gt; 解析） -&gt; 初始化 -&gt; 使用 - &gt;卸载</li><br></ul><br><h3 id="类初始化时机">类初始化时机</h3><br><ul><br><li><p>主动引用</p><br><ul><br><li>虚拟机规范中没有强制约束何时进行加载，但是规定了有且只有五种情况必须对类进行初始化（加载、验证、准备都会随之发生）</li><br></ul></li><br></ul><br><ol><br><li>遇到new、getstatic、putstatic、invokestatic这四条字节码指令时没有初始化。</li><br><li>反射调用时没有初始化。</li><br><li>发现其父类没有初始化则先触发其父类的初始化。</li><br><li>包含psvm（mian（）方法）的那个类。</li><br><li>动态语言支持时，REF_getStatic、REF_putStatic、REF_invokeStatic的方法句柄。</li><br></ol><br><ul><br><li><p>被动引用</p><br><ul><br><li>除上面五种情况之外，所有引用类的方式都不会触发初始化，称为被动引用。</li><br></ul></li><br></ul><br><ol><br><li>通过子类引用父类的静态字段，不会导致子类的初始化。</li><br><li>通过数组定义来引用类，不会触发此类的初始化。该过程会对数组类进行初始化，数组类是一个由虚拟机自动生成的、直接继承Object的子类，其中包含数组的属性和方法，用户只能使用public的length和clone()。</li><br><li>常量在编译阶段会存入调用类的常量池中，本质上并没有直接引用到定义常量的类，因此不会触发定义常量的类的初始化。</li><br></ol><br><h3 id="类加载过程">类加载过程</h3><br><ul><br><li><ol><br><li>加载</li><br></ol><br><ul><br><li><ol><br><li>通过类的全限定名来获取定义此类的二进制字节流。</li><br></ol></li><br></ul></li><br></ul><br><ol><br><li>将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。</li><br><li>在内存中生成一个代表这个类的java.lang.Class对象（HotSpot将其存放在方法区中），作为方法区这个类的各种数据的访问入口。</li><br></ol><br><ul><br><li><ol><br><li>验证</li><br></ol><br><ul><br><li>为了确保Class文件的字节类中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。可以通过-Xverify:none关闭大部分类验证。</li><br></ul></li><br></ul><br><ol><br><li>文件格式验证。确保输入字节流能正确的解析并存储于方法区，后面的3个验证全部基于方法区的存储结构进行，不会再操作字节流。</li><br><li>元数据验证。对字节码描述信息进行语义分析，确保其符合Java语法规范。（Java语法验证）</li><br><li>字节码验证。最复杂，通过数据流和控制流分析，确定程序语义时合法的、符合逻辑的。可以通过参数关闭。（验证指令跳转范围，类型转换有效等）</li><br><li>符号引用验证。将符号引用转化为直接引用，发生在第三个阶段——解析阶段中发生。</li><br></ol><br><ul><br><li><ol><br><li>准备</li><br></ol><br><ul><br><li>类变量是被static修饰的变量，准备阶段为类变量分配内存并设置零值（final直接设置初始值），使用的是方法区的内存。</li><br></ul></li><br><li><ol><br><li>解析</li><br></ol><br><ul><br><li>将常量池内的符号引用替换为直接引用的过程。<br><br>其中解析过程在某些情况下可以在初始化阶段之后再开始，这是为了支持Java的动态绑定。<br><br>解析动作主要针对类或接口、字段、类方法、接口方法、方法类型、方法句柄、和调用点限定符。</li><br></ul></li><br><li><ol><br><li>初始化</li><br></ol><br><ul><br><li><p>初始化阶段才真正执行类中定义的Java程序代码，是执行类构造器<clinit>()方法的过程。<br><br>在准备阶段，类变量已经给过零值，而在初始化阶段，根据程序员通过程序制定的主观计划去初始化类变量和其他资源。</clinit></p><br><ul><br><li><p><clinit>()</clinit></p><br><ul><br><li>类构造器方法。是由编译器自动收集类中的所有类变量的赋值动作和静态语句块中的的语句合并产生的。</li><br></ul></li><br></ul></li><br></ul></li><br></ul><br><ol><br><li>不需要显式调用父类构造器，JVM会保证在子类clinit执行之前，父类的clinit已经执行完成。</li><br><li>接口中不能使用静态语句块但仍可以有类变量的赋值操作。当没有使用父接口中定义的变量时子接口的c</li>
+</ol></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><li>接口中不能使用静态语句块但仍可以有类变量的赋值操作。当没有使用父接口中定义的变量时子接口的clinit不需要先执行父接口的clinit方法。接口的实现类也不会执行接口的clinit方法。</li></p>
+<p><li><p>虚拟机会保证clinit在多线程环境中被正确的加锁、同步。其他线性唤醒之后不会再进入clinit方法，同一个类加载器下，一个类型只会初始化一次。</p></li></p>
+<ul>
+<li><p>&lt;init&gt;()</p>
+<ul>
+<li>对象构造器方法。Java对象被创建时才会进行实例化操作，对非静态变量解析初始化。</li><br><li><p>会显式的调用父类的init方法，对象实例化过程中对实例域的初始化操作全部在init方法中进行。</p></li><br><br><h3 id="类加载-器">类（加载） 器</h3><ul><br><li><p>类与类加载器</p><br><ul><br><li>类加载器实现类的加载动作。<br><br>类加载器和这个类本身一同确立这个类的唯一性，每个类加载器都有独立的类命名空间。在同一个类加载器加载的情况下才会有两个类相等。<br><br>相等包括类的Class对象的equals()方法、isAssignableFrom()方法、isInstance()、instanceof关键字。</li><br></ul></li><br><li><p>类加载器分类</p><br><ul><br><li><p>启动类加载器</p><br><ul><br><li>由C++语言实现，是虚拟机的一部分。负责将JAVA_HOME/lib目录中，或者被-Xbootclasspath参数指定的路径，但是文件名要能被虚拟机识别，名字不符合无法被启动类加载器加载。启动类加载器无法被Java程序直接引用。</li><br></ul></li><br><li><p>扩展类加载器</p><br><ul><br><li>由Java语言实现，负责加载JAVA_HOME/lib/ext目录，或者被java.ext.dirs系统变量所指定的路径中的所有类库，开发者可以直接使用扩展类加载器。</li><br></ul></li><br><li><p>应用程序类加载器</p><br><ul><br><li>由于这个类加载器是ClassLoader中的getSystemClassLoader()方法的返回值，所以一般也称他为系统类加载器。负责加载用户类路径（ClassPath）上所指定的类库，一般情况下这个就是程序中默认的类加载器。</li><br></ul></li><br><li><p>自定义类加载器</p><br><ul><br><li>由用户自己实现。</li><br></ul></li><br></ul></li><br></ul><br><ol><br><li>如果不想打破双亲委派模型，那么只需要重写findClass方法即可。</li><br><li>否则就重写整个loadClass方法。</li><br></ol><br><ul><br><li><p>双亲委派模型</p><br><ul><br><li>双亲委派模型要求除了顶层的启动类加载器外，其余的类加载器都应该有自己的父类加载器。父子不会以继承的关系类实现，而是都是使用组合关系来服用父加载器的代码。<br><br>在java.lang.ClassLoader的loadClass()方法中实现。</li><br><li><p>工作过程</p><br><ul><br><li>一个类加载器首先将类加载请求转发到父类加载器，只有当父类加载器无法完成（它的搜索范围中没有找到所需要的类）时才尝试自己加载</li><br></ul></li><br><li><p>好处</p><br><ul><br><li>Java类随着它的类加载器一起具备了一种带有优先级的层次关系，从而使得基础类库得到同意。</li><br></ul></li><br></ul></li><br></ul><br><h2 id="四内存分配与回收策略">四、内存分配与回收策略</h2><br><h3 id="minor-gc-和-full-gc">Minor GC 和 Full GC</h3><br><ul><br><li><p>Minor GC</p><br><ul><br><li>发生在新生代的垃圾收集动作，因为新生代对象存活时间很短，因此Minor GC会频繁执行，执行速度快。</li><br><li><p>时机</p><br><ul><br><li>Eden不足</li><br></ul></li><br></ul></li><br><li><p>Full GC</p><br><ul><br><li>发生在老年区的GC，出现Full GC时往往伴随着Minor GC，比Minor GC慢10倍以上。</li><br><li><p>时机</p><br><ul><br><li><ol><br><li>调用System.gc()</li><br></ol><br><ul><br><li>只是建议虚拟机执行Full GC，但是虚拟机不一定真正去执行。<br><br>不建议使用这种方式，而是让虚拟机管理内存。</li><br></ul></li><br><li><ol><br><li>老年代空间不足</li><br></ol><br><ul><br><li>常见场景就是大对象和长期存活对象进入老年代。<br><br>尽量避免创建过大的对象以及数组，调大新生代大小，让对象尽量咋新生代中被回收，不进入老年代。</li><br></ul></li><br><li><ol><br><li>JDK1.7 之前方法区空间不足</li><br></ol><br><ul><br><li>当系统中要加载的类、反射的类和常量较多时，永久代可能会被占满，在未配置CMS GC的情况下也会执行Full GC，如果空间仍然不够则会抛出OOM异常。<br><br>可采用增大方法区空间或转为使用CMS GC。</li><br></ul></li><br><li><ol><br><li>空间分配担保失败</li><br></ol><br><ul><br><li>发生Minor GC时分配担保的两个判断失败</li><br></ul></li><br><li><ol><br><li>Concurrent Mode Failure</li><br></ol><br><ul><br><li>CMS GC 并发清理阶段用户线程还在执行，不断有新的浮动垃圾产生，当预留空间不足时报Concurrent Mode Failure错误并触发Full GC。</li><br></ul></li><br></ul></li><br></ul></li><br></ul><br><h3 id="内存分配策略">内存分配策略</h3><br><ul><br><li><ol><br><li>对象优先在Eden分配</li><br></ol><br><ul><br><li>大多数情况下，对象在新生代Eden上分配，当Eden空间不够时，发起Minor GC，当另外一个Survivor空间不足时则将存活对象通过分配担保机制提前转移到老年代。</li><br></ul></li><br><li><ol><br><li>大对象直接进入老年代</li><br></ol><br><ul><br><li>配置参数-XX:PretenureSizeThreshold，大于此值得对象直接在老年代分配，避免在Eden和Survivor之间的大量内存复制。</li><br></ul></li><br><li><ol><br><li>长期存活对象进入老年代</li><br></ol><br><ul><br><li>虚拟机为每个对象定义了一个Age计数器，对象在Eden出生并经过Minor GC存活转移到另一个Survivor空间中时Age++，增加到默认16则转移到老年代。</li><br></ul></li><br><li><ol><br><li>动态对象年龄绑定</li><br></ol><br><ul><br><li>虚拟机并不是永远要求对象的年龄必须到达MaxTenuringThreshold才能晋升老年代，如果在Survivor中相同年龄所有对象大小总和大于Survivor空间的一半，则年龄大于或等于该年龄的对象直接进入老年代。</li><br></ul></li><br><li><ol><br><li>空间分配担保</li><br></ol><br><ul><br><li>在发生Minor GC之前，虚拟机先检查老年代最大可用的连续空间是否大于新生代的所有对象，如果条件成立，那么Minor GC可以认为是安全的。<br><br>可以通过HandlePromotionFailure参数设置允许冒险，此时虚拟机将与历代晋升到老年区对象的平均大小比较，仍小于则要进行一次Full GC。<br><br>在JDK1.6.24之后HandlePromotionFailure已无作用，即虚拟机默认为true。</li><br></ul></li><br></ul>
+</ul></li>
+</ul>
+
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/02/08/Everything-about-ArrayList/" rel="next" title="Everything about ArrayList">
+                  <i class="fa fa-chevron-left"></i> Everything about ArrayList
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM原理速记复习Java虚拟机总结思维导图面试必备"><span class="nav-number">1.</span> <span class="nav-text">JVM原理速记复习Java虚拟机总结思维导图面试必备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java虚拟机"><span class="nav-number">2.</span> <span class="nav-text">Java虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一运行时数据区域"><span class="nav-number">2.1.</span> <span class="nav-text">一、运行时数据区域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程私有"><span class="nav-number">2.1.1.</span> <span class="nav-text">线程私有</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程公有"><span class="nav-number">2.1.2.</span> <span class="nav-text">线程公有</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二hotspot虚拟机"><span class="nav-number">2.2.</span> <span class="nav-text">二、HotSpot虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的创建"><span class="nav-number">2.2.1.</span> <span class="nav-text">对象的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的内存布局"><span class="nav-number">2.2.2.</span> <span class="nav-text">对象的内存布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的访问定位"><span class="nav-number">2.2.3.</span> <span class="nav-text">对象的访问定位</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三垃圾收集"><span class="nav-number">2.3.</span> <span class="nav-text">三、垃圾收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">2.3.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断对象是否可以被回收"><span class="nav-number">2.3.2.</span> <span class="nav-text">判断对象是否可以被回收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区的回收"><span class="nav-number">2.3.3.</span> <span class="nav-text">方法区的回收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用类型"><span class="nav-number">2.3.4.</span> <span class="nav-text">引用类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾收集算法"><span class="nav-number">2.3.5.</span> <span class="nav-text">垃圾收集算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hotspot的算法实现"><span class="nav-number">2.3.6.</span> <span class="nav-text">HotSpot的算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾收集器"><span class="nav-number">2.3.7.</span> <span class="nav-text">垃圾收集器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五类加载机制"><span class="nav-number">2.4.</span> <span class="nav-text">五、类加载机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的生命周期"><span class="nav-number">2.4.2.</span> <span class="nav-text">类的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类初始化时机"><span class="nav-number">2.4.3.</span> <span class="nav-text">类初始化时机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载过程"><span class="nav-number">2.4.4.</span> <span class="nav-text">类加载过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载-器"><span class="nav-number">2.4.5.</span> <span class="nav-text">类（加载） 器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四内存分配与回收策略"><span class="nav-number">2.5.</span> <span class="nav-text">四、内存分配与回收策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#minor-gc-和-full-gc"><span class="nav-number">2.5.1.</span> <span class="nav-text">Minor GC 和 Full GC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存分配策略"><span class="nav-number">2.5.2.</span> <span class="nav-text">内存分配策略</span></a></li></ol></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">William Ren</p>
+  <div class="site-description" itemprop="description">If not Me, Who? If not now, When?</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Williamren97" title="GitHub &rarr; https://github.com/Williamren97" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:Williamren97@gmail.com" title="E-Mail &rarr; mailto:Williamren97@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.linkedin.com/in/%E5%81%89-%E4%BB%BB-984941166/" title="Linkedin &rarr; https://www.linkedin.com/in/%E5%81%89-%E4%BB%BB-984941166/" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://twitter.com/WilliamRen10" title="Twitter &rarr; https://twitter.com/WilliamRen10" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.douban.com/people/renwei97/" title="Douban &rarr; https://www.douban.com/people/renwei97/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Douban</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://steamcommunity.com/profiles/76561198366135828" title="Steam &rarr; https://steamcommunity.com/profiles/76561198366135828" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Steam</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">William Ren</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes: 0,
+          toolbar: 0,
+          statusbar: 0,
+          pagemode: 'thumbs',
+          view: 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'lyytoY9PhsHWSRFu2rvamD0C-gzGzoHsz',
+    appKey: 'iqotmhQC2IjjG6MQB1rOkiBt',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
