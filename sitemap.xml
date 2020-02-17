@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/04/Everything-About-HashMap/</loc>
+    
+    <lastmod>2020-02-17T09:57:42.926Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/12/DesignPattern_Creational%20Pattern/</loc>
     
     <lastmod>2020-02-14T14:10:48.296Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://yoursite.com/2020/02/08/Principle-of-JVM/</loc>
     
     <lastmod>2020-02-07T18:15:30.203Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/04/Everything-About-HashMap/</loc>
-    
-    <lastmod>2020-02-07T17:11:59.836Z</lastmod>
     
   </url>
   
