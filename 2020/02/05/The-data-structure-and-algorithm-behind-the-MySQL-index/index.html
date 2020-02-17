@@ -66,12 +66,13 @@
   };
 </script>
 
-  <meta name="description" content="本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论。 文章主要内容分为三个部分。 第一部分主要从">
+  <meta name="description" content="本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论">
+<meta name="keywords" content="MySQL, Index, Database">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The data structure and algorithm behind the MySQL index">
 <meta property="og:url" content="http://yoursite.com/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/index.html">
 <meta property="og:site_name" content="REN WEI&#39;S BLOG">
-<meta property="og:description" content="本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论。 文章主要内容分为三个部分。 第一部分主要从">
+<meta property="og:description" content="本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/uploads/pictures/theory-of-mysql-index/1.png">
 <meta property="og:image" content="http://yoursite.com/uploads/pictures/theory-of-mysql-index/2.png">
@@ -87,10 +88,10 @@
 <meta property="og:image" content="http://yoursite.com/uploads/pictures/theory-of-mysql-index/12.png">
 <meta property="og:image" content="http://yoursite.com/uploads/pictures/theory-of-mysql-index/13.png">
 <meta property="og:image" content="http://yoursite.com/uploads/pictures/theory-of-mysql-index/14.png">
-<meta property="og:updated_time" content="2020-02-06T09:44:47.011Z">
+<meta property="og:updated_time" content="2020-02-17T10:18:40.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The data structure and algorithm behind the MySQL index">
-<meta name="twitter:description" content="本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论。 文章主要内容分为三个部分。 第一部分主要从">
+<meta name="twitter:description" content="本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论">
 <meta name="twitter:image" content="http://yoursite.com/uploads/pictures/theory-of-mysql-index/1.png">
   <link rel="canonical" href="http://yoursite.com/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/">
 
@@ -352,7 +353,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-06 17:44:47" itemprop="dateModified" datetime="2020-02-06T17:44:47+08:00">2020-02-06</time>
+                <time title="Modified: 2020-02-17 18:18:40" itemprop="dateModified" datetime="2020-02-17T18:18:40+08:00">2020-02-17</time>
               </span>
             
           
@@ -372,6 +373,8 @@
   </span>
   
   
+            <div class="post-description">本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论</div>
+          
 
         </div>
       </header>
@@ -382,8 +385,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p></p><p>本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论。</p><p></p>
-<p></p><p>文章主要内容分为三个部分。</p><p></p>
+        <p></p><p>文章主要内容分为三个部分。</p><p></p>
 <p></p><p>第一部分主要从数据结构及算法理论层面讨论MySQL数据库索引的数理基础。</p><p></p>
 <p></p><p>第二部分结合MySQL数据库中MyISAM和InnoDB数据存储引擎中索引的架构实现讨论聚集索引、非聚集索引及覆盖索引等话题。</p><p></p>
 <p></p><p>第三部分根据上面的理论基础，讨论MySQL中高性能使用索引的策略。<br><a id="more"></a><br></p><p></p>
@@ -599,6 +601,15 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/MySQL-Index-Database/" rel="tag"># MySQL, Index, Database</a>
+            
+          </div>
+        
 
         
 
@@ -711,7 +722,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>

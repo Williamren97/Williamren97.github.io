@@ -296,6 +296,101 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/2019-2In-TaiwanTech/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/02/17/2019-2In-TaiwanTech/" class="post-title-link" itemprop="url">2019-2In TaiwanTech</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-02-17 18:10:48 / Modified: 18:20:57" itemprop="dateCreated datePublished" datetime="2020-02-17T18:10:48+08:00">2020-02-17</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/02/17/2019-2In-TaiwanTech/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/02/17/2019-2In-TaiwanTech/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          The conclusion of semester1 on Senior year.
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/02/17/2019-2In-TaiwanTech/">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/08/Principle-of-JVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -325,11 +420,19 @@
                 
               
 
-              <time title="Created: 2020-02-08 02:08:41 / Modified: 02:15:30" itemprop="dateCreated datePublished" datetime="2020-02-08T02:08:41+08:00">2020-02-08</time>
+              <time title="Created: 2020-02-08 02:08:41" itemprop="dateCreated datePublished" datetime="2020-02-08T02:08:41+08:00">2020-02-08</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-17 18:19:31" itemprop="dateModified" datetime="2020-02-17T18:19:31+08:00">2020-02-17</time>
+              </span>
             
           
 
@@ -358,64 +461,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="JVM原理速记复习Java虚拟机总结思维导图面试必备"><a href="#JVM原理速记复习Java虚拟机总结思维导图面试必备" class="headerlink" title="JVM原理速记复习Java虚拟机总结思维导图面试必备"></a>JVM原理速记复习Java虚拟机总结思维导图面试必备</h1><p><div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown"></div></p>
-<p><img src="https://images.cnblogs.com/cnblogs_com/neverth/1592425/o_191116143745Java%E8%99%9A%E6%8B%9F%E6%9C%BA-min.png" alt="JVM"><br><br></p><h1 id="java虚拟机">Java虚拟机</h1><br><h2 id="一运行时数据区域">一、运行时数据区域</h2><br><h3 id="线程私有">线程私有</h3><br><ul><br><li><p>程序计数器</p><br><ul><br><li>记录正在执行的虚拟机字节码指令的地址（如果正在执行的是Native方法则为空），是唯一一个没有规定OOM（OutOfMemoryError）的区域。</li><br></ul></li><br><li><p>Java虚拟机栈</p><br><ul><br><li>每个Java方法在执行的同时会创建一个栈桢用于存储局部变量表、操作数栈、动态链接、方法出口等信息。从方法调用直到执行完成的过程，对应着一个栈桢在Java虚拟机栈中入栈和出栈的过程。（局部变量包含基本数据类型、对象引用reference和returnAddress类型）</li><br></ul></li><br><li><p>本地方法栈</p><br><ul><br><li>本地方法栈与Java虚拟机栈类似，它们之间的区别只不过是本地方法栈为Native方法服务。</li><br></ul></li><br></ul><br><h3 id="线程公有">线程公有</h3><br><ul><br><li><p>Java堆（GC区）（Java Head）</p><br><ul><br><li>几乎所有的对象实例都在这里分配内存，是垃圾收集器管理的主要区域。分为新生代和老年代。对于新生代又分为Eden空间、From Survivor空间、To Survivor空间。</li><br></ul></li><br><li><p>JDK1.7 方法区（永久代）</p><br><ul><br><li>用于存放已被加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。<br><br>对这块区域进行垃圾回收的主要目的是对常量池的回收和对类的卸载，但是一般难以实现。<br><br>HotSpot虚拟机把它当做永久代来进行垃圾回收。但很难确定永久代的大小，因为它受到很多因素的影响，并且每次Full GC之后永久代的大小都会改变，所以经常抛出OOM异常。<br><br>从JDK1.8开始，移除永久代，并把方法区移至元空间。</li><br><li><p>运行时常量池</p><br><ul><br><li>是方法区的一部分<br><br>Class文件中的常量池（编译器生成的字面量和符号引用）会在类加载后被放入这个区域。<br><br>允许动态生成，例如String类的intern()</li><br></ul></li><br></ul></li><br><li><p>JDK1.8 元空间</p><br><ul><br><li>原本存在方法区（永久代）的数据，一部分移到了Java堆里面，一部分移到了本地内存里面（即元空间）。元空间存储类的元信息，静态变量和常量池等放入堆中。</li><br></ul></li><br><li><p>直接内存</p><br><ul><br><li>在NIO中，会使用Native函数库直接分配堆外内存。</li><br></ul></li><br></ul><br><h2 id="二hotspot虚拟机">二、HotSpot虚拟机</h2><br><h3 id="对象的创建">对象的创建</h3><br><ul><br><li>当虚拟机遇到一条new指令时</li><br></ul><br><ol><br><li>检查参数能否在常量池中找到符号引用，并检查这个符号引用代表的类是否已经被加载、解析和初始过，没有的话先执行相应的类加载过程。</li><br><li>在类加载检查通过之后，接下来虚拟机将为新生对象分配内存。</li><br><li>内存分配完成之后，虚拟机需要将分配到的内存空间都初始化为零值（不包括对象头）。</li><br><li>对对象头进行必要的设置。</li><br><li>执行构造方法按照程序员的意愿进行初始化。</li><br></ol><br><h3 id="对象的内存布局">对象的内存布局</h3><br><ul><br><li><ol><br><li>对象头</li><br></ol><br><ul><br><li><ol><br><li>第一部分用于存储对象自身的运行时数据，如哈希码、GC分代年龄、锁状态标识、线程持有的锁、偏向线程ID、偏向实现戳等。</li><br></ol></li><br><li><ol><br><li>第二部分是类型指针，即对象指向它的类元数据的指针（如果使用直接对象指针访问），虚拟机通过这个指针来确定这个对象是哪个类的实例。</li><br></ol></li><br><li><ol><br><li>如果对象是一个Java数组的话，还需要第三部分记录数据长度的数据。</li><br></ol></li><br></ul></li><br><li><ol><br><li>实例数据</li><br></ol><br><ul><br><li>是对象真正存储的有效信息，也就是在代码中定义的各种类型的字段内容。</li><br></ul></li><br><li><ol><br><li>对齐填充</li><br></ol><br><ul><br><li>不是必然存在的，仅仅起着占位符的作用。<br><br>HotSpot需要对象的大小必须是8字节的整数倍。</li><br></ul></li><br></ul><br><h3 id="对象的访问定位">对象的访问定位</h3><br><ul><br><li><p>句柄访问</p><br><ul><br><li>在Java堆中划分出一块内存作为句柄池。<br><br>Java栈上的对象引用reference中存储的就是对象的句柄地址，而句柄中包含了到对象实例数据的指针和到对象类型数据的指针。<br><br>对象实例数据在Java堆中，对象类型数据在方法区（永久代）中。<br><br>优点：在对象被移动时只会改变句柄中的实例数据指针，而对象引用本身不需要修改。</li><br></ul></li><br><li><p>直接指针访问（HotSpot使用）</p><br><ul><br><li>Java栈上的对象引用reference中存储的就是对象的直接地址。<br><br>在堆中的对象实例数据就需要包含到对象类型数据的指针。<br><br>优点：节省了一次指针定位的时间开销，速度更快。</li><br></ul></li><br></ul><br><h2 id="三垃圾收集">三、垃圾收集</h2><br><h3 id="概述">概述</h3><br><ul><br><li>垃圾收集主要是针对Java堆和方法区。<br><br>程序计数器、Java虚拟机栈个本地方法栈三个区域属于线程私有，线程或方法结束之后就会消失，因此不需要对这三个区域进行垃圾回收。</li><br></ul><br><h3 id="判断对象是否可以被回收">判断对象是否可以被回收</h3><br><ul><br><li><p>第一次标记（缓刑）</p><br><ul><br><li><p>引用计数算法</p><br><ul><br><li>给对象添加一个引用计数器，当对象增加一个引用时引用计数值++，引用失效时引用计数值–，引用计数值为0时对象可以被回收。</li><br></ul></li><br></ul></li><br></ul><br><p>但是它难以解决对象之间的相互循环引用的情况，此时这个两个对象引用计数值为1，但是永远无法用到这两个对象。</p>
-
-<ul>
-<li><p>可达性分析算法（Java使用）</p>
-<ul>
-<li>以一系列GC Roots的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链，当一个对象到GC Roots没有任何引用链相连是，则证明此对象不可用，可以被回收。<p>GC Roots对象包括</p><br><ol><br><li>虚拟机栈（栈桢中的本地变量表）中引用的对象。</li><br><li>方法区中共类静态属性引用的对象。</li><br><li>方法区中常量引用的对象。</li><br><li>本地方法栈中JNI（即一般说的Native方法）引用的对象。</li><br></ol><br><ul><br><li><p>第二次标记</p><br><ul><br><li>当对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过。<br><br>如果对象在finalize方法中重新与引用链上的任何一个对象建立关联则将不会被回收。</li><br><li><p>finalize()</p><br><ul><br><li>任何一个对象的finalize()方法都只会被系统调用一次。<br><br>它的出现是一个妥协，运行代价高昂，不确定性大，无法保证各个对象的调用顺序。<br><br>finalize()能做的所有工作使用try-finally或者其他方式都可以做的更好，完全可以忘记在这个函数的存在。</li><br></ul></li><br></ul></li><br></ul><br><h3 id="方法区的回收">方法区的回收</h3><br><ul><br><li>在方法区进行垃圾回收的性价比一般比较低。<br><br>主要回收两部分，废弃常量和无用的类。</li><br></ul><br><p>满足无用的类三个判断条件才仅仅代表可以进行回收，不是必然关系，可以使用-Xnoclassgc参数控制。</p><br><ol><br><li>该类的所有实例都已经被回收，也就是Java堆中不存在该类的任何实例。</li><br><li>加载该类的ClassLoader已经被回收。</li><br><li>该类对应的java.lang.Class对象没有在任何地方被引用，无法在任何地方通过反射访问到该类的方法。</li><br></ol><br><h3 id="引用类型">引用类型</h3><br><ul><br><li><ol><br><li>强引用</li><br></ol><br><ul><br><li>使用new一个新对象的方式来创建强引用。<br><br>只要强引用还存在，被引用的对象则永远不会被回收。</li><br></ul></li><br><li><ol><br><li>软引用</li><br></ol><br><ul><br><li>使用SoftReference类来实现软引用。<br><br>用来描述一些还有用但是并非必须的对象，被引用的对象在将要发生内存溢出异常之前会被回收。</li><br></ul></li><br><li><ol><br><li>弱引用</li><br></ol><br><ul><br><li>使用WeakReference类来实现弱引用。<br><br>强度比软引用更弱一些，被引用的对象在下一次垃圾收集时会被回收。</li><br></ul></li><br><li><ol><br><li>虚引用</li><br></ol><br><ul><br><li>使用PhantomReference类来实现虚引用。<br><br>最弱的引用关系，不会对被引用的对象生存时间构成影响，也无法通过虚引用来取得一个对象实例。<br><br>唯一目的就是能在这个对象被收集器回收时收到一个系统通知。</li><br></ul></li><br></ul><br><h3 id="垃圾收集算法">垃圾收集算法</h3><br><ul><br><li><ol><br><li>标记 - 清除</li><br></ol><br><ul><br><li>首先标记出所有需要回收的对象，在标记完成后统一回收被标记的对象并取消标记。</li><br></ul></li><br></ul><br><p>不足：</p><br><ol><br><li>效率问题，标记和清除两个过程的效率都不高。</li><br><li>空间问题，标记清除之后会产生大量不连续的内存碎片，没有连续内存容纳较大对象而不得不提前触发另一次垃圾收集。</li><br></ol><br><ul><br><li><ol><br><li>标记 - 整理</li><br></ol><br><ul><br><li>和标记 - 清除算法一样，但标记之后让所有存活对象都向一段移动，然后直接清理掉端边界以外的内存。<br><br>解决了标记 - 清除算法的空间问题，但需要移动大量对象，还是存在效率问题。</li><br></ul></li><br><li><ol><br><li>复制</li><br></ol><br><ul><br><li>将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用多的内存空间一次清理掉。<br><br>代价是将内存缩小为原来的一般，太高了。</li><br></ul></li><br></ul><br><p>现在商业虚拟机都采用这种算法用于新生代。<br><br>因为新生代中的对象98%都是朝生暮死，所以将内存分为一块较大的Eden空间和两块较小的Survivor空间，每次使用Eden和其中一块Survivor空间。<br><br>当回收时，如果另外一块Survivor空间没有足够的空间存放存活下来的对象时，这些对象将直接通过分配担保机制进入老年代。</p><br><ul><br><li><ol><br><li>分代收集</li><br></ol><br><ul><br><li>一般把Java堆分为新生代和老年代。<br><br>在新生代中使用复制算法，在老年代中使用标记 -清除 或者 标记 - 整理 算法来进行回收。</li><br></ul></li><br></ul><br><h3 id="hotspot的算法实现">HotSpot的算法实现</h3><br><ul><br><li><p>枚举根节点（GC Roots）</p><br><ul><br><li>目前主流Java虚拟机使用的都是准确式GC。<br><br>GC停顿的时候，虚拟机可以通过OopMap数据结构（映射表）知道，在对象内的什么偏移量上是什么类型的数据，而且特定的位置记录着栈和寄存器中哪些位置是引用。因此可以快速且准确的完成GC Roots枚举。</li><br></ul></li><br><li><p>安全点</p><br><ul><br><li>为了节省GC的空间成本，并不会为每条指令都生成OopMap，只是在“特定的位置”记录OopMap，这些位置称为安全点。</li><br></ul></li><br></ul><br><p>程序执行只有到达安全点时才能暂停，到达安全点有两种方案。</p><br><ol><br><li>抢断式中断（几乎不使用）。GC时，先把所有线程中断，如果有线程不在安全点，就恢复该线程，让他跑到安全点。</li><br><li>主动式中断（主要使用）。GC时，设置一个标志，各个线程执行到安全点时轮询这个标志，发现标志为直则挂起线程。</li><br></ol><br><p>但是当线程sleep或blocked时无法响应JVM的中断请求走到安全点中断挂起，所以引出安全区域。</p><br><ul><br><li><p>安全区域</p><br><ul><br><li>安全区域是指在一段代码片段之中，引用关系不会发生变化，是扩展的安全点。</li><br></ul></li><br></ul><br><p>线程进入安全区域时表示自己进入了安全区域，这个发生GC时，JVM就不需要管这个线程。<br><br>线程离开安全区域时，检查系统是否完成GC过程，没有就等待可以离开安全区域的信号为止，否者继续执行。</p><br><h3 id="垃圾收集器">垃圾收集器</h3><br><ul><br><li><p>新生代</p><br><ul><br><li><ol><br><li>serial收集器</li><br></ol><br><ul><br><li>它是单线程收集器，只会使用一个线程进行垃圾收集工作，更重要的是它在进行垃圾收集时，必须暂停其他所有的工作线程。</li><br></ul></li><br></ul></li><br></ul><br><p>优点：对比其他单线程收集器简单高效，对于单个CPU环境来说，没有线程交互的开销，因此拥有最高的单线程收集效率。</p><br><p>它是Client场景下默认新生代收集器，因为在该场景下内存一般来说不会很大。</p></li>
-<li><ol start="2">
-<li>parnew收集器</li>
-</ol>
-</li>
-<li><p>它是Serial收集器的多线程版本，公用了相当多的代码。</p>
-<p>在单CPU环境中绝对不会有比Serial收集器更好的效果，甚至在2个CPU环境中也不能百分之百超越。</p><br><p>它是Server场景下默认的新生代收集器，主要因为除了Serial收集器，只用它能与CMS收集器配合使用。</p></li>
-<li><ol start="3">
-<li>parallel scavenge收集器</li>
-</ol>
-</li>
-<li><p>“吞吐优先”收集器，与ParNew收集器差不多。</p>
-<p>但是其他收集器的目标是尽可能缩短垃圾收集时用户线程停顿的时间，而它的目标是达到一个可控制的吞吐量。这里的吞吐量指CPU用于运行用户程序的时间占总时间的比值。</p><br><ul><br><li><p>老年代</p><br><ul><br><li><ol><br><li>serial old收集器</li><br></ol><br><ul><br><li>是Serial收集器老年代版本。</li><br></ul></li><br></ul></li><br></ul><br><p>也是给Client场景下的虚拟机使用的。</p></li>
-<li><ol start="5">
-<li>parallel old收集器</li>
-</ol>
-</li>
-<li><p>是Parallel Scavenge收集器的老年代版本。</p>
-<p>在注重吞吐量已经CPU资源敏感的场合，都可以优先考虑Parallel Scavenge和Parallel Old收集器。</p></li>
-<li><ol start="6">
-<li>cms收集器</li>
-</ol>
-</li>
-<li><p>Concurrent Mark Sweep收集器是一种以获取最短回收停顿时间为目标的收集器。</p>
-</li>
-<li><p>运作过程</p>
-<ul>
-<li><ol>
-<li>初始标记（最短）。仍需要暂停用户线程。只是标记一下GC Roots能直接关联到的对象，速度很快<br><ol><br><li>并发标记（耗时最长）。进行GC Roots Tracing（根搜索算法）的过程。</li><br><li>重新标记。修正并发标记期间因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录。比初始标记长但远小于并发标记时间。</li><br><li>并发清除</li><br></ol><p>1 和4 两个步骤并没有带上并发两个字，即这两个步骤仍要暂停用户线程。</p></li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>优缺点</p>
-<ul>
-<li>并发收集、低停顿。<br><ol><br><li>CMS收集器对CPU资源非常敏感。虽然不会导致用户线程停顿，但是占用CPU资源会使应用程序变慢。</li><br><li>无法处理浮动垃圾。在并发清除阶段新垃圾还会不断的产生，所以GC时要控制“-XX:CMSinitiatingOccupancyFraction参数”预留足够的内存空间给这些垃圾，当预留内存无法满足程序需要时就会出现”Concurrent Mode Failure“失败，临时启动Serial Old收集。</li><br><li>由于使用标记 - 清除算法，收集之后会产生大量空间碎片。</li><br></ol><br><ul><br><li><ol><br><li>g1收集器</li><br></ol><br><ul><br><li>Garbage First是一款面向服务端应用的垃圾收集器</li><br><li><p>运作过程</p><br><ul><br><li><ol><br><li>初始标记</li><br></ol></li><br></ul></li><br></ul></li><br></ul><br><ol><br><li>并发标记</li><br><li>最终标记</li><br><li>删选标记</li><br></ol><br><h2 id="五类加载机制">五、类加载机制</h2><br><h3 id="概述-1">概述</h3><br><ul><br><li>虚拟机把描述类的数据从Class问价加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型。<br><br>Java应用程序的高度灵活性就是依赖运行期动态加载和动态连接实现的。</li><br></ul><br><h3 id="类的生命周期">类的生命周期</h3><br><ul><br><li>加载 -&gt; 连接（验证 -&gt; 准备 -&gt; 解析） -&gt; 初始化 -&gt; 使用 - &gt;卸载</li><br></ul><br><h3 id="类初始化时机">类初始化时机</h3><br><ul><br><li><p>主动引用</p><br><ul><br><li>虚拟机规范中没有强制约束何时进行加载，但是规定了有且只有五种情况必须对类进行初始化（加载、验证、准备都会随之发生）</li><br></ul></li><br></ul><br><ol><br><li>遇到new、getstatic、putstatic、invokestatic这四条字节码指令时没有初始化。</li><br><li>反射调用时没有初始化。</li><br><li>发现其父类没有初始化则先触发其父类的初始化。</li><br><li>包含psvm（mian（）方法）的那个类。</li><br><li>动态语言支持时，REF_getStatic、REF_putStatic、REF_invokeStatic的方法句柄。</li><br></ol><br><ul><br><li><p>被动引用</p><br><ul><br><li>除上面五种情况之外，所有引用类的方式都不会触发初始化，称为被动引用。</li><br></ul></li><br></ul><br><ol><br><li>通过子类引用父类的静态字段，不会导致子类的初始化。</li><br><li>通过数组定义来引用类，不会触发此类的初始化。该过程会对数组类进行初始化，数组类是一个由虚拟机自动生成的、直接继承Object的子类，其中包含数组的属性和方法，用户只能使用public的length和clone()。</li><br><li>常量在编译阶段会存入调用类的常量池中，本质上并没有直接引用到定义常量的类，因此不会触发定义常量的类的初始化。</li><br></ol><br><h3 id="类加载过程">类加载过程</h3><br><ul><br><li><ol><br><li>加载</li><br></ol><br><ul><br><li><ol><br><li>通过类的全限定名来获取定义此类的二进制字节流。</li><br></ol></li><br></ul></li><br></ul><br><ol><br><li>将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。</li><br><li>在内存中生成一个代表这个类的java.lang.Class对象（HotSpot将其存放在方法区中），作为方法区这个类的各种数据的访问入口。</li><br></ol><br><ul><br><li><ol><br><li>验证</li><br></ol><br><ul><br><li>为了确保Class文件的字节类中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。可以通过-Xverify:none关闭大部分类验证。</li><br></ul></li><br></ul><br><ol><br><li>文件格式验证。确保输入字节流能正确的解析并存储于方法区，后面的3个验证全部基于方法区的存储结构进行，不会再操作字节流。</li><br><li>元数据验证。对字节码描述信息进行语义分析，确保其符合Java语法规范。（Java语法验证）</li><br><li>字节码验证。最复杂，通过数据流和控制流分析，确定程序语义时合法的、符合逻辑的。可以通过参数关闭。（验证指令跳转范围，类型转换有效等）</li><br><li>符号引用验证。将符号引用转化为直接引用，发生在第三个阶段——解析阶段中发生。</li><br></ol><br><ul><br><li><ol><br><li>准备</li><br></ol><br><ul><br><li>类变量是被static修饰的变量，准备阶段为类变量分配内存并设置零值（final直接设置初始值），使用的是方法区的内存。</li><br></ul></li><br><li><ol><br><li>解析</li><br></ol><br><ul><br><li>将常量池内的符号引用替换为直接引用的过程。<br><br>其中解析过程在某些情况下可以在初始化阶段之后再开始，这是为了支持Java的动态绑定。<br><br>解析动作主要针对类或接口、字段、类方法、接口方法、方法类型、方法句柄、和调用点限定符。</li><br></ul></li><br><li><ol><br><li>初始化</li><br></ol><br><ul><br><li><p>初始化阶段才真正执行类中定义的Java程序代码，是执行类构造器<clinit>()方法的过程。<br><br>在准备阶段，类变量已经给过零值，而在初始化阶段，根据程序员通过程序制定的主观计划去初始化类变量和其他资源。</clinit></p><br><ul><br><li><p><clinit>()</clinit></p><br><ul><br><li>类构造器方法。是由编译器自动收集类中的所有类变量的赋值动作和静态语句块中的的语句合并产生的。</li><br></ul></li><br></ul></li><br></ul></li><br></ul><br><ol><br><li>不需要显式调用父类构造器，JVM会保证在子类clinit执行之前，父类的clinit已经执行完成。</li><br><li>接口中不能使用静态语句块但仍可以有类变量的赋值操作。当没有使用父接口中定义的变量时子接口的c</li>
-</ol></li></ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><li>接口中不能使用静态语句块但仍可以有类变量的赋值操作。当没有使用父接口中定义的变量时子接口的clinit不需要先执行父接口的clinit方法。接口的实现类也不会执行接口的clinit方法。</li></p>
-<p><li><p>虚拟机会保证clinit在多线程环境中被正确的加锁、同步。其他线性唤醒之后不会再进入clinit方法，同一个类加载器下，一个类型只会初始化一次。</p></li></p>
-<ul>
-<li><p>&lt;init&gt;()</p>
-<ul>
-<li>对象构造器方法。Java对象被创建时才会进行实例化操作，对非静态变量解析初始化。</li><br><li><p>会显式的调用父类的init方法，对象实例化过程中对实例域的初始化操作全部在init方法中进行。</p></li><br><br><h3 id="类加载-器">类（加载） 器</h3><ul><br><li><p>类与类加载器</p><br><ul><br><li>类加载器实现类的加载动作。<br><br>类加载器和这个类本身一同确立这个类的唯一性，每个类加载器都有独立的类命名空间。在同一个类加载器加载的情况下才会有两个类相等。<br><br>相等包括类的Class对象的equals()方法、isAssignableFrom()方法、isInstance()、instanceof关键字。</li><br></ul></li><br><li><p>类加载器分类</p><br><ul><br><li><p>启动类加载器</p><br><ul><br><li>由C++语言实现，是虚拟机的一部分。负责将JAVA_HOME/lib目录中，或者被-Xbootclasspath参数指定的路径，但是文件名要能被虚拟机识别，名字不符合无法被启动类加载器加载。启动类加载器无法被Java程序直接引用。</li><br></ul></li><br><li><p>扩展类加载器</p><br><ul><br><li>由Java语言实现，负责加载JAVA_HOME/lib/ext目录，或者被java.ext.dirs系统变量所指定的路径中的所有类库，开发者可以直接使用扩展类加载器。</li><br></ul></li><br><li><p>应用程序类加载器</p><br><ul><br><li>由于这个类加载器是ClassLoader中的getSystemClassLoader()方法的返回值，所以一般也称他为系统类加载器。负责加载用户类路径（ClassPath）上所指定的类库，一般情况下这个就是程序中默认的类加载器。</li><br></ul></li><br><li><p>自定义类加载器</p><br><ul><br><li>由用户自己实现。</li><br></ul></li><br></ul></li><br></ul><br><ol><br><li>如果不想打破双亲委派模型，那么只需要重写findClass方法即可。</li><br><li>否则就重写整个loadClass方法。</li><br></ol><br><ul><br><li><p>双亲委派模型</p><br><ul><br><li>双亲委派模型要求除了顶层的启动类加载器外，其余的类加载器都应该有自己的父类加载器。父子不会以继承的关系类实现，而是都是使用组合关系来服用父加载器的代码。<br><br>在java.lang.ClassLoader的loadClass()方法中实现。</li><br><li><p>工作过程</p><br><ul><br><li>一个类加载器首先将类加载请求转发到父类加载器，只有当父类加载器无法完成（它的搜索范围中没有找到所需要的类）时才尝试自己加载</li><br></ul></li><br><li><p>好处</p><br><ul><br><li>Java类随着它的类加载器一起具备了一种带有优先级的层次关系，从而使得基础类库得到同意。</li><br></ul></li><br></ul></li><br></ul><br><h2 id="四内存分配与回收策略">四、内存分配与回收策略</h2><br><h3 id="minor-gc-和-full-gc">Minor GC 和 Full GC</h3><br><ul><br><li><p>Minor GC</p><br><ul><br><li>发生在新生代的垃圾收集动作，因为新生代对象存活时间很短，因此Minor GC会频繁执行，执行速度快。</li><br><li><p>时机</p><br><ul><br><li>Eden不足</li><br></ul></li><br></ul></li><br><li><p>Full GC</p><br><ul><br><li>发生在老年区的GC，出现Full GC时往往伴随着Minor GC，比Minor GC慢10倍以上。</li><br><li><p>时机</p><br><ul><br><li><ol><br><li>调用System.gc()</li><br></ol><br><ul><br><li>只是建议虚拟机执行Full GC，但是虚拟机不一定真正去执行。<br><br>不建议使用这种方式，而是让虚拟机管理内存。</li><br></ul></li><br><li><ol><br><li>老年代空间不足</li><br></ol><br><ul><br><li>常见场景就是大对象和长期存活对象进入老年代。<br><br>尽量避免创建过大的对象以及数组，调大新生代大小，让对象尽量咋新生代中被回收，不进入老年代。</li><br></ul></li><br><li><ol><br><li>JDK1.7 之前方法区空间不足</li><br></ol><br><ul><br><li>当系统中要加载的类、反射的类和常量较多时，永久代可能会被占满，在未配置CMS GC的情况下也会执行Full GC，如果空间仍然不够则会抛出OOM异常。<br><br>可采用增大方法区空间或转为使用CMS GC。</li><br></ul></li><br><li><ol><br><li>空间分配担保失败</li><br></ol><br><ul><br><li>发生Minor GC时分配担保的两个判断失败</li><br></ul></li><br><li><ol><br><li>Concurrent Mode Failure</li><br></ol><br><ul><br><li>CMS GC 并发清理阶段用户线程还在执行，不断有新的浮动垃圾产生，当预留空间不足时报Concurrent Mode Failure错误并触发Full GC。</li><br></ul></li><br></ul></li><br></ul></li><br></ul><br><h3 id="内存分配策略">内存分配策略</h3><br><ul><br><li><ol><br><li>对象优先在Eden分配</li><br></ol><br><ul><br><li>大多数情况下，对象在新生代Eden上分配，当Eden空间不够时，发起Minor GC，当另外一个Survivor空间不足时则将存活对象通过分配担保机制提前转移到老年代。</li><br></ul></li><br><li><ol><br><li>大对象直接进入老年代</li><br></ol><br><ul><br><li>配置参数-XX:PretenureSizeThreshold，大于此值得对象直接在老年代分配，避免在Eden和Survivor之间的大量内存复制。</li><br></ul></li><br><li><ol><br><li>长期存活对象进入老年代</li><br></ol><br><ul><br><li>虚拟机为每个对象定义了一个Age计数器，对象在Eden出生并经过Minor GC存活转移到另一个Survivor空间中时Age++，增加到默认16则转移到老年代。</li><br></ul></li><br><li><ol><br><li>动态对象年龄绑定</li><br></ol><br><ul><br><li>虚拟机并不是永远要求对象的年龄必须到达MaxTenuringThreshold才能晋升老年代，如果在Survivor中相同年龄所有对象大小总和大于Survivor空间的一半，则年龄大于或等于该年龄的对象直接进入老年代。</li><br></ul></li><br><li><ol><br><li>空间分配担保</li><br></ol><br><ul><br><li>在发生Minor GC之前，虚拟机先检查老年代最大可用的连续空间是否大于新生代的所有对象，如果条件成立，那么Minor GC可以认为是安全的。<br><br>可以通过HandlePromotionFailure参数设置允许冒险，此时虚拟机将与历代晋升到老年区对象的平均大小比较，仍小于则要进行一次Full GC。<br><br>在JDK1.6.24之后HandlePromotionFailure已无作用，即虚拟机默认为true。</li><br></ul></li><br></ul>
-</ul></li>
-</ul>
-
-
-
+          JVM原理速记复习Java虚拟机总结思维导图面试必备
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/02/08/Principle-of-JVM/">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -479,7 +534,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-10 17:11:08" itemprop="dateModified" datetime="2020-02-10T17:11:08+08:00">2020-02-10</time>
+                <time title="Modified: 2020-02-17 18:21:40" itemprop="dateModified" datetime="2020-02-17T18:21:40+08:00">2020-02-17</time>
               </span>
             
           
@@ -509,16 +564,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Java-ArrayList底层实现原理源码详细分析Jdk8"><a href="#Java-ArrayList底层实现原理源码详细分析Jdk8" class="headerlink" title="Java ArrayList底层实现原理源码详细分析Jdk8"></a>Java ArrayList底层实现原理源码详细分析Jdk8</h1><p><li>ArrayList是基于数组实现的，是一个动态数组，其容量能自动增长，类似于C语言中的动态申请内存，动态增长内存。</li></p>
-<p><li><strong>ArrayList不是线程安全的</strong>，只能用在单线程环境下，多线程环境下可以考虑用Collections.synchronizedList(List l)函数返回一个线程安全的ArrayList类，也可以使用concurrent并发包下的CopyOnWriteArrayList类。</li></p>
-<p><li>ArrayList实现了Serializable接口，因此它支持序列化，能够通过序列化传输，实现了RandomAccess接口，支持快速随机访问，实际上就是通过下标序号进行快速访问，实现了Cloneable接口，能被克隆。</li><br></p>
-<h4 id="存储结构">存储结构</h4><br><pre class="java"><code>// 当前数据对象存放地方，当前对象不参与序列化<br>// 这个关键字最主要的作用就是当序列化时，被transient修饰的内容将不会被序列化<br>transient Object[] elementData;</code></pre><br><ul><br><li><p>Object类型数组。</p><br><h4 id="数据域">数据域</h4></li><br></ul><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 序列化ID</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">8683452581122892189L</span>;</span><br><span class="line">  <span class="comment">// 默认初始容量</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_CAPACITY = <span class="number">10</span>;</span><br><span class="line">  <span class="comment">// 一个空数组，方便使用，主要用于带参构造函数初始化和读取序列化对象等。</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object[] EMPTY_ELEMENTDATA = &#123;&#125;;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 和官方文档写的一样，DEFAULTCAPACITY_EMPTY_ELEMENTDATA 和EMPTY_ELEMENTDATA 的区别</span></span><br><span class="line"><span class="comment">   * 仅仅是为了区别用户带参为0的构造和默认构造的惰性初始模式对象。</span></span><br><span class="line"><span class="comment">   * 当用户带参为0的构造，第一次add时，数组容量grow到1。</span></span><br><span class="line"><span class="comment">   * 当用户使用默认构造时，第一次add时，容量直接grow到DEFAULT_CAPACITY（10）。</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当前数据对象存放地方，当前对象不参与序列化</span></span><br><span class="line">  <span class="comment">// 这个关键字最主要的作用就是当序列化时，被transient修饰的内容将不会被序列化</span></span><br><span class="line">  <span class="keyword">transient</span> Object[] elementData; <span class="comment">// non-private to simplify nested class access</span></span><br><span class="line">  <span class="comment">// 当前数组中元素的个数</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line">  <span class="comment">// 数组最大可分配容量</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MAX_ARRAY_SIZE = Integer.MAX_VALUE - <span class="number">8</span>;</span><br><span class="line">  <span class="comment">// 集合数组修改次数的标识（由AbstractList继承下来）（fail-fast机制）</span></span><br><span class="line">  <span class="keyword">protected</span> <span class="keyword">transient</span> <span class="keyword">int</span> modCount = <span class="number">0</span>;</span><br></pre></td></tr></table></figure><br><br><ul><br><li>ArrayList的无参构造函数。<strong>初始化的时候并没有真正的创建10个空间，这是惰性初始模式对象。</strong></li><br><li>DEFAULTCAPACITY_EMPTY_ELEMENTDATA 和EMPTY_ELEMENTDATA 的区别仅仅是为了区别用户带参为0的构造和默认构造的惰性初始模式对象。</li><br><li>modCount用来记录ArrayList结构发生变化的次数。用于<a href="#q1">Fail-Fast机制</a></li><br></ul><br><br><h4 id="构造函数">构造函数</h4>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ArrayList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 只有这个地方会引用DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span></span><br><span class="line">     <span class="keyword">this</span>.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="title">ArrayList</span><span class="params">(<span class="keyword">int</span> initialCapacity)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span> (initialCapacity &amp;gt; <span class="number">0</span>) &#123;</span><br><span class="line">         <span class="keyword">this</span>.elementData = <span class="keyword">new</span> Object[initialCapacity];</span><br><span class="line">     &#125; <span class="keyword">else</span> <span class="keyword">if</span> (initialCapacity == <span class="number">0</span>) &#123;</span><br><span class="line">         <span class="comment">// 使用 EMPTY_ELEMENTDATA，在其他的多个地方可能会引用EMPTY_ELEMENTDATA</span></span><br><span class="line">         <span class="keyword">this</span>.elementData = EMPTY_ELEMENTDATA;</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(&amp;quot;Illegal Capacity: &amp;quot;+</span><br><span class="line">                                            initialCapacity);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="title">ArrayList</span><span class="params">(Collection&amp;lt;? extends E&amp;gt; c)</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 把传入集合传化成[]数组并浅拷贝给elementData</span></span><br><span class="line">     elementData = c.toArray();</span><br><span class="line">     <span class="comment">// 转化后的数组长度赋给当前ArrayList的size,并判断是否为0</span></span><br><span class="line">     <span class="keyword">if</span> ((size = elementData.length) != <span class="number">0</span>) &#123;</span><br><span class="line">         <span class="comment">//c.toArray可能不会返回 Object[]，可以查看 java 官方编号为 6260652 的 bug</span></span><br><span class="line">         <span class="keyword">if</span> (elementData.getClass() != Object[].class)</span><br><span class="line">             <span class="comment">// 若 c.toArray() 返回的数组类型不是 Object[]，则利用 Arrays.copyOf(); 来构造一个大小为 size 的 Object[] 数组</span></span><br><span class="line">             <span class="comment">// 此时elementData是指向传入集合的内存，还需要创建新的内存区域深拷贝给elementData</span></span><br><span class="line">             elementData = Arrays.copyOf(elementData, size, Object[].class);</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         <span class="comment">// 传入数组size为零替换空数组</span></span><br><span class="line">         <span class="keyword">this</span>.elementData = EMPTY_ELEMENTDATA;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<ul><br><li>DEFAULTCAPACITY_EMPTY_ELEMENTDATA 和EMPTY_ELEMENTDATA 的区别仅仅是为了区别用户带参为0的构造和默认构造的惰性初始模式对象。</li><br><li>注意<strong>深拷贝和浅拷贝</strong>。</li><br><li><p>带参为0的构造会惰性初始化，不为0的构造则不会惰性初始化。</p><br><h4 id="add源码解析">add()源码解析</h4></li><br></ul><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 确保数组已使用长度（size）加1之后足够存下 下一个数据</span></span><br><span class="line">        ensureCapacityInternal(size + <span class="number">1</span>);  <span class="comment">// Increments modCount!!</span></span><br><span class="line">        <span class="comment">// 数组的下一个index存放传入元素。</span></span><br><span class="line">        elementData[size++] = e;</span><br><span class="line">        <span class="comment">// 始终返回true。</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureCapacityInternal</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        ensureExplicitCapacity(calculateCapacity(elementData, minCapacity));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calculateCapacity</span><span class="params">(Object[] elementData, <span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 这里就是DEFAULTCAPACITY_EMPTY_ELEMENTDATA 和</span></span><br><span class="line">        <span class="comment">// EMPTY_ELEMENTDATA 最主要的区别。</span></span><br><span class="line">        <span class="keyword">if</span> (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) &#123;</span><br><span class="line">            <span class="comment">// 默认构造第一次add返回10。</span></span><br><span class="line">            <span class="keyword">return</span> Math.max(DEFAULT_CAPACITY, minCapacity);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 带参为0构造第一次add返回 1 （0 + 1）。</span></span><br><span class="line">        <span class="keyword">return</span> minCapacity;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ensureExplicitCapacity</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 自增修改计数</span></span><br><span class="line">        modCount++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// overflow-conscious code</span></span><br><span class="line">        <span class="comment">// 当前数组容量小于需要的最小容量</span></span><br><span class="line">        <span class="keyword">if</span> (minCapacity - elementData.length &amp;gt; <span class="number">0</span>)</span><br><span class="line">            <span class="comment">// 准备扩容数组</span></span><br><span class="line">            grow(minCapacity);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">grow</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// overflow-conscious code</span></span><br><span class="line">        <span class="comment">// 获得当前数组容量</span></span><br><span class="line">        <span class="keyword">int</span> oldCapacity = elementData.length;</span><br><span class="line">        <span class="comment">// 新数组容量为1.5倍的旧数组容量</span></span><br><span class="line">        <span class="keyword">int</span> newCapacity = oldCapacity + (oldCapacity &amp;gt;&amp;gt; <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (newCapacity - minCapacity &amp;lt; <span class="number">0</span>)</span><br><span class="line">            <span class="comment">// 若 newCapacity 依旧小于 minCapacity</span></span><br><span class="line">            newCapacity = minCapacity;</span><br><span class="line">            <span class="comment">// 判断是需要的容量是否超过最大的数组容量。</span></span><br><span class="line">        <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &amp;gt; <span class="number">0</span>)</span><br><span class="line">            newCapacity = hugeCapacity(minCapacity);</span><br><span class="line">        <span class="comment">// minCapacity is usually close to size, so this is a win:</span></span><br><span class="line">        <span class="comment">// 在Arrays.copyOf()中会将原数组整个赋值到扩容的数组中。</span></span><br><span class="line">        elementData = Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><ul><br><li>扩容操作需要调用Arrays.copyOf()把原数组整个复制到新数组中，这个操作代价很高，因此最好在创建ArrayList对象时就指定大概的容量大小，减少扩容操作的次数。</li><br></ul><br><h4 id="addint-index-e-element源码分析">add(int index, E element)源码分析</h4><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一个本地方法，由C语言实现。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">arraycopy</span><span class="params">(Object src,  // 源数组</span></span></span><br><span class="line"><span class="function"><span class="params">                                    <span class="keyword">int</span>  srcPos, // 源数组要复制的起始位置</span></span></span><br><span class="line"><span class="function"><span class="params">                                    Object dest, // 目标数组（将原数组复制到目标数组）</span></span></span><br><span class="line"><span class="function"><span class="params">                                    <span class="keyword">int</span> destPos, // 目标数组起始位置（从目标数组的哪个下标开始复制操作）</span></span></span><br><span class="line"><span class="function"><span class="params">                                    <span class="keyword">int</span> length   // 复制源数组的长度</span></span></span><br><span class="line"><span class="function"><span class="params">                                    )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> index, E element)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 判断索引是否越界</span></span><br><span class="line">        rangeCheckForAdd(index);</span><br><span class="line">        <span class="comment">// 确保数组已使用长度（size）加1之后足够存下 下一个数据</span></span><br><span class="line">        ensureCapacityInternal(size + <span class="number">1</span>);  <span class="comment">// Increments modCount!!</span></span><br><span class="line">        <span class="comment">// 运行到这里代表数组容量满足。</span></span><br><span class="line">        <span class="comment">// 数组从传入形参index处开始复制，复制size-index个元素（即包括index在内后面的元素全部复制），</span></span><br><span class="line">        <span class="comment">// 从数组的index + 1处开始粘贴。</span></span><br><span class="line">        <span class="comment">// 这时，index 和 index + 1处元素数值相同。</span></span><br><span class="line">        System.arraycopy(elementData, index, elementData, index + <span class="number">1</span>,</span><br><span class="line">                         size - index);</span><br><span class="line">        <span class="comment">// 把index处的元素替换成新的元素。</span></span><br><span class="line">        elementData[index] = element;</span><br><span class="line">        <span class="comment">// 数组内元素长度加一。</span></span><br><span class="line">        size++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><ul><br><li>需要调用System.arraycopy()将包括index在内后面的元素都复制到index + 1位置上，该操作的时间复杂度为O(N)，可以看出ArrayList数组头增加元素的代价是非常高的。</li><br></ul><br><h4 id="removeint-index源码分析">remove(int index)源码分析</h4><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">remove</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 检查index</span></span><br><span class="line">        rangeCheck(index);</span><br><span class="line"></span><br><span class="line">        modCount++;</span><br><span class="line">        E oldValue = elementData(index);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> numMoved = size - index - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (numMoved &amp;gt; <span class="number">0</span>)</span><br><span class="line">            <span class="comment">// 和 add(int index, E element)原理想通。</span></span><br><span class="line">            System.arraycopy(elementData, index+<span class="number">1</span>, elementData, index,</span><br><span class="line">                             numMoved);</span><br><span class="line">        <span class="comment">// 引用计数为0，会自动进行垃圾回收。</span></span><br><span class="line">        elementData[--size] = <span class="keyword">null</span>; <span class="comment">// clear to let GC do its work</span></span><br><span class="line">        <span class="comment">// 返回旧元素</span></span><br><span class="line">        <span class="keyword">return</span> oldValue;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br><br><ul><br><li>需要调用System.arraycopy()将包括index + 1在内后面的元素都复制到index位置上，该操作的时间复杂度为O(N)，可以看出ArrayList数组头增加元素的代价是非常高的。</li><br></ul><br><h4 id="q1">Fail-Fast机制</h4><br><p>fail-fast 机制，即快速失败机制，是java集合(Collection)中的一种错误检测机制。当在迭代集合的过程中该集合在结构上发生改变的时候，就有可能会发生fail-fast，即抛出ConcurrentModificationException异常。fail-fast机制并不保证在不同步的修改下一定会抛出异常，它只是尽最大努力去抛出，所以这种机制一般仅用于检测bug。</p><br><ul><br><li>结构发生变化是指添加或者删除至少一个元素的所有操作，或者是调整内部数组大小，仅仅只是设置元素的值不算结构发生变化。</li><br><li>在进行序列化或者迭代操作时，需要比较操作前后modCount是否改变，如果改变了需要跑出ConcurrentModificationException</li><br></ul><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Itr</span> <span class="keyword">implements</span> <span class="title">Iterator</span>&amp;<span class="title">lt</span></span>;E&amp;gt; &#123;</span><br><span class="line">        <span class="keyword">int</span> cursor;</span><br><span class="line">        <span class="keyword">int</span> lastRet = -<span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 期待的修改值等于当前修改次数（modCount）</span></span><br><span class="line">        <span class="keyword">int</span> expectedModCount = modCount;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> cursor != size;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> E <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">// 检查 expectedModCount是否等于modCount，不相同则抛出ConcurrentModificationException</span></span><br><span class="line">            checkForComodification();</span><br><span class="line">            <span class="comment">/** 省略此处代码 */</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.lastRet &amp;lt; <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException();</span><br><span class="line">            checkForComodification();</span><br><span class="line">            <span class="comment">/** 省略此处代码 */</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">final</span> <span class="keyword">void</span> <span class="title">checkForComodification</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (ArrayList.<span class="keyword">this</span>.modCount == <span class="keyword">this</span>.expectedModCount)</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ConcurrentModificationException();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br><br><p>一个单线程环境下的fail-fast的例子</p><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       List&amp;lt;String&amp;gt; list = <span class="keyword">new</span> ArrayList&amp;lt;&amp;gt;();</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &amp;lt; <span class="number">10</span> ; i++ ) &#123;</span><br><span class="line">            list.add(i + &amp;quot;&amp;quot;);</span><br><span class="line">       &#125;</span><br><span class="line">       Iterator&amp;lt;String&amp;gt; iterator = list.iterator();</span><br><span class="line">       <span class="keyword">int</span> i = <span class="number">0</span> ;</span><br><span class="line">       <span class="keyword">while</span>(iterator.hasNext()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">3</span>) &#123;</span><br><span class="line">                 list.remove(<span class="number">3</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">            i ++;</span><br><span class="line">       &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><br><br><h4 id="序列化">序列化</h4><br><p>ArrayList 实现了 java.io.Serializable 接口，但是自己定义了序列化和反序列化。因为ArrayList基于数组实现，并且具有动态扩容特性，因此保存元素的数组不一定都会被使用，那么就没有<strong>必要全部进行序列化</strong>。因此 elementData 数组使用 transient 修饰，可以防止被自动序列化。</p><br><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">writeObject</span><span class="params">(java.io.ObjectOutputStream s)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> java.io.IOException</span>&#123;</span><br><span class="line">        <span class="comment">// Write out element count, and any hidden stuff</span></span><br><span class="line">        <span class="keyword">int</span> expectedModCount = modCount;</span><br><span class="line">        <span class="comment">// 将当前类的非静态(non-static)和非瞬态(non-transient)字段写入流</span></span><br><span class="line">        <span class="comment">// 在这里也会将size字段写入。</span></span><br><span class="line">        s.defaultWriteObject();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Write out size as capacity for behavioural compatibility with clone()</span></span><br><span class="line">        <span class="comment">// 序列化数组包含元素数量，为了向后兼容</span></span><br><span class="line">        <span class="comment">// 两次将size写入流</span></span><br><span class="line">        s.writeInt(size);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Write out all elements in the proper order.</span></span><br><span class="line">        <span class="comment">// 按照顺序写入，只写入到数组包含元素的结尾，并不会把数组的所有容量区域全部写入</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&amp;lt;size; i++) &#123;</span><br><span class="line">            s.writeObject(elementData[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 判断是否触发Fast-Fail</span></span><br><span class="line">        <span class="keyword">if</span> (modCount != expectedModCount) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ConcurrentModificationException();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">readObject</span><span class="params">(java.io.ObjectInputStream s)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> java.io.IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">// 设置数组引用空数组。</span></span><br><span class="line">        elementData = EMPTY_ELEMENTDATA;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Read in size, and any hidden stuff</span></span><br><span class="line">        <span class="comment">// 将流中的的非静态(non-static)和非瞬态(non-transient)字段读取到当前类</span></span><br><span class="line">        <span class="comment">// 包含 size</span></span><br><span class="line">        s.defaultReadObject();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Read in capacity</span></span><br><span class="line">        <span class="comment">// 读入元素个数，没什么用，只是因为写出的时候写了size属性，读的时候也要按顺序来读</span></span><br><span class="line">        s.readInt(); <span class="comment">// ignored</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (size &amp;gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// be like clone(), allocate array based upon size not capacity</span></span><br><span class="line">            <span class="comment">// 根据size计算容量。</span></span><br><span class="line">            <span class="keyword">int</span> capacity = calculateCapacity(elementData, size);</span><br><span class="line">            <span class="comment">// SharedSecrets 一个“共享机密”存储库，它是一种机制，</span></span><br><span class="line">            <span class="comment">// 用于调用另一个包中的实现专用方法，而不使用反射。TODO</span></span><br><span class="line">            SharedSecrets.getJavaOISAccess().checkArray(s, Object[].class, capacity);</span><br><span class="line">            <span class="comment">// 检查是否需要扩容</span></span><br><span class="line">            ensureCapacityInternal(size);</span><br><span class="line"></span><br><span class="line">            Object[] a = elementData;</span><br><span class="line">            <span class="comment">// Read in all elements in the proper order.</span></span><br><span class="line">            <span class="comment">// 依次读取元素到数组中</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&amp;lt;size; i++) &#123;</span><br><span class="line">                a[i] = s.readObject();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br><br><p>ArrayList中为什么size要序列化两次？</p><br><blockquote><br><p>在代码中s.defaultWriteObject();中size应该也被序列化了，为什么下边还要再单独序列化一次呢？<br><br>这样写是出于兼容性考虑。<br><br>旧版本的JDK中，ArrayList的实现有所不同，会对length字段进行序列化。<br><br>而新版的JDK中，对优化了ArrayList的实现，不再序列化length字段。<br><br>这个时候，如果去掉s.writeInt(size)，那么新版本JDK序列化的对象，在旧版本中就无法正确读取，<br><br>因为缺少了length字段。<br><br>因此这种写法看起来多此一举，实际上却保证了兼容性。</p><br></blockquote><br><br>### 小结<br><ul><br><li>ArrayList基于数组方式实现，无容量的限制（会扩容）</li><br><li>添加元素时可能要扩容（所以最好预判一下），删除元素时不会减少容量（若希望减少容量可以使用trimToSize()），删除元素时，将删除掉的位置元素置为null，下次gc就会回收这些元素所占的内存空间。</li><br><li>线程不安全</li><br><li>add(int index, E element)：添加元素到数组中指定位置的时候，需要将该位置及其后边所有的元素都整块向后复制一位</li><br><li>get(int index)：获取指定位置上的元素时，可以通过索引直接获取（O(1)）</li><br><li>remove(Object o)需要遍历数组</li><br><li>remove(int index)不需要遍历数组，只需判断index是否符合条件即可，效率比remove(Object o)高</li><br><li>contains(E)需要遍历数组</li><br></ul>
-
-<p><a href="https://www.cnblogs.com/renjiaqi/p/10403725.html" target="_blank" rel="noopener">面试必会之ArrayList源码分析&amp;手写ArrayList</a></p>
-
+          Java ArrayList底层实现原理源码详细分析Jdk8
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/02/08/Everything-about-ArrayList/">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -582,7 +637,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-06 17:44:47" itemprop="dateModified" datetime="2020-02-06T17:44:47+08:00">2020-02-06</time>
+                <time title="Modified: 2020-02-17 18:18:40" itemprop="dateModified" datetime="2020-02-17T18:18:40+08:00">2020-02-17</time>
               </span>
             
           
@@ -612,15 +667,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p></p><p>本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论。</p><p></p>
-<p></p><p>文章主要内容分为三个部分。</p><p></p>
-<p></p><p>第一部分主要从数据结构及算法理论层面讨论MySQL数据库索引的数理基础。</p><p></p>
-<p></p><p>第二部分结合MySQL数据库中MyISAM和InnoDB数据存储引擎中索引的架构实现讨论聚集索引、非聚集索引及覆盖索引等话题。</p><p></p>
-<p></p><p>第三部分根据上面的理论基础，讨论MySQL中高性能使用索引的策略。<br>
+          本文以MySQL数据库为研究对象，讨论与数据库索引相关的一些话题。特别需要说明的是，MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，哈希索引，全文索引等等。为了避免混乱，本文将只关注于BTree索引，因为这是平常使用MySQL时主要打交道的索引，至于哈希索引和全文索引本文暂不讨论
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/#more" rel="contents">
+              <a class="btn" href="/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/">
                 Read more &raquo;
               </a>
             </div>
@@ -678,11 +729,19 @@
                 
               
 
-              <time title="Created: 2020-02-05 16:41:49 / Modified: 23:13:35" itemprop="dateCreated datePublished" datetime="2020-02-05T16:41:49+08:00">2020-02-05</time>
+              <time title="Created: 2020-02-05 16:41:49" itemprop="dateCreated datePublished" datetime="2020-02-05T16:41:49+08:00">2020-02-05</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-17 18:19:15" itemprop="dateModified" datetime="2020-02-17T18:19:15+08:00">2020-02-17</time>
+              </span>
             
           
 
@@ -711,76 +770,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>对于操作系统而言，进程是整个现代操作系统的根本，操作系統是以进程为单位执行任务。随着技术发展，在执行一些细小任务，且本身无需分配单独资源时，进程的实现机制依然会繁琐的将资源分割，这样造成浪费，而且还消耗时间，所以就有了专门的多任务技术被创造出来——线程。 线程的特点就是在不需要独立资源的情况下就可以运行。如此一来会极大节省资源开销，以及处理时间。</p>
-<p>进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。</p>
-<p>我们有如下对比图片：</p>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Process   进程</th>
-<th style="text-align:right">Thread线程</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>引入目的</td>
-<td style="text-align:center">可以并发执行，提高资源的利用率和系统吞吐量</td>
-<td style="text-align:right">调高并发执行的速度，进一步提高资源的利用率和系统吞吐量</td>
-</tr>
-<tr>
-<td>并发性</td>
-<td style="text-align:center">较低</td>
-<td style="text-align:right">较高</td>
-</tr>
-<tr>
-<td>基本属性（调度）</td>
-<td style="text-align:center">资源拥有的基本单位是进程，独立调度/分配的基本单位是进程</td>
-<td style="text-align:right">资源拥有的基本单位是进程，独立调度/分配的基本单位是线程</td>
-</tr>
-<tr>
-<td>基本状态</td>
-<td style="text-align:center">就绪；执行；等待</td>
-<td style="text-align:right">就绪；执行；等待</td>
-</tr>
-<tr>
-<td>系统开销</td>
-<td style="text-align:center">创建/撤销/切换时开销较大</td>
-<td style="text-align:right">创建/撤销/切换时开销较小</td>
-</tr>
-<tr>
-<td>系统操作</td>
-<td style="text-align:center">创建；撤销；切换</td>
-<td style="text-align:right">创建；撤销；切换</td>
-</tr>
-<tr>
-<td>存在状态</td>
-<td style="text-align:center">进程控制块PCB</td>
-<td style="text-align:right">进程控制块PCB，进程控制块TCB</td>
-</tr>
-</tbody>
-</table>
-<h4 id="但是对于-Linux-来说，它只支持轻量级进程，不支持线程，对于-Linux-而言："><a href="#但是对于-Linux-来说，它只支持轻量级进程，不支持线程，对于-Linux-而言：" class="headerlink" title="但是对于 Linux 来说，它只支持轻量级进程，不支持线程，对于 Linux 而言："></a>但是对于 Linux 来说，它只支持轻量级进程，不支持线程，对于 Linux 而言：</h4><ul>
-<li>系统启动后的 第一个进程是 init，它的 PID 是 1。init 是唯一一个由系统内核直接运行的进程。</li>
-<li>除了 init 之外，每个进程都有 父进程（PPID 标识）</li>
-<li>每个进程还有四个 与用户和组相关的识别号<br>1.实际用户识别号 （real user ID，RUID）<br>2.实际组识别号 （real group ID，RGID）<br>3.有效用户识别号 （effect user ID，EUID）<br>4.有效组识别号 （effect group ID，EGID</li>
-</ul>
-<p>######在 Linux 内核 2.4 版以前，线程的实现和管理方式就是完全按照进程方式实现的。在 2.6 版内核以后才有了单独的线程实现,为了弥补不支持线程的缺陷，Linux 引入线程组的概念，即该组中第一个轻量级进程的 PID，它被存入进程描述符的 tgid 字段中。<code>getpid()</code>系统调用返回当前进程的 tgid 值而不是 pid 值，因此，一个多线程应用的所有线程共享相同的 PID。</p>
-<ul>
-<li><code>fork()</code>系统调用是Unix下以自身进程创建子进程的系统调用，一次调用，两次返回，如果返回是0，则是子进程，如果返回值&gt;0，则是父进程（返回值是子进程的pid）,如果fork出错，返回一个负值.</li>
-<li>在<code>fork()</code>的调用处，整个父进程空间会原模原样地复制到子进程中，包括指令，变量值，程序调用栈，环境变量，缓冲区，等等。</li>
-<li><code>fork()</code>函数会把它所在语句以后的语句复制到一个子进程里，单独执行。</li>
-<li><p>如果<code>printf</code>函数最后没有<code>&quot;\n&quot;</code>，则输出缓冲区不会被立即清空，而fork函数会把输出缓冲区里的内容也都复制到子进程里</p>
-</li>
-<li><p>进程的执行过程是线状的，尽管中间会发生中断或暂停，但该进程所拥有的资源只为该线状执行过程服务。一旦发生进程上下文切换，这些资源都是要被保护起来的。</p>
-</li>
-<li>线程的改变只代表了 CPU 执行过程的改变，而没有发生进程所拥有的资源变化。</li>
-<li>计算机内的软硬件资源的分配与线程无关，线程只能共享它所属进程的资源。</li>
-<li>进程拥有一个完整的虚拟地址空间，不依赖于线程而独立存在；反之，线程是进程的一部分，没有自己的地址空间，与进程内的其他线程一起共享分配给该进程的所有资源。</li>
-<li>线程中执行时一般都要进行同步和互斥，因为他们共享同一进程的所有资源。</li>
-</ul>
-<p><strong>文章来源:</strong><br><a href="https://zhuanlan.zhihu.com/p/60558136" target="_blank" rel="noopener">进程和线程有哪些区别与联系？力扣（LeetCode）</a></p>
-
+          进程和线程有哪些区别与联系
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/02/05/The-Difference-between-Process-and-Thread/">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -844,7 +843,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-17 17:57:42" itemprop="dateModified" datetime="2020-02-17T17:57:42+08:00">2020-02-17</time>
+                <time title="Modified: 2020-02-17 18:22:18" itemprop="dateModified" datetime="2020-02-17T18:22:18+08:00">2020-02-17</time>
               </span>
             
           
@@ -874,133 +873,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-为什么用HashMap？"><a href="#1-为什么用HashMap？" class="headerlink" title="1.为什么用HashMap？"></a>1.为什么用HashMap？</h2><ul>
-<li>HashMap是一个散列桶（数组和链表），它存储的内容是键值对(key-value)映射。</li>
-<li>HashMap采用了数组和链表的数据结构，能在查询和修改方便继承了数组的线性查找和链表的寻址修改。数组是用来确定桶的位置，利用元素的key的hash值对数组长度取模得到. 链表是用来解决hash冲突问题，当出现hash值一样的情形，就在数组上的对应位置形成一条链表。</li>
-<li>用LinkedList代替数组结构可以么?</li>
-</ul>
-<p>当然是可以的，稍微说明一下，此题的意思是，源码中是这样的</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Entry[] table = <span class="keyword">new</span> Entry[capacity];</span><br><span class="line"></span><br><span class="line">Entry就是一个链表节点。 那下面这样表示，是否可行?</span><br><span class="line"></span><br><span class="line">List&lt;Entry&gt; table = <span class="keyword">new</span> LinkedList&lt;Entry&gt;();</span><br></pre></td></tr></table></figure>
-<p>答案很明显，是可以的。</p>
-<p>既然是可以的,为什么HashMap不用LinkedList,而选用数组?<br>因为用数组效率最高！在HashMap中，定位桶的位置是利用元素的key的哈希值对数组长度取模得到。此时，我们已得到桶的位置。显然数组的查找效率比LinkedList大。</p>
-<ul>
-<li>那ArrayList，底层也是数组，查找也快啊，为啥不用ArrayList?<br>因为采用基本数组结构，扩容机制可以自己定义，HashMap中数组扩容刚好是2的次幂，在做取模运算的效率高。 而ArrayList的扩容机制是1.5倍扩容，那ArrayList为什么是1.5倍扩容这就不在本文说明了。</li>
-<li>HashMap是非synchronized，所以HashMap很快。</li>
-<li>HashMap可以接受null键和值，而Hashtable则不能（原因就是<code>equlas()</code>方法需要对象，因为HashMap是后出的API经过处理才可以）</li>
-<li>当链表转为红黑树后，什么时候退化为链表?<br>为6的时候退转为链表。中间有个差值7可以防止链表和树之间频繁的转换。假设一下，如果设计成链表个数超过8则链表转换成树结构，链表个数小于8则树结构转换成链表，如果一个HashMap不停的插入、删除元素，链表个数在8左右徘徊，就会频繁的发生树转链表、链表转树，效率会很低。</li>
-</ul>
-<h2 id="2-HashMap的工作原理是什么？"><a href="#2-HashMap的工作原理是什么？" class="headerlink" title="2.HashMap的工作原理是什么？"></a>2.HashMap的工作原理是什么？</h2><p>HashMap是基于hashing的原理，我们使用put(key, value)存储对象到HashMap中，使用get(key)从HashMap中获取对象。当我们给put()方法传递键和值时，我们先对键调用hashCode()方法，计算并返回的hashCode是用于找到Map数组的bucket位置来储存Node 对象。这里关键点在于指出，HashMap是在bucket中储存键对象和值对象，作为Map.Node。
-　　</p>
-<ul>
-<li><p>以下是HashMap初始化 ，简单模拟数据结构</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Node[] table=<span class="keyword">new</span> Node[<span class="number">16</span>]  散列桶初始化，table</span><br><span class="line"></span><br><span class="line">　　 <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　hash;<span class="comment">//hash值</span></span><br><span class="line"></span><br><span class="line">     key;<span class="comment">//键</span></span><br><span class="line"></span><br><span class="line">　　　　value;<span class="comment">//值</span></span><br><span class="line"></span><br><span class="line">　　　　node next;<span class="comment">//用于指向链表的下一层（产生冲突，用拉链法）</span></span><br><span class="line"></span><br><span class="line">　　 &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>以下是具体的put过程（JDK1.8版）</p>
-<pre><code>1.对Key求Hash值，然后再计算下标
-2.如果没有碰撞，直接放入桶中（碰撞的意思是计算得到的Hash值相同，需要放到同一个bucket中）
-3.如果碰撞了，以链表的方式链接到后面
-4.如果链表长度超过阀值( TREEIFY THRESHOLD==8)，就把链表转成红黑树，链表长度低于6，就把红黑树转回链表
-5.如果节点已经存在就替换旧值
-6.如果桶满了(容量16*加载因子0.75)，就需要 resize（扩容2倍后重排）
-</code></pre></li>
-</ul>
-<p><strong>扩容后，元素要么是在原位置，要么是在原位置再移动2次幂的位置，且链表顺序不变。</strong></p>
-<ul>
-<li>以下是具体get过程(考虑特殊情况如果两个键的hashcode相同，你如何获取值对象？)<br>当我们调用get()方法，HashMap会使用键对象的hashcode找到bucket位置，找到bucket位置之后，会调用keys.equals()方法去找到链表中正确的节点，最终找到要找的值对象。</li>
-</ul>
-<p>　　</p>
-<h2 id="3-有什么方法可以减少碰撞？"><a href="#3-有什么方法可以减少碰撞？" class="headerlink" title="3.有什么方法可以减少碰撞？"></a>3.有什么方法可以减少碰撞？</h2><ul>
-<li>扰动函数可以减少碰撞，原理是如果两个不相等的对象返回不同的hashcode的话，那么碰撞的几率就会小些，这就意味着存链表结构减小，这样取值的话就不会频繁调用equal方法，这样就能提高HashMap的性能。（扰动即Hash方法内部的算法实现，目的是让不同对象返回不同hashcode。）</li>
-<li>使用不可变的、声明作final的对象，并且采用合适的equals()和hashCode()方法的话，将会减少碰撞的发生。不可变性使得能够缓存不同键的hashcode，这将提高整个获取对象的速度，使用String，Interger这样的wrapper类作为键是非常好的选择。为什么String, Interger这样的wrapper类适合作为键？因为String是final的，而且已经重写了equals()和hashCode()方法了。不可变性是必要的，因为为了要计算hashCode()，就要防止键值改变，如果键值在放入时和获取时返回不同的hashcode的话，那么就不能从HashMap中找到你想要的对象。</li>
-</ul>
-<h2 id="4-HashMap中hash函数怎么是是实现的"><a href="#4-HashMap中hash函数怎么是是实现的" class="headerlink" title="4.HashMap中hash函数怎么是是实现的?"></a>4.HashMap中hash函数怎么是是实现的?</h2><p>　　我们可以看到在hashmap中要找到某个元素，需要根据key的hash值来求得对应数组中的位置。如何计算这个位置就是hash算法。前面说过hashmap的数据结构是数组和链表的结合，所以我们当然希望这个hashmap里面的元素位置尽量的分布均匀些，尽量使得每个位置上的元素数量只有一个，那么当我们用hash算法求得这个位置的时候，马上就可以知道对应位置的元素就是我们要的，而不用再去遍历链表。 所以我们首先想到的就是把hashcode对数组长度取模运算，这样一来，元素的分布相对来说是比较均匀的。但是，“模”运算的消耗还是比较大的，能不能找一种更快速，消耗更小的方式，我们来看看JDK1.8的源码是怎么做的.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">hash</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (key == <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="keyword">int</span> h;</span><br><span class="line">     h=key.hashCode()；返回散列值也就是hashcode</span><br><span class="line">      <span class="comment">// ^ ：按位异或</span></span><br><span class="line">      <span class="comment">// &gt;&gt;&gt;:无符号右移，忽略符号位，空位都以0补齐</span></span><br><span class="line">      <span class="comment">//其中n是数组的长度，即Map的数组部分初始化长度</span></span><br><span class="line">     <span class="keyword">return</span>  (n-<span class="number">1</span>)&amp;(h ^ (h &gt;&gt;&gt; <span class="number">16</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>高16位异或低16位以后，进行取模运算</strong><br>1.高16bit不变，低16bit和高16bit做了一个异或(得到的HashCode转化为32位的二进制，前16位和后16位低16bit和高16bit做了一个异或)<br>2.(n·1)&amp;hash=-&gt;得到下标</p>
-<ul>
-<li>为什么扩容是2的次幂?</li>
-</ul>
-<p>HashMap为了存取高效，要尽量较少碰撞，就是要尽量把数据分配均匀，每个链表长度大致相同，这个实现就在把数据存到哪个链表中的算法<br>这个算法实际就是取模，hash%length。 但是，大家都知道这种运算不如位移运算快。<br>因此，源码中做了优化hash&amp;(length-1)。 也就是说hash%length==hash&amp;(length-1)</p>
-<h2 id="5-拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？"><a href="#5-拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？" class="headerlink" title="5.拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？"></a>5.拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？</h2><p>之所以选择红黑树是为了解决二叉查找树的缺陷，二叉查找树在特殊情况下会变成一条线性结构（这就跟原来使用链表结构一样了，造成很深的问题），遍历查找会非常慢。而红黑树在插入新数据后可能需要通过左旋，右旋、变色这些操作来保持平衡，引入红黑树就是为了查找数据快，解决链表查询深度的问题，我们知道红黑树属于平衡二叉树，但是为了保持“平衡”是需要付出代价的，但是该代价所损耗的资源要比遍历线性链表要少，所以当长度大于8的时候，会使用红黑树，如果链表长度很短的话，根本不需要引入红黑树，引入反而会慢。</p>
-<h2 id="6-对红黑树的见解？"><a href="#6-对红黑树的见解？" class="headerlink" title="6.对红黑树的见解？"></a>6.对红黑树的见解？</h2><ul>
-<li>节点是红色或黑色。</li>
-<li>根节点是黑色。</li>
-<li>每个红色节点的两个子节点都是黑色。(从每个叶子到根的所有路径上不能有两个连续的红色节点)</li>
-<li><strong>从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点。</strong></li>
-</ul>
-<h2 id="7-解决hash-碰撞还有那些办法？"><a href="#7-解决hash-碰撞还有那些办法？" class="headerlink" title="7.解决hash 碰撞还有那些办法？"></a>7.解决hash 碰撞还有那些办法？</h2><p><strong>比较出名的有四种 (1)开放定址法 (2)链地址法 (3)再哈希法 (4)公共溢出区域法</strong></p>
-<ul>
-<li>开放定址法<br>开放定址法就是一旦发生了冲突，就去寻找下一个空的散列地址，只要散列表足够大，空的散列地址总能找到，并将记录存入。</li>
-<li>链地址法<br>将哈希表的每个单元作为链表的头结点，所有哈希地址为i的元素构成一个同义词链表。即发生冲突时就把该关键字链在以该单元为头结点的链表的尾部。</li>
-<li>再哈希法<br>当哈希地址发生冲突用其他的函数计算另一个哈希函数地址，直到冲突不再产生为止。</li>
-<li>建立公共溢出区<br>将哈希表分为基本表和溢出表两部分，发生冲突的元素都放入溢出表中。</li>
-</ul>
-<p><strong>下面给一个线性探查法的例子</strong>　</p>
-<p><strong>问题：已知一组关键字为(26，36，41，38，44，15，68，12，06，51)，用除余法构造散列函数，用线性探查法解决冲突构造这组关键字的散列表</strong></p>
-<p> <strong>解答：为了减少冲突，通常令装填因子α由除余法因子是13的散列函数计算出的上述关键字序列的散列地址为(0，10，2，12，5，2，3，12，6，12)。</strong></p>
-<ul>
-<li>前5个关键字插入时，其相应的地址均为开放地址，故将它们直接插入T[0]，T[10)，T[2]，T[12]和T[5]中。</li>
-<li>当插入第6个关键字15时，其散列地址2(即h(15)=15％13=2)已被关键字41(15和41互为同义词)占用。故探查h1=(2+1)％13=3，此地址开放，所以将15放入T[3]中。</li>
-<li>当插入第7个关键字68时，其散列地址3已被非同义词15先占用，故将其插入到T[4]中。</li>
-<li>当插入第8个关键字12时，散列地址12已被同义词38占用，故探查hl=(12+1)％13=0，而T[0]亦被26占用，再探查h2=(12+2)％13=1，此地址开放，可将12插入其中。</li>
-<li>类似地，第9个关键字06直接插入T[6]中；而最后一个关键字51插人时，因探查的地址12，0，1，…，6均非空，故51插入T[7]中。</li>
-</ul>
-<h2 id="8-如果HashMap的大小超过了负载因子-load-factor-定义的容量，怎么办？"><a href="#8-如果HashMap的大小超过了负载因子-load-factor-定义的容量，怎么办？" class="headerlink" title="8.如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？"></a>8.如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？</h2><p>　　默认的负载因子大小为0.75，也就是说，当一个map填满了75%的bucket时候，和其它集合类(如ArrayList等)一样，将会创建原来HashMap大小的两倍的bucket数组，来重新调整map的大小，并将原来的对象放入新的bucket数组中。这个过程叫作rehashing，因为它调用hash方法找到新的bucket位置。这个值只可能在两个地方，一个是原下标的位置，另一种是在下标为&lt;原下标+原容量&gt;的位置　　</p>
-<h2 id="9-重新调整HashMap大小存在什么问题吗？"><a href="#9-重新调整HashMap大小存在什么问题吗？" class="headerlink" title="9.重新调整HashMap大小存在什么问题吗？"></a>9.重新调整HashMap大小存在什么问题吗？</h2><ul>
-<li>当重新调整HashMap大小的时候，确实存在条件竞争，因为如果两个线程都发现HashMap需要重新调整大小了，它们会同时试着调整大小。在调整大小的过程中，存储在链表中的元素的次序会反过来，因为移动到新的bucket位置的时候，HashMap并不会将元素放在链表的尾部，而是放在头部，这是为了避免尾部遍历(tail traversing)。因为直接插入的效率更高。如果条件竞争发生了，那么就死循环了。(多线程的环境下不使用HashMap）。</li>
-<li>为什么多线程会导致死循环，它是怎么发生的？<br>HashMap的容量是有限的。当经过多次元素插入，使得HashMap达到一定饱和度时，Key映射位置发生冲突的几率会逐渐提高。这时候，HashMap需要扩展它的长度，也就是进行Resize。1.扩容：创建一个新的Entry空数组，长度是原数组的2倍。2.ReHash：遍历原Entry数组，把所有的Entry重新Hash到新数组。</li>
-</ul>
-<h2 id="10-HashTable"><a href="#10-HashTable" class="headerlink" title="10.HashTable"></a>10.HashTable</h2><p>数组 + 链表方式存储<br>默认容量： 11(质数为宜)</p>
-<h4 id="Put"><a href="#Put" class="headerlink" title="Put:"></a><code>Put:</code></h4><ul>
-<li>对key的hashCode()做hash运算，计算index; 如果没碰撞直接放到bucket里； 如果碰撞了，以链表的形式存在buckets后； 如果碰撞导致链表过长(大于等于TREEIFY_THRESHOLD)，就把链表转换成红黑树(JDK1.8中的改动)； 如果节点已经存在就替换old value(保证key的唯一性) 如果bucket满了(超过load factor*current capacity)，就要resize。</li>
-<li>索引计算 : （key.hashCode() &amp; 0x7FFFFFFF）% table.length</li>
-<li>若在链表中找到了，则替换旧值，若未找到则继续</li>
-<li>当总元素个数超过容量*加载因子时，扩容为原来 2 倍并重新散列。</li>
-<li>将新元素加到链表头部,对修改 Hashtable 内部共享数据的方法添加了 synchronized，保证线程安全。<h4 id="Get"><a href="#Get" class="headerlink" title="Get:"></a><code>Get:</code></h4>对key的hashCode()做hash运算，计算index; 如果在bucket里的第一个节点里直接命中，则直接返回； 如果有冲突，则通过key.equals(k)去查找对应的Entry;<br>• 若为树，则在树中通过key.equals(k)查找，O(logn)；<br>• 若为链表，则在链表中通过key.equals(k)查找，O(n)。</li>
-</ul>
-<h2 id="11-HashMap-，HashTable-区别"><a href="#11-HashMap-，HashTable-区别" class="headerlink" title="11.HashMap ，HashTable 区别"></a>11.HashMap ，HashTable 区别</h2><ul>
-<li>默认容量不同。扩容不同</li>
-<li>线程安全性，HashTable 安全  </li>
-<li>效率不同 HashTable 要慢因为加锁</li>
-</ul>
-<h2 id="12-可以使用CocurrentHashMap来代替Hashtable吗？"><a href="#12-可以使用CocurrentHashMap来代替Hashtable吗？" class="headerlink" title="12.可以使用CocurrentHashMap来代替Hashtable吗？"></a>12.可以使用CocurrentHashMap来代替Hashtable吗？</h2><p>我们知道Hashtable是synchronized的，但是ConcurrentHashMap同步性能更好，因为它仅仅根据同步级别对map的一部分进行上锁。ConcurrentHashMap当然可以代替HashTable，但是HashTable提供更强的线程安全性。它们都可以用于多线程的环境，但是当Hashtable的大小增加到一定的时候，性能会急剧下降，因为迭代时需要被锁定很长的时间。因为ConcurrentHashMap引入了分割(segmentation)，不论它变得多么大，仅仅需要锁定map的某个部分，而其它的线程不需要等到迭代完成才能访问map。简而言之，在迭代的过程中，ConcurrentHashMap仅仅锁定map的某个部分，而Hashtable则会锁定整个map。</p>
-<h2 id="13-CocurrentHashMap（1-8）"><a href="#13-CocurrentHashMap（1-8）" class="headerlink" title="13.CocurrentHashMap（1.8）"></a>13.CocurrentHashMap（1.8）</h2><ul>
-<li>其中抛弃了原有的 Segment 分段锁，而采用了<code>CAS + synchronized</code>来保证并发安全性。</li>
-<li>其中的 val next 都用了 <code>volatile</code>修饰，保证了可见性</li>
-<li>最大特点是引入了 CAS（借助 Unsafe 来实现【native code】）<br>CAS有3个操作数，内存值V，旧的预期值A，要修改的新值B。当且仅当预期值A和内存值V相同时，将内存值V修改为B，否则什么都不做。</li>
-<li><p>CAS 会出现的问题：ABA<br>解决：对变量增加一个版本号，每次修改，版本号加 1，比较的时候比较版本号。<br>####<code>Put过程</code></p>
-</li>
-<li><p>根据 key 计算出 hashcode 。判断是否需要进行初始化。</p>
-</li>
-<li>通过 key 定位出的 Node，如果为空表示当前位置可以写入数据，利用 CAS 尝试写入，失败则自旋保证成功。</li>
-<li>如果当前位置的 hashcode == MOVED == -1,则需要进行扩容。</li>
-<li>如果都不满足，则利用 synchronized 锁写入数据。</li>
-<li><p>如果数量大于 TREEIFY_THRESHOLD 则要转换为红黑树。</p>
-<h4 id="Get过程"><a href="#Get过程" class="headerlink" title="Get过程"></a><code>Get过程</code></h4></li>
-<li><p>根据计算出来的 hashcode 寻址，如果就在桶上那么直接返回值。</p>
-</li>
-<li>如果是红黑树那就按照树的方式获取值。</li>
-<li>都不满足那就按照链表的方式遍历获取值。</li>
-</ul>
-<h2 id="14-TreeMap"><a href="#14-TreeMap" class="headerlink" title="14.TreeMap"></a>14.TreeMap</h2><p>TreeMap 则是基于红黑树的一种提供顺序访问的 Map，和HashMap不同，它的get、put、remove之类操作都是O(logn)的复杂度，具体顺序可以由指定的Comparator来决定，或者根据键的自然顺序来判断</p>
-<h2 id="15-hash算法是干嘛的？还知道哪些hash算法？"><a href="#15-hash算法是干嘛的？还知道哪些hash算法？" class="headerlink" title="15.hash算法是干嘛的？还知道哪些hash算法？"></a>15.hash算法是干嘛的？还知道哪些hash算法？</h2><p>Hash函数是指把一个大范围映射到一个小范围。把大范围映射到一个小范围的目的往往是为了节省空间，使得数据容易保存。<br>比较出名的算法有SHA,MD4、MD5等</p>
-<p>说说String中hashcode的实现?<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> h = hash;</span><br><span class="line">    <span class="keyword">if</span> (h == <span class="number">0</span> &amp;&amp; value.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">char</span> val[] = value;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; value.length; i++) &#123;</span><br><span class="line">            h = <span class="number">31</span> * h + val[i];</span><br><span class="line">        &#125;</span><br><span class="line">        hash = h;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>String类中的hashCode计算方法还是比较简单的，就是以31为权，每一位为字符的ASCII值进行运算，用自然溢出来等效取模。</li>
-<li>哈希计算公式可以计为<figure class="highlight plain"><figcaption><span>+ s[1]*31^(n-2) + ... + s[n-1]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 那为什么以31为质数呢?</span><br><span class="line">主要是因为31是一个奇质数，所以```31*i=32*i-i=(i&lt;&lt;5)-i```，这种位移与减法结合的计算相比一般的运算快很多。</span><br><span class="line"></span><br><span class="line">## 16.健可以为Null值么?</span><br><span class="line"></span><br><span class="line">可以，key为null的时候，hash算法最后的值以0来计算，也就是放在数组的第一个位置。</span><br><span class="line"></span><br><span class="line">## 17.一般用什么作为HashMap的key?</span><br><span class="line"></span><br><span class="line">一般用Integer、String这种不可变类当HashMap当key，而且String最为常用。</span><br><span class="line">• (1) 因为字符串是不可变的，所以在它创建的时候hashcode就被缓存了，不需要重新计算。这就使得字符串很适合作为Map中的键，字符串的处理速度要快过其它的键对象。这就是HashMap中的键往往都使用字符串。</span><br><span class="line">• (2) 因为获取对象的时候要用到equals()和hashCode()方法，那么键对象正确的重写这两个方法是非常重要的,这些类已经很规范的覆写了hashCode()以及equals()方法。</span><br><span class="line"></span><br><span class="line">## Hashcode</span><br><span class="line">* 一、hashCode简介</span><br><span class="line">public int hashCode()：``hashCode``是根类Obeject中的方法。默认情况下，Object中的``hashCode() ``返回对象的32位jvm内存地址。也就是说如果对象不重写该方法，则返回相应对象的32为JVM内存地址。</span><br><span class="line">* 二、hashCode注意点</span><br><span class="line">关于hashCode方法，一致的约定是：</span><br><span class="line">1、重写了``euqls``方法的对象必须同时重写``hashCode()``方法。</span><br><span class="line">2、如果两个对象equals相等，那么这两个对象的HashCode一定也相同</span><br><span class="line">3、如果两个对象的HashCode相同，不代表两个对象就相同，只能说明这两个对象在散列存储结构中，存放于同一个位置</span><br><span class="line">* 三、hashCode作用</span><br><span class="line">从Object角度看，JVM每new一个Object，它都会将这个Object丢到一个Hash表中去，这样的话，下次做Object的比较或者取这个对象的时候（读取过程），它会根据对象的HashCode再从Hash表中取这个对象。这样做的目的是提高取对象的效率。若HashCode相同再去调用equal。</span><br><span class="line">HashCode是用于查找使用的，而equals是用于比较两个对象的是否相等的。</span><br><span class="line">* 四、为什么重写</span><br><span class="line">实际开发的过程中在hashmap或者hashset里如果不重写的hashcode和equals方法的话会导致我们存对象的时候，把对象存进去了，取的时候却取不到想要的对象。</span><br><span class="line">重写了hashcode和equals方法可以迅速的在hashmap中找到键的位置；</span><br><span class="line">1、重写hashcode是为了保证相同的对象会有相同的hashcode；</span><br><span class="line">2、重写equals是为了保证在发生冲突的情况下取得到Entry对象（也可以理解是key或是元素）；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">存在一个table数组，里面每个元素都是一个node链表，当添加一个元素（key-value）时，就首先计算元素key的hash值，通过table的长度和key的hash值进行与运算得到一个index，以此确定插入数组中的位置，但是可能存在同一hash值的元素已经被放在数组同一位置了，这时就把这个元素添加到同一hash值的node链表的链尾，他们在数组的同一位置，但是形成了链表，同一各链表上的Hash值是相同的，所以说数组存放的是链表。而当链表长度大于等于8时，链表就可能转换为红黑树，这样大大提高了查找的效率。</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20191102133424361.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM1ODMzMTE=,size_16,color_FFFFFF,t_70&quot; alt=&quot;存储结构&quot; /&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">```Java</span><br><span class="line">static class Node&amp;lt;K,V&amp;gt; implements Map.Entry&amp;lt;K,V&amp;gt; &#123;</span><br><span class="line">        final int hash;</span><br><span class="line">        final K key;</span><br><span class="line">        V value;</span><br><span class="line">        Node&amp;lt;K,V&amp;gt; next; //可以看得出这是一个链表</span><br><span class="line"></span><br><span class="line">        Node(int hash, K key, V value, Node&amp;lt;K,V&amp;gt; next) &#123;</span><br><span class="line">            this.hash = hash;</span><br><span class="line">            this.key = key;</span><br><span class="line">            this.value = value;</span><br><span class="line">            this.next = next;</span><br><span class="line">        &#125;</span><br><span class="line">        *</span><br><span class="line">        *</span><br><span class="line">        *</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">transient Node&lt;K,V&gt;[] table;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<li>HashMap内部包含一个Node类型的数组table，Node由Map.Entry继承而来。</li><br><li>Node存储着键值对。它包含四个字段，从next字段我们可以看出node是一个链表。</li><br><li>table数组中的每个位置都可以当做一个桶，一个桶存放一个链表。</li><br><li>HashMap使用拉链法来解决冲突，同一个存放散列值相同的Node。</li><br><h4 id="数据域">数据域</h4><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">362498820763181265L</span>;  </span><br><span class="line"><span class="comment">// 初始化容量，初始化有16个桶</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_INITIAL_CAPACITY = <span class="number">1</span> &amp;lt;&amp;lt; <span class="number">4</span>; <span class="comment">// aka 16  </span></span><br><span class="line"><span class="comment">// 最大容量  1 073 741 824, 10亿多</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MAXIMUM_CAPACITY = <span class="number">1</span> &amp;lt;&amp;lt; <span class="number">30</span>;</span><br><span class="line"><span class="comment">// 默认的负载因子。因此初始情况下，当键值对的数量大于 16 * 0.75 = 12 时，就会触发扩容。</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">float</span> DEFAULT_LOAD_FACTOR = <span class="number">0.75f</span>;</span><br><span class="line"><span class="comment">// 当put()一个元素到某个桶，其链表长度达到8时有可能将链表转换为红黑树  </span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TREEIFY_THRESHOLD = <span class="number">8</span>;  </span><br><span class="line"><span class="comment">// 在hashMap扩容时，如果发现链表长度小于等于6，则会由红黑树重新退化为链表。</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> UNTREEIFY_THRESHOLD = <span class="number">6</span>;  </span><br><span class="line"><span class="comment">// 在转变成红黑树树之前，还会有一次判断，只有键值对数量大于 64 才会发生转换，否者直接扩容。这是为了避免在HashMap建立初期，多个键值对恰好被放入了同一个链表中而导致不必要的转化。</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MIN_TREEIFY_CAPACITY = <span class="number">64</span>;  </span><br><span class="line"><span class="comment">// 存储元素的数组  </span></span><br><span class="line"><span class="keyword">transient</span> Node&amp;lt;k,v&amp;gt;[] table;</span><br><span class="line"><span class="comment">// 存放元素的个数</span></span><br><span class="line"><span class="keyword">transient</span> <span class="keyword">int</span> size;</span><br><span class="line"><span class="comment">// 被修改的次数fast-fail机制   </span></span><br><span class="line"><span class="keyword">transient</span> <span class="keyword">int</span> modCount;</span><br><span class="line"><span class="comment">// 临界值 当实际大小(容量*填充比)超过临界值时，会进行扩容   </span></span><br><span class="line"><span class="keyword">int</span> threshold;</span><br><span class="line"><span class="comment">// 填充比</span></span><br><span class="line">final float loadFactor;&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;h4 id="构造函数"&gt;构造函数&lt;/h4&gt;</span><br><span class="line">&lt;pre <span class="class"><span class="keyword">class</span></span>=<span class="string">"java"</span>&gt;&lt;code&gt;<span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.loadFactor = DEFAULT_LOAD_FACTOR; <span class="comment">// all other fields defaulted</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">(<span class="keyword">int</span> initialCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(initialCapacity, DEFAULT_LOAD_FACTOR);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">(<span class="keyword">int</span> initialCapacity, <span class="keyword">float</span> loadFactor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (initialCapacity &amp;lt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(&amp;quot;Illegal initial capacity: &amp;quot; +</span><br><span class="line">                                               initialCapacity);</span><br><span class="line">        <span class="keyword">if</span> (initialCapacity &amp;gt; MAXIMUM_CAPACITY)</span><br><span class="line">            initialCapacity = MAXIMUM_CAPACITY;</span><br><span class="line">        <span class="keyword">if</span> (loadFactor &amp;lt;= <span class="number">0</span> || Float.isNaN(loadFactor))</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(&amp;quot;Illegal load factor: &amp;quot; +</span><br><span class="line">                                               loadFactor);</span><br><span class="line">        <span class="keyword">this</span>.loadFactor = loadFactor;</span><br><span class="line">        <span class="comment">// tableSizeFor(initialCapacity)方法计算出接近initialCapacity</span></span><br><span class="line">        <span class="comment">// 参数的2^n来作为初始化容量。</span></span><br><span class="line">        <span class="keyword">this</span>.threshold = tableSizeFor(initialCapacity);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">(Map&amp;lt;? extends K, ? extends V&amp;gt; m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.loadFactor = DEFAULT_LOAD_FACTOR;</span><br><span class="line">        putMapEntries(m, <span class="keyword">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><ul><br><li><p>HashMap构造函数允许用户传入容量不是2的n次方，因为它可以自动地将传入的容量转换为2的n次方。</p><br></li></ul><br>### <code>Put()</code>源码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> V <span class="title">put</span><span class="params">(K key, V value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> putVal(hash(key), key, value, <span class="keyword">false</span>, <span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">hash</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> h;</span><br><span class="line">        <span class="comment">// “扰动函数”。参考 https://www.cnblogs.com/zhengwang/p/8136164.html</span></span><br><span class="line">        <span class="keyword">return</span> (key == <span class="keyword">null</span>) ? <span class="number">0</span> : (h = key.hashCode()) ^ (h &amp;gt;&amp;gt;&amp;gt; <span class="number">16</span>);</span><br><span class="line">&#125;    </span><br><span class="line"><span class="function"><span class="keyword">final</span> V <span class="title">putVal</span><span class="params">(<span class="keyword">int</span> hash, K key, V value, <span class="keyword">boolean</span> onlyIfAbsent,</span></span></span><br><span class="line"><span class="function"><span class="params">                   <span class="keyword">boolean</span> evict)</span> </span>&#123;</span><br><span class="line">        HashMap.Node&amp;lt;K,V&amp;gt;[] tab; HashMap.Node&amp;lt;K,V&amp;gt; p; <span class="keyword">int</span> n, i;</span><br><span class="line">        <span class="comment">// 未初始化则初始化table</span></span><br><span class="line">        <span class="keyword">if</span> ((tab = table) == <span class="keyword">null</span> || (n = tab.length) == <span class="number">0</span>)</span><br><span class="line">            n = (tab = resize()).length;</span><br><span class="line">        <span class="comment">// 通过table的长度和hash与运算得到一个index，</span></span><br><span class="line">        <span class="comment">// 然后判断table数组下标为index处是否已经存在node。</span></span><br><span class="line">        <span class="keyword">if</span> ((p = tab[i = (n - <span class="number">1</span>) &amp;amp; hash]) == <span class="keyword">null</span>)</span><br><span class="line">            <span class="comment">// 如果table数组下标为index处为空则新创建一个node放在该处</span></span><br><span class="line">            tab[i] = newNode(hash, key, value, <span class="keyword">null</span>);</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 运行到这代表table数组下标为index处已经存在node，即发生了碰撞</span></span><br><span class="line">            HashMap.Node&amp;lt;K,V&amp;gt; e; K k;</span><br><span class="line">            <span class="comment">// 检查这个node的key是否跟插入的key是否相同。</span></span><br><span class="line">            <span class="keyword">if</span> (p.hash == hash &amp;amp;&amp;amp;</span><br><span class="line">                    ((k = p.key) == key || (key != <span class="keyword">null</span> &amp;amp;&amp;amp; key.equals(k))))</span><br><span class="line">                e = p;</span><br><span class="line">            <span class="comment">// 检查这个node是否已经是一个红黑树</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (p <span class="keyword">instanceof</span> TreeNode)</span><br><span class="line">                <span class="comment">// 如果这个node已经是一个红黑树则继续往树种添加节点</span></span><br><span class="line">                e = ((HashMap.TreeNode&amp;lt;K,V&amp;gt;)p).putTreeVal(<span class="keyword">this</span>, tab, hash, key, value);</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> binCount = <span class="number">0</span>; ; ++binCount) &#123;</span><br><span class="line">                    <span class="comment">// 在这里循环遍历node链表</span></span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 判断是否到达链表尾</span></span><br><span class="line">                    <span class="keyword">if</span> ((e = p.next) == <span class="keyword">null</span>) &#123;</span><br><span class="line">                        <span class="comment">// 到达链表尾，直接把新node插入链表，插入链表尾部，在jdk8之前是头插法</span></span><br><span class="line">                        p.next = newNode(hash, key, value, <span class="keyword">null</span>);</span><br><span class="line">                        <span class="keyword">if</span> (binCount &amp;gt;= TREEIFY_THRESHOLD - <span class="number">1</span>) <span class="comment">// -1 for 1st</span></span><br><span class="line">                            <span class="comment">// 如果node链表的长度大于等于8则可能把这个node转换为红黑树</span></span><br><span class="line">                            treeifyBin(tab, hash);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">// 检查这个node的key是否跟插入的key是否相同。</span></span><br><span class="line">                    <span class="keyword">if</span> (e.hash == hash &amp;amp;&amp;amp;</span><br><span class="line">                            ((k = e.key) == key || (key != <span class="keyword">null</span> &amp;amp;&amp;amp; key.equals(k))))</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    p = e;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 当插入key存在，则更新value值并返回旧value</span></span><br><span class="line">            <span class="keyword">if</span> (e != <span class="keyword">null</span>) &#123; <span class="comment">// existing mapping for key</span></span><br><span class="line">                V oldValue = e.value;</span><br><span class="line">                <span class="keyword">if</span> (!onlyIfAbsent || oldValue == <span class="keyword">null</span>)</span><br><span class="line">                    e.value = value;</span><br><span class="line">                afterNodeAccess(e);</span><br><span class="line">                <span class="keyword">return</span> oldValue;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 修改次数++</span></span><br><span class="line">        ++modCount;</span><br><span class="line">        <span class="comment">// 如果当前大小大于门限，门限原本是初始容量*0.75</span></span><br><span class="line">        <span class="keyword">if</span> (++size &amp;gt; threshold)</span><br><span class="line">            resize();</span><br><span class="line">        afterNodeInsertion(evict);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br><br><ul><br><li>下面简单说下put()流程：<br><ol><br><li>判断键值对数组table[]是否为空或为null，否则以默认大小resize()；</li><br><li>根据键key计算hash值与table的长度进行与运算得到插入的数组索引 index，如果tab[index] == null，直接根据key-value新建node添加，否则转入3</li><br><li>判断当前数组中处理hash冲突的方式为链表还是红黑树(check第一个节点类型即可),分别处理</li><br></ol></li>
-
-<p><li>为啥头插法为什么要换成尾插：jdk1.7时候用头插法可能是考虑到了一个所谓的热点数据的点(新插入的数据可能会更早用到)；找到链表尾部的时间复杂度是 O(n)，或者需要使用额外的内存地址来保存链表尾部的位置，头插法可以节省插入耗时。但是在扩容时会改变链表中元素原本的顺序，以至于在<strong>并发场景下导致链表成环</strong>的问题。</li></p>
-<p><li>从putVal()源码可以看出，HashMap并没有对null的键值对做限制（hash值设为0），即HashMap允许插入键尾null的键值对。但在JDK1.8之前HashMap使用第0个node存放键为null的键值对。</li></p>
-<p><li>确定node下标：通过table的长度和key的hash进行与运算得到一个index。</li></p>
-<p><li>在转变成红黑树树之前，还会有一次判断，只有键值对数量大于 64 才会发生转换，否者直接扩容。这是为了避免在HashMap建立初期，多个键值对恰好被放入了同一个链表中而导致不必要的转化。</li><br></p></ul><p></p>
-<h4 id="get操作源码解析">get()操作源码解析</h4><br><pre class="java"><code>public V get(Object key) {<br>        HashMap.Node&lt;K,V&gt; e;<br>        return (e = getNode(hash(key), key)) == null ? null : e.value;<br>    }<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> HashMap.Node&amp;lt;K,V&amp;gt; getNode(<span class="keyword">int</span> hash, Object key) &#123;</span><br><span class="line">    HashMap.Node&amp;lt;K,V&amp;gt;[] tab; HashMap.Node&amp;lt;K,V&amp;gt; first, e; <span class="keyword">int</span> n; K k;</span><br><span class="line">    <span class="comment">// table不为空</span></span><br><span class="line">    <span class="keyword">if</span> ((tab = table) != <span class="keyword">null</span> &amp;amp;&amp;amp; (n = tab.length) &amp;gt; <span class="number">0</span> &amp;amp;&amp;amp;</span><br><span class="line">            <span class="comment">// 通过table的长度和hash与运算得到一个index，table</span></span><br><span class="line">            <span class="comment">// 下标位index处的元素不为空，即元素为node链表</span></span><br><span class="line">            (first = tab[(n - <span class="number">1</span>) &amp;amp; hash]) != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 首先判断node链表中中第一个节点</span></span><br><span class="line">        <span class="keyword">if</span> (first.hash == hash &amp;amp;&amp;amp; <span class="comment">// always check first node</span></span><br><span class="line">                <span class="comment">// 分别判断key为null和key不为null的情况</span></span><br><span class="line">                ((k = first.key) == key || (key != <span class="keyword">null</span> &amp;amp;&amp;amp; key.equals(k))))</span><br><span class="line">            <span class="comment">// key相等则返回第一个</span></span><br><span class="line">            <span class="keyword">return</span> first;</span><br><span class="line">        <span class="comment">// 第一个节点key不同且node链表不止包含一个节点</span></span><br><span class="line">        <span class="keyword">if</span> ((e = first.next) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 判断node链表是否转为红黑树。</span></span><br><span class="line">            <span class="keyword">if</span> (first <span class="keyword">instanceof</span> HashMap.TreeNode)</span><br><span class="line">                <span class="comment">// 则在红黑树中进行查找。</span></span><br><span class="line">                <span class="keyword">return</span> ((HashMap.TreeNode&amp;lt;K,V&amp;gt;)first).getTreeNode(hash, key);</span><br><span class="line">            <span class="keyword">do</span> &#123;</span><br><span class="line">                <span class="comment">// 循环遍历node链表中的节点，判断key是否相等</span></span><br><span class="line">                <span class="keyword">if</span> (e.hash == hash &amp;amp;&amp;amp;</span><br><span class="line">                        ((k = e.key) == key || (key != <span class="keyword">null</span> &amp;amp;&amp;amp; key.equals(k))))</span><br><span class="line">                    <span class="keyword">return</span> e;</span><br><span class="line">            &#125; <span class="keyword">while</span> ((e = e.next) != <span class="keyword">null</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// key在table中不存在则返回null。</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><ul><br><li>get(key)方法首先获取key的hash值，<br><ol><br><li>计算hash &amp; (table.len - 1)得到在链表数组中的位置，</li><br><li>先判断node链表（桶）中的第一个节点的key是否与参数key相等，</li><br><li>不等则判断是否已经转为红黑树，若转为红黑树则在红黑树中查找，</li><br><li>如没有转为红黑树就遍历后面的链表找到相同的key值返回对应的Value值即可。</li><br></ol></li><br></ul><br><h4 id="resize操作源码解析">resize()操作源码解析</h4>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化或者扩容之后的元素调整</span></span><br><span class="line">    <span class="keyword">final</span> HashMap.Node&amp;lt;K,V&amp;gt;[] resize() &#123;</span><br><span class="line">        <span class="comment">// 获取旧table</span></span><br><span class="line">        HashMap.Node&amp;lt;K,V&amp;gt;[] oldTab = table;</span><br><span class="line">        <span class="comment">// 旧table容量</span></span><br><span class="line">        <span class="keyword">int</span> oldCap = (oldTab == <span class="keyword">null</span>) ? <span class="number">0</span> : oldTab.length;</span><br><span class="line">        <span class="comment">// 旧table扩容临界值</span></span><br><span class="line">        <span class="keyword">int</span> oldThr = threshold;</span><br><span class="line">        <span class="comment">// 定义新table容量和临界值</span></span><br><span class="line">        <span class="keyword">int</span> newCap, newThr = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 如果原table不为空</span></span><br><span class="line">        <span class="keyword">if</span> (oldCap &amp;gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果table容量达到最大值，则修改临界值为Integer.MAX_VALUE</span></span><br><span class="line">            <span class="comment">// MAXIMUM_CAPACITY = 1 &amp;lt;&amp;lt; 30;</span></span><br><span class="line">            <span class="comment">// Integer.MAX_VALUE = 1 &amp;lt;&amp;lt; 31 - 1;</span></span><br><span class="line">            <span class="keyword">if</span> (oldCap &amp;gt;= MAXIMUM_CAPACITY) &#123;</span><br><span class="line">                <span class="comment">// Map达到最大容量，这时还要向map中放数据，则直接设置临界值为整数的最大值</span></span><br><span class="line">                <span class="comment">// 在容量没有达到最大值之前不会再resize。</span></span><br><span class="line">                threshold = Integer.MAX_VALUE;</span><br><span class="line">                <span class="comment">// 结束操作</span></span><br><span class="line">                <span class="keyword">return</span> oldTab;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 下面就是扩容操作（2倍）</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> ((newCap = oldCap &amp;lt;&amp;lt; <span class="number">1</span>) &amp;lt; MAXIMUM_CAPACITY &amp;amp;&amp;amp;</span><br><span class="line">                    oldCap &amp;gt;= DEFAULT_INITIAL_CAPACITY)</span><br><span class="line">                <span class="comment">// 临界值也变为两倍</span></span><br><span class="line">                newThr = oldThr &amp;lt;&amp;lt; <span class="number">1</span>; <span class="comment">// double threshold</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (oldThr &amp;gt; <span class="number">0</span>) <span class="comment">// initial capacity was placed in threshold</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * 进入此if证明创建HashMap时用的带参构造：public HashMap(int initialCapacity)</span></span><br><span class="line"><span class="comment">             * 或 public HashMap(int initialCapacity, float loadFactor)</span></span><br><span class="line"><span class="comment">             * 注：带参的构造中initialCapacity（初始容量值）不管是输入几都会通过</span></span><br><span class="line"><span class="comment">             * tableSizeFor(initialCapacity)方法计算出接近initialCapacity</span></span><br><span class="line"><span class="comment">             * 参数的2^n来作为初始化容量。</span></span><br><span class="line"><span class="comment">             * 所以实际创建的容量并不等于设置的初始容量。</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            newCap = oldThr;</span><br><span class="line">        <span class="keyword">else</span> &#123;               <span class="comment">// zero initial threshold signifies using defaults</span></span><br><span class="line">            <span class="comment">// 进入此if证明创建map时用的无参构造：</span></span><br><span class="line">            <span class="comment">// 然后将参数newCap（新的容量）、newThr(新的扩容阀界值)进行初始化</span></span><br><span class="line">            newCap = DEFAULT_INITIAL_CAPACITY;</span><br><span class="line">            newThr = (<span class="keyword">int</span>)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (newThr == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 进入这代表有两种可能。</span></span><br><span class="line">            <span class="comment">// 1. 说明old table容量大于0但是小于16.</span></span><br><span class="line">            <span class="comment">// 2. 创建HashMap时用的带参构造，根据loadFactor计算临界值。</span></span><br><span class="line">            <span class="keyword">float</span> ft = (<span class="keyword">float</span>)newCap * loadFactor;</span><br><span class="line">            newThr = (newCap &amp;lt; MAXIMUM_CAPACITY &amp;amp;&amp;amp; ft &amp;lt; (<span class="keyword">float</span>)MAXIMUM_CAPACITY ?</span><br><span class="line">                    (<span class="keyword">int</span>)ft : Integer.MAX_VALUE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 修改临界值</span></span><br><span class="line">        threshold = newThr;</span><br><span class="line">        <span class="meta">@SuppressWarnings</span>(&#123;&amp;quot;rawtypes&amp;quot;,&amp;quot;unchecked&amp;quot;&#125;)</span><br><span class="line">        <span class="comment">// 根据新的容量生成新的 table</span></span><br><span class="line">        HashMap.Node&amp;lt;K,V&amp;gt;[] newTab = (HashMap.Node&amp;lt;K,V&amp;gt;[])<span class="keyword">new</span> HashMap.Node[newCap];</span><br><span class="line">        <span class="comment">// 替换成新的table</span></span><br><span class="line">        table = newTab;</span><br><span class="line">        <span class="comment">// 如果oldTab不为null说明是扩容，否则直接返回newTab</span></span><br><span class="line">        <span class="keyword">if</span> (oldTab != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">/* 遍历原来的table */</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &amp;lt; oldCap; ++j) &#123;</span><br><span class="line">                HashMap.Node&amp;lt;K,V&amp;gt; e;</span><br><span class="line">                <span class="keyword">if</span> ((e = oldTab[j]) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    oldTab[j] = <span class="keyword">null</span>;</span><br><span class="line">                    <span class="comment">// 判断这个桶（链表）中就只有一个节点</span></span><br><span class="line">                    <span class="keyword">if</span> (e.next == <span class="keyword">null</span>)</span><br><span class="line">                        <span class="comment">// 根据新的容量重新计算在table中的位置index，并把当前元素赋值给他。</span></span><br><span class="line">                        newTab[e.hash &amp;amp; (newCap - <span class="number">1</span>)] = e;</span><br><span class="line">                    <span class="comment">// 判断这个链表是否已经转为红黑树</span></span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (e <span class="keyword">instanceof</span> HashMap.TreeNode)</span><br><span class="line">                        <span class="comment">// 在split函数中可能由于红黑树的长度小于等于UNTREEIFY_THRESHOLD（6）</span></span><br><span class="line">                        <span class="comment">// 则把红黑树重新转为链表</span></span><br><span class="line">                        ((HashMap.TreeNode&amp;lt;K,V&amp;gt;)e).split(<span class="keyword">this</span>, newTab, j, oldCap);</span><br><span class="line">                    <span class="keyword">else</span> &#123; <span class="comment">// preserve order</span></span><br><span class="line">                        <span class="comment">// 运行到这里证明桶中有多个节点。</span></span><br><span class="line">                        HashMap.Node&amp;lt;K,V&amp;gt; loHead = <span class="keyword">null</span>, loTail = <span class="keyword">null</span>;</span><br><span class="line">                        HashMap.Node&amp;lt;K,V&amp;gt; hiHead = <span class="keyword">null</span>, hiTail = <span class="keyword">null</span>;</span><br><span class="line">                        HashMap.Node&amp;lt;K,V&amp;gt; next;</span><br><span class="line">                        <span class="keyword">do</span> &#123;</span><br><span class="line">                            <span class="comment">// 对桶进行遍历</span></span><br><span class="line">                            next = e.next;</span><br><span class="line">                            <span class="keyword">if</span> ((e.hash &amp;amp; oldCap) == <span class="number">0</span>) &#123;</span><br><span class="line">                                <span class="keyword">if</span> (loTail == <span class="keyword">null</span>)</span><br><span class="line">                                    loHead = e;</span><br><span class="line">                                <span class="keyword">else</span></span><br><span class="line">                                    loTail.next = e;</span><br><span class="line">                                loTail = e;</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">else</span> &#123;</span><br><span class="line">                                <span class="keyword">if</span> (hiTail == <span class="keyword">null</span>)</span><br><span class="line">                                    hiHead = e;</span><br><span class="line">                                <span class="keyword">else</span></span><br><span class="line">                                    hiTail.next = e;</span><br><span class="line">                                hiTail = e;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">while</span> ((e = next) != <span class="keyword">null</span>);</span><br><span class="line">                        <span class="keyword">if</span> (loTail != <span class="keyword">null</span>) &#123;</span><br><span class="line">                            loTail.next = <span class="keyword">null</span>;</span><br><span class="line">                            newTab[j] = loHead;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">if</span> (hiTail != <span class="keyword">null</span>) &#123;</span><br><span class="line">                            hiTail.next = <span class="keyword">null</span>;</span><br><span class="line">                            newTab[j + oldCap] = hiHead;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newTab;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="快速失败-fail-fast-和安全失败-fail-safe-的区别是什么？"><a href="#快速失败-fail-fast-和安全失败-fail-safe-的区别是什么？" class="headerlink" title="快速失败 (fail-fast) 和安全失败 (fail-safe) 的区别是什么？"></a>快速失败 (fail-fast) 和安全失败 (fail-safe) 的区别是什么？</h2><ul>
-<li>1、快速失败（fail-fast）<br>在用迭代器遍历一个集合对象时，如果遍历过程中对集合对象的内容进行修改（增加、删除、修改），则会抛出Concurrent Modification Exception.<br>原理：迭代器在遍历时直接访问集合中的内容，并且在遍历过程中使用一个modCount变量。集合在被遍历期间如果内容发生变化，就会改变modCount的值。每当迭代器使用hashNext()/next()遍历下一个元素之前，都会检测modCount变量是否为expectedmodCount值，是的话就返回遍历；否则抛出异常，终止遍历。<br>注意：这里异常的抛出条件是检测到modCount!=expectedmodCount这个条件。如果集合发生变化时修改modCount值刚好又设置为了expectedmodCount值，则异常不会抛出。因此，不能依赖于这个异常是否抛出而进行并发操作的编程，这个异常只建议用于检测并发修改的bug。<br>场景：java.util包下的集合类都是快速失败的，不能在多线程下发生并发修改（迭代过程中被修改）。</li>
-<li>2、安全失败（fail-safe）<br>采用安全失败机制的集合容器，在遍历时不是直接在集合内容上访问的，而是先复制原有集合内容，在拷贝的集合上进行遍历。<br>原理：由于迭代时是对原集合的拷贝进行遍历，所以在遍历过程中对原集合所作的修改并不能被迭代器检测到，所以不会触发Concurrent Modification Exception。<br>缺点：基于拷贝内容的优点是避免了Concurrent Modification Exception,但同样地，迭代器并不能访问到修改后的内容，即：迭代器遍历的是开始遍历那一刻拿到的集合拷贝，在遍历期间原集合发生的修改迭代器是不知道的<br>场景：java.util.concurrent包下的容器都是安全失败，可以在多线程下并发使用，并发修改。</li>
-</ul>
-</code></pre>
+          Find Everything about HashMap IN There.
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/02/04/Everything-About-HashMap/">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1116,6 +998,109 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/SortAlgorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/13/SortAlgorithm/" class="post-title-link" itemprop="url">SortAlgorithms</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-01-13 22:19:13" itemprop="dateCreated datePublished" datetime="2020-01-13T22:19:13+08:00">2020-01-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-17 18:23:38" itemprop="dateModified" datetime="2020-02-17T18:23:38+08:00">2020-02-17</time>
+              </span>
+            
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/01/13/SortAlgorithm/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/01/13/SortAlgorithm/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          因为健忘，加上对各种排序算法理解不深刻，过段时间面对排序就蒙了。所以决定对我们常见的这几种排序算法进行统一总结，强行学习。首先罗列一下常见的十大排序算法
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2020/01/13/SortAlgorithm/">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/SDN-OpenFlow/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1156,7 +1141,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-08 17:42:48" itemprop="dateModified" datetime="2019-11-08T17:42:48+08:00">2019-11-08</time>
+                <time title="Modified: 2020-02-17 18:24:20" itemprop="dateModified" datetime="2020-02-17T18:24:20+08:00">2020-02-17</time>
               </span>
             
           
@@ -1315,266 +1300,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/18/108FALL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="William Ren">
-      <meta itemprop="description" content="If not Me, Who? If not now, When?">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="REN WEI'S BLOG">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/18/108FALL/" class="post-title-link" itemprop="url">108FALL</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-10-18 14:29:50" itemprop="dateCreated datePublished" datetime="2019-10-18T14:29:50+08:00">2019-10-18</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-05 13:00:43" itemprop="dateModified" datetime="2019-12-05T13:00:43+08:00">2019-12-05</time>
-              </span>
-            
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2019/10/18/108FALL/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/10/18/108FALL/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="CS5095701-Advanced-Database-Systems"><a href="#CS5095701-Advanced-Database-Systems" class="headerlink" title="CS5095701 Advanced Database Systems"></a>CS5095701 Advanced Database Systems</h1><ul>
-<li><p><a href="http://faculty.csie.ntust.edu.tw/~ywu/cs5095701/index.html" target="_blank" rel="noopener">CourseInfo</a></p>
-</li>
-<li><p><a href="https://docs.google.com/presentation/d/1HP7sgi0ClYdZmHQpGbO5SYVTYlU4V5MpYIx4xEOi4Co/edit" target="_blank" rel="noopener">PrensentationSlides</a></p>
-</li>
-<li><p>11/15 Proposal presentation (all 14 groups)</p>
-</li>
-<li>11/22 Mid-term exam</li>
-<li>11/29 paper presentation (4 groups)(sequence        1~4)</li>
-</ul>
-<h2 id="Project-proposal"><a href="#Project-proposal" class="headerlink" title="Project proposal:"></a>Project proposal:</h2><p>You are required to propose a database related research project in this course. You are encouraged to have a publication as a goal for your project. A list of project ideas is listed below.</p>
-<h2 id="You-proposal-should-include-the-following-aspects"><a href="#You-proposal-should-include-the-following-aspects" class="headerlink" title="You proposal should include the following aspects:"></a>You proposal should include the following aspects:</h2><ul>
-<li><p>importance of the proposed project</p>
-</li>
-<li><p>your algorithm and ideas</p>
-</li>
-<li><p>main contributions</p>
-</li>
-<li><p>the design of the software you propose to build</p>
-</li>
-<li><p>how you propose to evaluate your ideas</p>
-</li>
-<li><p>the design of the experiments</p>
-</li>
-<li><p>literature survey</p>
-</li>
-</ul>
-<h3 id="You-will-present-to-the-class-about-your-proposal-5-minutes-and-write-a-proposal-report-2-4-pages-in-IEEE-format"><a href="#You-will-present-to-the-class-about-your-proposal-5-minutes-and-write-a-proposal-report-2-4-pages-in-IEEE-format" class="headerlink" title="You will present to the class about your proposal (~ 5 minutes) and write a proposal report (2~4 pages in IEEE format)."></a>You will present to the class about your proposal (~ 5 minutes) and write a proposal report (2~4 pages in IEEE format).</h3><h1 id="CS5014701-電腦與機器人視覺-Computer-and-Robot-Vision"><a href="#CS5014701-電腦與機器人視覺-Computer-and-Robot-Vision" class="headerlink" title="CS5014701 電腦與機器人視覺 Computer and Robot Vision"></a>CS5014701 電腦與機器人視覺 Computer and Robot Vision</h1><ul>
-<li><p><a href="https://docs.google.com/presentation/d/1IGnx-zBDaD7oFmCo3vJa4of-yKDxCmiLzA4EswjaXX0/edit" target="_blank" rel="noopener">Everybody Dance NOW<br></a></p>
-</li>
-<li><p><a href="https://docs.google.com/presentation/d/1KySt5eAGNONS2xu5TM4nkeAA_78sE_DKQ-Eq6oCJjJE/edit#slide=id.p" target="_blank" rel="noopener">Joint Discriminative and Generative Learning for Person Re-identification</a></p>
-</li>
-</ul>
-<h1 id="CS5146701-虛擬化網路及應用-Virtualized-Networks-and-Applications"><a href="#CS5146701-虛擬化網路及應用-Virtualized-Networks-and-Applications" class="headerlink" title="CS5146701 虛擬化網路及應用 Virtualized Networks and Applications"></a>CS5146701 虛擬化網路及應用 Virtualized Networks and Applications</h1><ul>
-<li>Proposal</li>
-</ul>
-<h2 id="Catch-up-from-Flick"><a href="#Catch-up-from-Flick" class="headerlink" title="Catch up from Flick"></a>Catch up from Flick</h2><p><a href="https://www.youtube.com/watch?v=wLDK8ZCnuBc&t=2s" target="_blank" rel="noopener">network virtualization</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WenaxhSv35c?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h1 id="CS5023701-Knowledge-Based-Systems"><a href="#CS5023701-Knowledge-Based-Systems" class="headerlink" title="CS5023701  Knowledge-Based Systems"></a>CS5023701  Knowledge-Based Systems</h1><p><a href="https://docs.google.com/presentation/d/1qY_z_h-IgD5GLm81VX1pLvkQcwI_KNSnJgOVYtuUyJY/edit#slide=id.p" target="_blank" rel="noopener">Revisit Fuzzy Neural Network: Demystifying Batch Normalization and ReLU with Generalized Hamming Network</a></p>
-<h1 id="CS5141701-深度學習導論及其應用-Introduction-to-Deep-Learning-and-Its-Applications"><a href="#CS5141701-深度學習導論及其應用-Introduction-to-Deep-Learning-and-Its-Applications" class="headerlink" title="CS5141701 深度學習導論及其應用 Introduction to Deep Learning and Its Applications"></a>CS5141701 深度學習導論及其應用 Introduction to Deep Learning and Its Applications</h1><p><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_MLSD15_2.html" target="_blank" rel="noopener">Hung-yi Lee’S CourseInfo</a></p>
-<p><a href="https://datawhalechina.github.io/leeml-notes/#/" target="_blank" rel="noopener">李宏毅机器学习笔记(LeeML-Notes)</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXVfgk9fNX2IQOYPmqjqWsNUFl2kpk1U2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CXgbekl66jc?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JGZFYJFoxDA?start=3947" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h1 id="【財金學程】FBG006301-品牌價值創新講座-Seminar-on-Brand-Value-Innovation"><a href="#【財金學程】FBG006301-品牌價值創新講座-Seminar-on-Brand-Value-Innovation" class="headerlink" title="【財金學程】FBG006301 品牌價值創新講座 Seminar on Brand Value Innovation"></a>【財金學程】FBG006301 品牌價值創新講座 Seminar on Brand Value Innovation</h1><p><a href="https://docs.google.com/presentation/d/1EokcapXuKWdFcqMF8_RCJ9WLSpPHzAfqs9S3ddTh7A0/edit?usp=sharing" target="_blank" rel="noopener">柯達企業失敗個案分析</a></p>
-<h1 id="TCG037301-親近經典智慧-Wisdom-in-Classics"><a href="#TCG037301-親近經典智慧-Wisdom-in-Classics" class="headerlink" title="TCG037301 親近經典智慧 Wisdom in Classics"></a>TCG037301 親近經典智慧 Wisdom in Classics</h1><p><a href="https://docs.google.com/presentation/d/1VrzqySkwp_2s_XxrMa3tAunXpURI08F3ZUdXqflCeE8/edit?usp=sharing" target="_blank" rel="noopener">畜牧業的陰謀</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Recommend-System/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="William Ren">
-      <meta itemprop="description" content="If not Me, Who? If not now, When?">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="REN WEI'S BLOG">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/03/Recommend-System/" class="post-title-link" itemprop="url">Recommend System</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-10-03 17:50:23" itemprop="dateCreated datePublished" datetime="2019-10-03T17:50:23+08:00">2019-10-03</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-07 10:27:23" itemprop="dateModified" datetime="2020-01-07T10:27:23+08:00">2020-01-07</time>
-              </span>
-            
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2019/10/03/Recommend-System/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/10/03/Recommend-System/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="http://wepon.me/" target="_blank" rel="noopener">http://wepon.me/</a> pku<br><a href="https://coladrill.github.io/about/" target="_blank" rel="noopener">https://coladrill.github.io/about/</a> seu<br><a href="https://github.com/ColaDrill/2018spa" target="_blank" rel="noopener">https://github.com/ColaDrill/2018spa</a> 推荐系统</p>
-<p><a href="https://www.zhihu.com/people/coladrill/activities" target="_blank" rel="noopener">https://www.zhihu.com/people/coladrill/activities</a><br>推荐系统 必看</p>
-<p><a href="https://zhuanlan.zhihu.com/p/82671707?utm_source=wechat_session&utm_medium=social&utm_oi=973611927536181248" target="_blank" rel="noopener">手写xgboost</a></p>
-<h1 id="Special-Projects"><a href="#Special-Projects" class="headerlink" title="Special Projects"></a>Special Projects</h1><h2 id="Previous"><a href="#Previous" class="headerlink" title="Previous"></a>Previous</h2><p>The Uni require all the undergraduate student to reach out the Special Projects.</p>
-<h2 id="Mission"><a href="#Mission" class="headerlink" title="Mission:"></a>Mission:</h2><p>Recommend systems based on the Collaborative Filtering</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ul>
-<li><p><a href="https://spinningup.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">Reinforcement Spinning Up</a></p>
-</li>
-<li><p><a href="https://d2l.ai/chapter_recommender-systems/index.html" target="_blank" rel="noopener">Introduction to Deep Learning STAT 157, UC Berkeley, Spring, 2019</a><br>Reference By <a href="https://zhuanlan.zhihu.com/p/66062438" target="_blank" rel="noopener">在伯克利教深度学习</a></p>
-</li>
-</ul>
-<p><a href="https://www.bilibili.com/video/av63439164?from=search&seid=3600678311547036502" target="_blank" rel="noopener">Talk in Mandarin</a></p>
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/p/27908027" target="_blank" rel="noopener">Intro CNN</a></li>
-</ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tH9FH1DH5n0?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<blockquote class="blockquote-center"><p>Elegant in code, simple in core</p>
-</blockquote>
-<h3 id="IEEE-International-Conference-on-Signal-Information-and-Data-Processing-2019"><a href="#IEEE-International-Conference-on-Signal-Information-and-Data-Processing-2019" class="headerlink" title="IEEE International Conference on Signal, Information and Data Processing 2019"></a>IEEE International Conference on Signal, Information and Data Processing 2019</h3><p><a href="https://www.scribd.com/document/431478280/Automatic-Digital-Recognition-of-Multiple-E-lect-rici-ty-Dash-boar-ds-pdf" target="_blank" rel="noopener">Automatic Digital Recognition of Multiple Electricity Dashboards, (accepted) [EI]</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1651,7 +1376,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
