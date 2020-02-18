@@ -1161,6 +1161,252 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/13/DesignPattern-Structural-pattern part1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/05/13/DesignPattern-Structural-pattern part1/" class="post-title-link" itemprop="url">DesignPattern_Structural pattern part1</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-05-13 22:22:22" itemprop="dateCreated datePublished" datetime="2019-05-13T22:22:22+08:00">2019-05-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-18 14:21:39" itemprop="dateModified" datetime="2020-02-18T14:21:39+08:00">2020-02-18</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Foundation/" itemprop="url" rel="index"><span itemprop="name">Foundation</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/05/13/DesignPattern-Structural-pattern part1/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/05/13/DesignPattern-Structural-pattern part1/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我们学习了 5 种构建型模式。它们主要用于构建对象。让我们简单回顾一下：</p>
+<ul>
+<li><p>​工厂方法模式：为每一类对象建立工厂，将对象交由工厂创建，客户端只和工厂打交道。</p>
+</li>
+<li><p>​抽象工厂模式：为每一类工厂提取出抽象接口，使得新增工厂、替换工厂变得非常容易。</p>
+</li>
+<li>​建造者模式：用于创建构造过程稳定的对象，不同的 Builder 可以定义不同的配置。</li>
+<li>​单例模式：全局使用同一个对象，分为饿汉式和懒汉式。懒汉式有双检锁和内部类两种实现方式。</li>
+<li>​原型模式：为一个类定义 clone 方法，使得创建相同的对象更方便。</li>
+</ul>
+<p>本篇文章我们将一起学习结构型模式，顾名思义，结构型模式是用来设计程序的结构的。结构型模式就像搭积木，将不同的类结合在一起形成契合的结构。包括以下几种：</p>
+<ul>
+<li>​适配器模式</li>
+<li>​桥接模式</li>
+<li>​组合模式</li>
+<li>​装饰模式</li>
+<li>​外观模式</li>
+<li>​享元模式</li>
+<li>​代理模式</li>
+</ul>
+<p>由于内容较多，本篇我们先讲解前三种模式。</p>
+<h2 id="一、适配器模式"><a href="#一、适配器模式" class="headerlink" title="一、适配器模式"></a>一、适配器模式</h2><blockquote>
+<p>Adapter<br>    Convert the existing interfaces to a new interface to achieve compatibility and reusability of the unrelated classes in one application. Also known as Wrapper pattern.</p>
+</blockquote>
+<p>说到适配器，我们最熟悉的莫过于电源适配器了，也就是手机的充电头。它就是适配器模式的一个应用。</p>
+<p>试想一下，你有一条连接电脑和手机的 USB 数据线，连接电脑的一端从电脑接口处接收 5V 的电压，连接手机的一端向手机输出 5V 的电压，并且他们工作良好。</p>
+<p>中国的家用电压都是 220V，所以 USB 数据线不能直接拿来给手机充电，这时候我们有两种方案：</p>
+<p>单独制作手机充电器，接收 220V 家用电压，输出 5V 电压。<br>添加一个适配器，将 220V 家庭电压转化为类似电脑接口的 5V 电压，再连接数据线给手机充电。<br>如果你使用过早期的手机，就会知道以前的手机厂商采用的就是第一种方案：早期的手机充电器都是单独制作的，充电头和充电线是连在一起的。现在的手机都采用了电源适配器加数据线的方案。这是生活中应用适配器模式的一个进步。</p>
+<blockquote>
+<p>适配器模式：将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。<br>适配的意思是适应、匹配。通俗地讲，适配器模式适用于 有相关性但不兼容的结构，源接口通过一个中间件转换后才可以适用于目标接口，这个转换过程就是适配，这个中间件就称之为适配器。</p>
+</blockquote>
+<p>家用电源和 USB 数据线有相关性：家用电源输出电压，USB 数据线输入电压。但两个接口无法兼容，因为一个输出 220V，一个输入 5V，通过适配器将输出 220V 转换成输出 5V 之后才可以一起工作。</p>
+<p>让我们用程序来模拟一下这个过程。</p>
+<p>首先，家庭电源提供 220V 的电压：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomeBattery</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">supply</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 家用电源提供一个 220V 的输出电压</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">220</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>USB 数据线只接收 5V 的充电电压：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">USBLine</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">charge</span><span class="params">(<span class="keyword">int</span> volt)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 如果电压不是 5V，抛出异常</span></span><br><span class="line">        <span class="keyword">if</span> (volt != <span class="number">5</span>) <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"只能接收 5V 电压"</span>);</span><br><span class="line">        <span class="comment">// 如果电压是 5V，正常充电</span></span><br><span class="line">        System.out.println(<span class="string">"正常充电"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>先来看看适配之前，用户如果直接用家庭电源给手机充电：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">chargeForPhone</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        HomeBattery homeBattery = <span class="keyword">new</span> HomeBattery();</span><br><span class="line">        <span class="keyword">int</span> homeVolt = homeBattery.supply();</span><br><span class="line">        System.out.println(<span class="string">"家庭电源提供的电压是 "</span> + homeVolt + <span class="string">"V"</span>);</span><br><span class="line"></span><br><span class="line">        USBLine usbLine = <span class="keyword">new</span> USBLine();</span><br><span class="line">        usbLine.charge(homeVolt);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行程序，输出如下：</span><br><span class="line"></span><br><span class="line">家庭电源提供的电压是 <span class="number">220</span>V</span><br><span class="line"></span><br><span class="line">java.lang.IllegalArgumentException: 只能接收 <span class="number">5</span>V 电压</span><br><span class="line">这时，我们加入电源适配器：</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">convert</span><span class="params">(<span class="keyword">int</span> homeVolt)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 适配过程：使用电阻、电容等器件将其降低为输出 5V</span></span><br><span class="line">        <span class="keyword">int</span> chargeVolt = homeVolt - <span class="number">215</span>;</span><br><span class="line">        <span class="keyword">return</span> chargeVolt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后，用户再使用适配器将家庭电源提供的电压转换为充电电压：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">chargeForPhone</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        HomeBattery homeBattery = <span class="keyword">new</span> HomeBattery();</span><br><span class="line">        <span class="keyword">int</span> homeVolt = homeBattery.supply();</span><br><span class="line">        System.out.println(<span class="string">"家庭电源提供的电压是 "</span> + homeVolt + <span class="string">"V"</span>);</span><br><span class="line"></span><br><span class="line">        Adapter adapter = <span class="keyword">new</span> Adapter();</span><br><span class="line">        <span class="keyword">int</span> chargeVolt = adapter.convert(homeVolt);</span><br><span class="line">        System.out.println(<span class="string">"使用适配器将家庭电压转换成了 "</span> + chargeVolt + <span class="string">"V"</span>);</span><br><span class="line"></span><br><span class="line">        USBLine usbLine = <span class="keyword">new</span> USBLine();</span><br><span class="line">        usbLine.charge(chargeVolt);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行程序，输出如下：</span><br><span class="line"></span><br><span class="line">家庭电源提供的电压是 <span class="number">220</span>V</span><br><span class="line">使用适配器将家庭电压转换成了 <span class="number">5</span>V</span><br><span class="line">正常充电</span><br></pre></td></tr></table></figure></p>
+<p>这就是适配器模式。在我们日常的开发中经常会使用到各种各样的 Adapter，都属于适配器模式的应用。</p>
+<p>但适配器模式并不推荐多用。因为未雨绸缪好过亡羊补牢，如果事先能预防接口不同的问题，不匹配问题就不会发生，只有遇到源接口无法改变时，才应该考虑使用适配器。比如现代的电源插口中很多已经增加了专门的充电接口，让我们不需要再使用适配器转换接口，这又是社会的一个进步。</p>
+<h2 id="二、桥接模式"><a href="#二、桥接模式" class="headerlink" title="二、桥接模式"></a>二、桥接模式</h2><blockquote>
+<p>Bridge<br>    Decouple an abstraction or interface from its implementation so that the two can vary independently.</p>
+</blockquote>
+<p>考虑这样一个需求：绘制矩形、圆形、三角形这三种图案。按照面向对象的理念，我们至少需要三个具体类，对应三种不同的图形。</p>
+<p>抽象接口 IShape：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>三个具体形状类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">implements</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"绘制矩形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Round</span> <span class="keyword">implements</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"绘制圆形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Triangle</span> <span class="keyword">implements</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"绘制三角形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接下来我们有了新的需求，每种形状都需要有四种不同的颜色：红、蓝、黄、绿。</p>
+<p>这时我们很容易想到两种设计方案：</p>
+<ul>
+<li>为了复用形状类，将每种形状定义为父类，每种不同颜色的图形继承自其形状父类。此时一共有 12 个类。</li>
+<li>为了复用颜色类，将每种颜色定义为父类，每种不同颜色的图形继承自其颜色父类。此时一共有 12 个类。<br>乍一看没什么问题，我们使用了面向对象的继承特性，复用了父类的代码并扩展了新的功能。</li>
+</ul>
+<p>但仔细想一想，如果以后要增加一种颜色，比如黑色，那么我们就需要增加三个类；如果再要增加一种形状，我们又需要增加五个类，对应 5 种颜色。</p>
+<p>更不用说遇到增加 20 个形状，20 种颜色的需求，不同的排列组合将会使工作量变得无比的庞大。看来我们不得不重新思考设计方案。</p>
+<p>形状和颜色，都是图形的两个属性。他们两者的关系是平等的，所以不属于继承关系。更好的的实现方式是：将形状和颜色分离，根据需要对形状和颜色进行组合，这就是桥接模式的思想。</p>
+<blockquote>
+<p>桥接模式：将抽象部分与它的实现部分分离，使它们都可以独立地变化。它是一种对象结构型模式，又称为柄体模式或接口模式。<br>官方定义非常精准、简练，但却有点不易理解。通俗地说，如果一个对象有两种或者多种分类方式，并且两种分类方式都容易变化，比如本例中的形状和颜色。这时使用继承很容易造成子类越来越多，所以更好的做法是把这种分类方式分离出来，让他们独立变化，使用时将不同的分类进行组合即可。</p>
+</blockquote>
+<p>说到这里，不得不提一个设计原则：合成 / 聚合复用原则。虽然它没有被划分到六大设计原则中，但它在面向对象的设计中也非常的重要。</p>
+<blockquote>
+<p>合成 / 聚合复用原则：优先使用合成 / 聚合，而不是类继承。</p>
+</blockquote>
+<p>继承虽然是面向对象的三大特性之一，但继承会导致子类与父类有非常紧密的依赖关系，它会限制子类的灵活性和子类的复用性。而使用合成 / 聚合，也就是使用接口实现的方式，就不存在依赖问题，一个类可以实现多个接口，可以很方便地拓展功能。</p>
+<p>让我们一起来看一下本例使用桥接模式的程序实现：</p>
+<p>新建接口类 IColor，仅包含一个获取颜色的方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IColor</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">getColor</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>每种颜色都实现此接口：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Red</span> <span class="keyword">implements</span> <span class="title">IColor</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"红"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Blue</span> <span class="keyword">implements</span> <span class="title">IColor</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"蓝"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Yellow</span> <span class="keyword">implements</span> <span class="title">IColor</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"黄"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Green</span> <span class="keyword">implements</span> <span class="title">IColor</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"绿"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在每个形状类中，桥接 IColor 接口：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">implements</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IColor color;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setColor</span><span class="params">(IColor color)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"绘制"</span> + color.getColor() + <span class="string">"矩形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Round</span> <span class="keyword">implements</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IColor color;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setColor</span><span class="params">(IColor color)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"绘制"</span> + color.getColor() + <span class="string">"圆形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Triangle</span> <span class="keyword">implements</span> <span class="title">IShape</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IColor color;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setColor</span><span class="params">(IColor color)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"绘制"</span> + color.getColor() + <span class="string">"三角形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>测试函数：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Rectangle rectangle = <span class="keyword">new</span> Rectangle();</span><br><span class="line">    rectangle.setColor(<span class="keyword">new</span> Red());</span><br><span class="line">    rectangle.draw();</span><br><span class="line"></span><br><span class="line">    Round round = <span class="keyword">new</span> Round();</span><br><span class="line">    round.setColor(<span class="keyword">new</span> Blue());</span><br><span class="line">    round.draw();</span><br><span class="line"></span><br><span class="line">    Triangle triangle = <span class="keyword">new</span> Triangle();</span><br><span class="line">    triangle.setColor(<span class="keyword">new</span> Yellow());</span><br><span class="line">    triangle.draw();</span><br><span class="line">&#125;</span><br><span class="line">运行程序，输出如下：</span><br><span class="line"></span><br><span class="line">绘制红矩形</span><br><span class="line">绘制蓝圆形</span><br><span class="line">绘制黄三角形</span><br></pre></td></tr></table></figure></p>
+<p>这时我们再来回顾一下官方定义：将抽象部分与它的实现部分分离，使它们都可以独立地变化。抽象部分指的是父类，对应本例中的形状类，实现部分指的是不同子类的区别之处。将子类的区别方式 —— 也就是本例中的颜色 —— 分离成接口，通过组合的方式桥接颜色和形状，这就是桥接模式，它主要用于 两个或多个同等级的接口。</p>
+<h2 id="三、组合模式"><a href="#三、组合模式" class="headerlink" title="三、组合模式"></a>三、组合模式</h2><blockquote>
+<p>Composite<br>    Build a complex object out of elemental objects and itself like a tree structure.</p>
+</blockquote>
+<p>上文说到，桥接模式用于将同等级的接口互相组合，那么组合模式和桥接模式有什么共同点吗？</p>
+<p>事实上组合模式和桥接模式的组合完全不一样。组合模式用于 整体与部分的结构，当整体与部分有相似的结构，在操作时可以被一致对待时，就可以使用组合模式。例如：</p>
+<p>文件夹和子文件夹的关系：文件夹中可以存放文件，也可以新建文件夹，子文件夹也一样。<br>总公司子公司的关系：总公司可以设立部门，也可以设立分公司，子公司也一样。<br>树枝和分树枝的关系：树枝可以长出叶子，也可以长出树枝，分树枝也一样。<br>在这些关系中，虽然整体包含了部分，但无论整体或部分，都具有一致的行为。</p>
+<blockquote>
+<p>组合模式：又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。<br>考虑这样一个实际应用：设计一个公司的人员分布结构，结构如下图所示。</p>
+</blockquote>
+<p>我们注意到人员结构中有两种结构，一是管理者，如老板，PM，CFO，CTO，二是职员。其中有的管理者不仅仅要管理职员，还会管理其他的管理者。这就是一个典型的整体与部分的结构。</p>
+<h3 id="3-1-不使用组合模式的设计方案"><a href="#3-1-不使用组合模式的设计方案" class="headerlink" title="3.1.不使用组合模式的设计方案"></a>3.1.不使用组合模式的设计方案</h3><p>要描述这样的结构，我们很容易想到以下设计方案：</p>
+<p>新建管理者类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 职位</span></span><br><span class="line">    <span class="keyword">private</span> String position;</span><br><span class="line">    <span class="comment">// 工作内容</span></span><br><span class="line">    <span class="keyword">private</span> String job;</span><br><span class="line">    <span class="comment">// 管理的管理者</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Manager&gt; managers = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="comment">// 管理的职员</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Employee&gt; employees = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.position = position;</span><br><span class="line">        <span class="keyword">this</span>.job = job;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addManager</span><span class="params">(Manager manager)</span> </span>&#123;</span><br><span class="line">        managers.add(manager);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeManager</span><span class="params">(Manager manager)</span> </span>&#123;</span><br><span class="line">        managers.remove(manager);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addEmployee</span><span class="params">(Employee employee)</span> </span>&#123;</span><br><span class="line">        employees.add(employee);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeEmployee</span><span class="params">(Employee employee)</span> </span>&#123;</span><br><span class="line">        employees.remove(employee);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 做自己的本职工作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我是"</span> + position + <span class="string">"，我正在"</span> + job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查下属</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        work();</span><br><span class="line">        <span class="keyword">for</span> (Employee employee : employees) &#123;</span><br><span class="line">            employee.work();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (Manager manager : managers) &#123;</span><br><span class="line">            manager.check();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>新建职员类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 职位</span></span><br><span class="line">    <span class="keyword">private</span> String position;</span><br><span class="line">    <span class="comment">// 工作内容</span></span><br><span class="line">    <span class="keyword">private</span> String job;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.position = position;</span><br><span class="line">        <span class="keyword">this</span>.job = job;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 做自己的本职工作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我是"</span> + position + <span class="string">"，我正在"</span> + job);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>客户端建立人员结构关系：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Manager boss = <span class="keyword">new</span> Manager(<span class="string">"老板"</span>, <span class="string">"唱怒放的生命"</span>);</span><br><span class="line">        Employee HR = <span class="keyword">new</span> Employee(<span class="string">"人力资源"</span>, <span class="string">"聊微信"</span>);</span><br><span class="line">        Manager PM = <span class="keyword">new</span> Manager(<span class="string">"产品经理"</span>, <span class="string">"不知道干啥"</span>);</span><br><span class="line">        Manager CFO = <span class="keyword">new</span> Manager(<span class="string">"财务主管"</span>, <span class="string">"看剧"</span>);</span><br><span class="line">        Manager CTO = <span class="keyword">new</span> Manager(<span class="string">"技术主管"</span>, <span class="string">"划水"</span>);</span><br><span class="line">        Employee UI = <span class="keyword">new</span> Employee(<span class="string">"设计师"</span>, <span class="string">"画画"</span>);</span><br><span class="line">        Employee operator = <span class="keyword">new</span> Employee(<span class="string">"运营人员"</span>, <span class="string">"兼职客服"</span>);</span><br><span class="line">        Employee webProgrammer = <span class="keyword">new</span> Employee(<span class="string">"程序员"</span>, <span class="string">"学习设计模式"</span>);</span><br><span class="line">        Employee backgroundProgrammer = <span class="keyword">new</span> Employee(<span class="string">"后台程序员"</span>, <span class="string">"CRUD"</span>);</span><br><span class="line">        Employee accountant = <span class="keyword">new</span> Employee(<span class="string">"会计"</span>, <span class="string">"背九九乘法表"</span>);</span><br><span class="line">        Employee clerk = <span class="keyword">new</span> Employee(<span class="string">"文员"</span>, <span class="string">"给老板递麦克风"</span>);</span><br><span class="line">        boss.addEmployee(HR);</span><br><span class="line">        boss.addManager(PM);</span><br><span class="line">        boss.addManager(CFO);</span><br><span class="line">        PM.addEmployee(UI);</span><br><span class="line">        PM.addManager(CTO);</span><br><span class="line">        PM.addEmployee(operator);</span><br><span class="line">        CTO.addEmployee(webProgrammer);</span><br><span class="line">        CTO.addEmployee(backgroundProgrammer);</span><br><span class="line">        CFO.addEmployee(accountant);</span><br><span class="line">        CFO.addEmployee(clerk);</span><br><span class="line"></span><br><span class="line">        boss.check();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行测试方法，输出如下（为方便查看，笔者添加了缩进）：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">我是老板，我正在唱怒放的生命</span><br><span class="line">	我是人力资源，我正在聊微信</span><br><span class="line">	我是产品经理，我正在不知道干啥</span><br><span class="line">		我是设计师，我正在画画</span><br><span class="line">		我是运营人员，我正在兼职客服</span><br><span class="line">		我是技术主管，我正在划水</span><br><span class="line">			我是程序员，我正在学习设计模式</span><br><span class="line">			我是后台程序员，我正在CRUD</span><br><span class="line">	我是财务主管，我正在看剧</span><br><span class="line">		我是会计，我正在背九九乘法表</span><br><span class="line">		我是文员，我正在给老板递麦克风</span><br></pre></td></tr></table></figure></p>
+<p>这样我们就设计出了公司的结构，但是这样的设计有两个弊端：</p>
+<ul>
+<li>name 字段，job 字段，work 方法重复了。</li>
+<li>管理者对其管理的管理者和职员需要区别对待。</li>
+</ul>
+<p>关于第一个弊端，虽然这里为了讲解，只有两个字段和一个方法重复，实际工作中这样的整体部分结构会有相当多的重复。比如此例中还可能有工号、年龄等字段，领取工资、上下班打卡、开各种无聊的会等方法。</p>
+<p>大量的重复显然是很丑陋的代码，分析一下可以发现， Manager 类只比 Employee 类多一个管理人员的列表字段，多几个增加 / 移除人员的方法，其他的字段和方法全都是一样的。</p>
+<p>有读者应该会想到：我们可以将重复的字段和方法提取到一个工具类中，让 Employee 和 Manager 都去调用此工具类，就可以消除重复了。</p>
+<p>这样固然可行，但属于 Employee 和 Manager 类自己的东西却要通过其他类调用，并不利于程序的高内聚。</p>
+<p>关于第二个弊端，此方案无法解决，此方案中 Employee 和 Manager 类完全是两个不同的对象，两者的相似性被忽略了。</p>
+<p>所以我们有更好的设计方案，那就是组合模式！</p>
+<h3 id="3-2-使用组合模式的设计方案"><a href="#3-2-使用组合模式的设计方案" class="headerlink" title="3.2.使用组合模式的设计方案"></a>3.2.使用组合模式的设计方案</h3><p>组合模式最主要的功能就是让用户可以一致对待整体和部分结构，将两者都作为一个相同的组件，所以我们先新建一个抽象的组件类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 职位</span></span><br><span class="line">    <span class="keyword">private</span> String position;</span><br><span class="line">    <span class="comment">// 工作内容</span></span><br><span class="line">    <span class="keyword">private</span> String job;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Component</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.position = position;</span><br><span class="line">        <span class="keyword">this</span>.job = job;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 做自己的本职工作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我是"</span> + position + <span class="string">"，我正在"</span> + job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">addComponent</span><span class="params">(Component component)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">removeComponent</span><span class="params">(Component component)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>管理者继承自此抽象类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 管理的组件</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Component&gt; components = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(position, job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addComponent</span><span class="params">(Component component)</span> </span>&#123;</span><br><span class="line">        components.add(component);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeComponent</span><span class="params">(Component component)</span> </span>&#123;</span><br><span class="line">        components.remove(component);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查下属</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        work();</span><br><span class="line">        <span class="keyword">for</span> (Component component : components) &#123;</span><br><span class="line">            component.check();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>职员同样继承自此抽象类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(position, job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addComponent</span><span class="params">(Component component)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"职员没有管理权限"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeComponent</span><span class="params">(Component component)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"职员没有管理权限"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        work();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>修改客户端如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Component boss = <span class="keyword">new</span> Manager(<span class="string">"老板"</span>, <span class="string">"唱怒放的生命"</span>);</span><br><span class="line">        Component HR = <span class="keyword">new</span> Employee(<span class="string">"人力资源"</span>, <span class="string">"聊微信"</span>);</span><br><span class="line">        Component PM = <span class="keyword">new</span> Manager(<span class="string">"产品经理"</span>, <span class="string">"不知道干啥"</span>);</span><br><span class="line">        Component CFO = <span class="keyword">new</span> Manager(<span class="string">"财务主管"</span>, <span class="string">"看剧"</span>);</span><br><span class="line">        Component CTO = <span class="keyword">new</span> Manager(<span class="string">"技术主管"</span>, <span class="string">"划水"</span>);</span><br><span class="line">        Component UI = <span class="keyword">new</span> Employee(<span class="string">"设计师"</span>, <span class="string">"画画"</span>);</span><br><span class="line">        Component operator = <span class="keyword">new</span> Employee(<span class="string">"运营人员"</span>, <span class="string">"兼职客服"</span>);</span><br><span class="line">        Component webProgrammer = <span class="keyword">new</span> Employee(<span class="string">"程序员"</span>, <span class="string">"学习设计模式"</span>);</span><br><span class="line">        Component backgroundProgrammer = <span class="keyword">new</span> Employee(<span class="string">"后台程序员"</span>, <span class="string">"CRUD"</span>);</span><br><span class="line">        Component accountant = <span class="keyword">new</span> Employee(<span class="string">"会计"</span>, <span class="string">"背九九乘法表"</span>);</span><br><span class="line">        Component clerk = <span class="keyword">new</span> Employee(<span class="string">"文员"</span>, <span class="string">"给老板递麦克风"</span>);</span><br><span class="line">        boss.addComponent(HR);</span><br><span class="line">        boss.addComponent(PM);</span><br><span class="line">        boss.addComponent(CFO);</span><br><span class="line">        PM.addComponent(UI);</span><br><span class="line">        PM.addComponent(CTO);</span><br><span class="line">        PM.addComponent(operator);</span><br><span class="line">        CTO.addComponent(webProgrammer);</span><br><span class="line">        CTO.addComponent(backgroundProgrammer);</span><br><span class="line">        CFO.addComponent(accountant);</span><br><span class="line">        CFO.addComponent(clerk);</span><br><span class="line"></span><br><span class="line">        boss.check();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行测试方法，输出结果与之前的结果一模一样。</p>
+<p>可以看到，使用组合模式后，我们解决了之前的两个弊端。一是将共有的字段与方法移到了父类中，消除了重复，并且在客户端中，可以一致对待 Manager 和 Employee 类：</p>
+<ul>
+<li>Manager 类和 Employee 类统一声明为 Component 对象</li>
+<li>统一调用 Component 对象的 addComponent 方法添加子对象即可。</li>
+</ul>
+<h3 id="3-3-组合模式中的安全方式与透明方式"><a href="#3-3-组合模式中的安全方式与透明方式" class="headerlink" title="3.3.组合模式中的安全方式与透明方式"></a>3.3.组合模式中的安全方式与透明方式</h3><p>读者可能已经注意到了，Employee 类虽然继承了父类的 addComponent 和 removeComponent 方法，但是仅仅提供了一个空实现，因为 Employee 类是不支持添加和移除组件的。这样是否违背了接口隔离原则呢？</p>
+<blockquote>
+<p>接口隔离原则：客户端不应依赖它不需要的接口。如果一个接口在实现时，部分方法由于冗余被客户端空实现，则应该将接口拆分，让实现类只需依赖自己需要的接口方法。</p>
+</blockquote>
+<p>答案是肯定的，这样确实违背了接口隔离原则。这种方式在组合模式中被称作透明方式.</p>
+<blockquote>
+<p>透明方式：在 Component 中声明所有管理子对象的方法，包括 add 、remove 等，这样继承自 Component 的子类都具备了 add、remove 方法。对于外界来说叶节点和枝节点是透明的，它们具备完全一致的接口。</p>
+</blockquote>
+<p>这种方式有它的优点：让 Manager 类和 Employee 类具备完全一致的行为接口，调用者可以一致对待它们。</p>
+<p>但它的缺点也显而易见：Employee 类并不支持管理子对象，不仅违背了接口隔离原则，而且客户端可以用 Employee 类调用 addComponent 和 removeComponent 方法，导致程序出错，所以这种方式是不安全的。</p>
+<p>那么我们可不可以将 addComponent 和 removeComponent 方法移到 Manager 子类中去单独实现，让 Employee 不再实现这两个方法呢？我们来尝试一下。</p>
+<p>将抽象类修改为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 职位</span></span><br><span class="line">    <span class="keyword">private</span> String position;</span><br><span class="line">    <span class="comment">// 工作内容</span></span><br><span class="line">    <span class="keyword">private</span> String job;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Component</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.position = position;</span><br><span class="line">        <span class="keyword">this</span>.job = job;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 做自己的本职工作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我是"</span> + position + <span class="string">"，我正在"</span> + job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到，我们在父类中去掉了 addComponent 和 removeComponent 这两个抽象方法。</p>
+<p>Manager 类修改为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 管理的组件</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Component&gt; components = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(position, job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addComponent</span><span class="params">(Component component)</span> </span>&#123;</span><br><span class="line">        components.add(component);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeComponent</span><span class="params">(Component component)</span> </span>&#123;</span><br><span class="line">        components.remove(component);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查下属</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        work();</span><br><span class="line">        <span class="keyword">for</span> (Component component : components) &#123;</span><br><span class="line">            component.check();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Manager 类单独实现了 addComponent 和 removeComponent 这两个方法，去掉了 @Override 注解。</p>
+<p>Employee 类修改为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String position, String job)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(position, job);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        work();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>客户端建立人员结构关系：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Manager boss = <span class="keyword">new</span> Manager(<span class="string">"老板"</span>, <span class="string">"唱怒放的生命"</span>);</span><br><span class="line">        Employee HR = <span class="keyword">new</span> Employee(<span class="string">"人力资源"</span>, <span class="string">"聊微信"</span>);</span><br><span class="line">        Manager PM = <span class="keyword">new</span> Manager(<span class="string">"产品经理"</span>, <span class="string">"不知道干啥"</span>);</span><br><span class="line">        Manager CFO = <span class="keyword">new</span> Manager(<span class="string">"财务主管"</span>, <span class="string">"看剧"</span>);</span><br><span class="line">        Manager CTO = <span class="keyword">new</span> Manager(<span class="string">"技术主管"</span>, <span class="string">"划水"</span>);</span><br><span class="line">        Employee UI = <span class="keyword">new</span> Employee(<span class="string">"设计师"</span>, <span class="string">"画画"</span>);</span><br><span class="line">        Employee operator = <span class="keyword">new</span> Employee(<span class="string">"运营人员"</span>, <span class="string">"兼职客服"</span>);</span><br><span class="line">        Employee webProgrammer = <span class="keyword">new</span> Employee(<span class="string">"程序员"</span>, <span class="string">"学习设计模式"</span>);</span><br><span class="line">        Employee backgroundProgrammer = <span class="keyword">new</span> Employee(<span class="string">"后台程序员"</span>, <span class="string">"CRUD"</span>);</span><br><span class="line">        Employee accountant = <span class="keyword">new</span> Employee(<span class="string">"会计"</span>, <span class="string">"背九九乘法表"</span>);</span><br><span class="line">        Employee clerk = <span class="keyword">new</span> Employee(<span class="string">"文员"</span>, <span class="string">"给老板递麦克风"</span>);</span><br><span class="line">        boss.addComponent(HR);</span><br><span class="line">        boss.addComponent(PM);</span><br><span class="line">        boss.addComponent(CFO);</span><br><span class="line">        PM.addComponent(UI);</span><br><span class="line">        PM.addComponent(CTO);</span><br><span class="line">        PM.addComponent(operator);</span><br><span class="line">        CTO.addComponent(webProgrammer);</span><br><span class="line">        CTO.addComponent(backgroundProgrammer);</span><br><span class="line">        CFO.addComponent(accountant);</span><br><span class="line">        CFO.addComponent(clerk);</span><br><span class="line"></span><br><span class="line">        boss.check();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行程序，输出结果与之前一模一样。</p>
+<p>这种方式在组合模式中称之为安全方式。</p>
+<blockquote>
+<p>安全方式：在 Component 中不声明 add 和 remove 等管理子对象的方法，这样叶节点就无需实现它，只需在枝节点中实现管理子对象的方法即可。</p>
+</blockquote>
+<p>安全方式遵循了接口隔离原则，但由于不够透明，Manager 和 Employee 类不具有相同的接口，在客户端中，我们无法将 Manager 和 Employee 统一声明为 Component 类了，必须要区别对待，带来了使用上的不方便。</p>
+<p>安全方式和透明方式各有好处，在使用组合模式时，需要根据实际情况决定。但大多数使用组合模式的场景都是采用的透明方式，虽然它有点不安全，但是客户端无需做任何判断来区分是叶子结点还是枝节点，用起来是真香。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到这里我们就把结构型模式的前三种介绍完了，让我们总结一下：</p>
+<ul>
+<li>适配器模式：用于有相关性但不兼容的接口</li>
+<li>桥接模式：用于同等级的接口互相组合</li>
+<li>组合模式：用于整体与部分的结构</li>
+</ul>
+<p>剩余四种结构型模式我们将在下篇文章中学习。</p>
+<p>本文作者：Alpinist Wang</p>
+<p>声明：本文归 “力扣” 版权所有，如需转载请联系。文章封面图和文中部分图片来源于网络，为非商业用途使用，如有侵权联系删除。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/DesignPattern_Creational Pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1392,122 +1638,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/28/Java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="William Ren">
-      <meta itemprop="description" content="If not Me, Who? If not now, When?">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="REN WEI'S BLOG">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/28/Java/" class="post-title-link" itemprop="url">Java</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-04-28 22:58:01" itemprop="dateCreated datePublished" datetime="2019-04-28T22:58:01+08:00">2019-04-28</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-30 14:09:23" itemprop="dateModified" datetime="2019-11-30T14:09:23+08:00">2019-11-30</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Diary/" itemprop="url" rel="index"><span itemprop="name">Diary</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2019/04/28/Java/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/04/28/Java/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Learning resource for java
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2019/04/28/Java/">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1558,7 +1688,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
