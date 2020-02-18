@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/17/2019-2In-TaiwanTech/</loc>
+    
+    <lastmod>2020-02-17T17:14:12.396Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/11/GRE/</loc>
     
     <lastmod>2020-02-17T10:25:23.209Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/2020/02/08/Everything-about-ArrayList/</loc>
     
     <lastmod>2020-02-17T10:21:40.603Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/17/2019-2In-TaiwanTech/</loc>
-    
-    <lastmod>2020-02-17T10:20:57.798Z</lastmod>
     
   </url>
   
