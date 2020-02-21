@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/17/2019-2In-TaiwanTech/</loc>
+    
+    <lastmod>2020-02-21T11:15:49.498Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/03/31/Mind-Map-In-Java-Environmentals/</loc>
     
     <lastmod>2020-02-21T10:52:34.823Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2019/05/13/DesignPattern-Structural-pattern%20part1/</loc>
     
     <lastmod>2020-02-20T19:13:36.569Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/17/2019-2In-TaiwanTech/</loc>
-    
-    <lastmod>2020-02-18T18:19:54.093Z</lastmod>
     
   </url>
   
