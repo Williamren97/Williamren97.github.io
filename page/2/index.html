@@ -296,6 +296,121 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/SDN-OpenFlow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/11/06/SDN-OpenFlow/" class="post-title-link" itemprop="url">SDN_OpenFlow</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-11-06 14:00:03" itemprop="dateCreated datePublished" datetime="2019-11-06T14:00:03+08:00">2019-11-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-17 18:24:20" itemprop="dateModified" datetime="2020-02-17T18:24:20+08:00">2020-02-17</time>
+              </span>
+            
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/11/06/SDN-OpenFlow/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/11/06/SDN-OpenFlow/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="107-SDN"><a href="#107-SDN" class="headerlink" title="107 SDN"></a>107 SDN</h1><h2 id="a10715005-任偉"><a href="#a10715005-任偉" class="headerlink" title="a10715005 任偉"></a>a10715005 任偉</h2><h3 id="Boot-onosproject"><a href="#Boot-onosproject" class="headerlink" title="Boot onosproject"></a>Boot onosproject</h3><p><img src="https://imgur.com/GBqQTM5.png" alt></p>
+<h3 id="Configuration-Json-file-and-Create-Topo-using-command-line"><a href="#Configuration-Json-file-and-Create-Topo-using-command-line" class="headerlink" title="Configuration Json file and Create Topo using command line"></a>Configuration Json file and Create Topo using command line</h3><p><img src="https://imgur.com/ZBZABkv.png" alt></p>
+<h1 id="已經解決"><a href="#已經解決" class="headerlink" title="已經解決"></a>已經解決</h1><h2 id="ONOS-GUI中的topology"><a href="#ONOS-GUI中的topology" class="headerlink" title="ONOS GUI中的topology"></a>ONOS GUI中的topology</h2><p><img src="https://imgur.com/meGhS42.png" alt></p>
+<h2 id="Ping-成功的畫面"><a href="#Ping-成功的畫面" class="headerlink" title="Ping 成功的畫面"></a>Ping 成功的畫面</h2><p><img src="https://imgur.com/gvkVOIL.png" alt></p>
+<h2 id="Switch-s3的forwarding-table"><a href="#Switch-s3的forwarding-table" class="headerlink" title="Switch s3的forwarding table"></a>Switch s3的forwarding table</h2><p><img src="https://imgur.com/VpZQL2l.png" alt></p>
+<h1 id="還沒有解決"><a href="#還沒有解決" class="headerlink" title="還沒有解決"></a>還沒有解決</h1><p><del>h1 ping h2</del><br><del>產生有兩條路徑的topology</del></p>
+<ul>
+<li>讓ping packet走較長的路徑</li>
+</ul>
+<p>原来是<br><img src="https://imgur.com/fX9oXev.png" alt></p>
+<p>现在想让他变成<br><img src="https://imgur.com/LJETsWO.png" alt></p>
+<h2 id="Pre-requisites"><a href="#Pre-requisites" class="headerlink" title="Pre-requisites:"></a>Pre-requisites:</h2><p><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener"><code>VirtualBox</code></a></p>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration:"></a>Configuration:</h3><p><a href="https://jingyan.baidu.com/article/e2284b2b61a2efe2e6118d39.html" target="_blank" rel="noopener">JDK Configuration in Ubuntu</a></p>
+<p><a href="https://blog.csdn.net/u010558281/article/details/78419321" target="_blank" rel="noopener">Install ONOS on Ubuntu</a></p>
+<h3 id="Using-Linux-command"><a href="#Using-Linux-command" class="headerlink" title="Using Linux command:"></a>Using Linux command:</h3><p>modification file in Linux <code>gedit</code></p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ul>
+<li><p><a href="https://wiki.onosproject.org/display/ONOS/Basic+ONOS+Tutorial" target="_blank" rel="noopener"><code>Basic ONOS Tutorial</code></a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=l25Ukkmk6Sk" target="_blank" rel="noopener"><code>OpenFlow</code></a></p>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/05/CV/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1356,119 +1471,11 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/System-Design/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="William Ren">
-      <meta itemprop="description" content="If not Me, Who? If not now, When?">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="REN WEI'S BLOG">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/14/System-Design/" class="post-title-link" itemprop="url">System Design</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-05-14 00:04:56 / Modified: 00:06:16" itemprop="dateCreated datePublished" datetime="2019-05-14T00:04:56+08:00">2019-05-14</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Foundation/" itemprop="url" rel="index"><span itemprop="name">Foundation</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2019/05/14/System-Design/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/05/14/System-Design/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          System Design
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2019/05/14/System-Design/">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1514,7 +1521,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

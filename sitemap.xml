@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/</loc>
+    
+    <lastmod>2020-02-27T09:15:26.658Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/27/EveryThing-About-Operation-System/</loc>
+    
+    <lastmod>2020-02-27T09:15:02.431Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/14/EveryThing-About-MySQL/</loc>
     
     <lastmod>2020-02-23T16:59:23.599Z</lastmod>
@@ -96,13 +110,6 @@
     <loc>http://yoursite.com/2020/02/05/The-Difference-between-Process-and-Thread/</loc>
     
     <lastmod>2020-02-17T10:19:15.781Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/05/The-data-structure-and-algorithm-behind-the-MySQL-index/</loc>
-    
-    <lastmod>2020-02-17T10:18:40.369Z</lastmod>
     
   </url>
   
