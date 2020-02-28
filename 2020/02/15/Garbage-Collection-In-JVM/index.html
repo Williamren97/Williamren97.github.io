@@ -66,17 +66,22 @@
   };
 </script>
 
-  <meta name="description" content="If not Me, Who? If not now, When?">
-<meta property="og:type" content="website">
-<meta property="og:title" content="REN WEI&#39;S BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/Application/index.html">
+  <meta name="description" content="Garbage Collection In JVM">
+<meta name="keywords" content="JVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Garbage Collection In JVM">
+<meta property="og:url" content="http://yoursite.com/2020/02/15/Garbage-Collection-In-JVM/index.html">
 <meta property="og:site_name" content="REN WEI&#39;S BLOG">
-<meta property="og:description" content="If not Me, Who? If not now, When?">
+<meta property="og:description" content="Garbage Collection In JVM">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2020/02/29/HvzDCcBqPuLmiOR.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/26/rY2Q6bXhUDLNSkR.png">
+<meta property="og:updated_time" content="2020-02-28T17:57:53.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="REN WEI&#39;S BLOG">
-<meta name="twitter:description" content="If not Me, Who? If not now, When?">
-  <link rel="canonical" href="http://yoursite.com/tags/Application/">
+<meta name="twitter:title" content="Garbage Collection In JVM">
+<meta name="twitter:description" content="Garbage Collection In JVM">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/29/HvzDCcBqPuLmiOR.jpg">
+  <link rel="canonical" href="http://yoursite.com/2020/02/15/Garbage-Collection-In-JVM/">
 
 
 <script id="page-configurations">
@@ -84,13 +89,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Tag: Application | REN WEI'S BLOG</title>
+  <title>Garbage Collection In JVM | REN WEI'S BLOG</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140000048-1"></script>
   <script>
@@ -288,178 +293,170 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block tag">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Application<small>Tag</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/Garbage-Collection-In-JVM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="William Ren">
+      <meta itemprop="description" content="If not Me, Who? If not now, When?">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="REN WEI'S BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Garbage Collection In JVM
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-02-15 01:52:18" itemprop="dateCreated datePublished" datetime="2020-02-15T01:52:18+08:00">2020-02-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-29 01:57:53" itemprop="dateModified" datetime="2020-02-29T01:57:53+08:00">2020-02-29</time>
+              </span>
+            
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/02/15/Garbage-Collection-In-JVM/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/02/15/Garbage-Collection-In-JVM/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+            <div class="post-description">Garbage Collection In JVM</div>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <h1 id="为什么我们要了解JVM"><a href="#为什么我们要了解JVM" class="headerlink" title="为什么我们要了解JVM"></a>为什么我们要了解JVM</h1><p><img src="https://i.loli.net/2020/02/29/HvzDCcBqPuLmiOR.jpg" alt="FULLGC.jpg"></p>
+<p><img src="https://i.loli.net/2020/02/26/rY2Q6bXhUDLNSkR.png" alt="JVM.png"></p>
+<h4 id="私有线程区域："><a href="#私有线程区域：" class="headerlink" title="私有线程区域："></a>私有线程区域：</h4><ul>
+<li>栈：函数当前运行过程中的一些函数变量。存对象的引用类型和地址</li>
+<li>本地方法栈：存放C++运行时的native栈。</li>
+<li>程序计数器：指向当前程序运行的位置。<h4 id="线程共享区域："><a href="#线程共享区域：" class="headerlink" title="线程共享区域："></a>线程共享区域：</h4></li>
+<li>堆：存对象(最终)，老年代。</li>
+<li>方法区：存储元数据信息，在JDK1.7前作永久代，1.8以后改为元数据空间，存储静态变量和常量、类加载器。</li>
+</ul>
+<p>Java的基础数据和指针都是值类型，所以直接存到内存里面去，不是去存地址寻址。</p>
+<h3 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h3><ul>
+<li>GC Root本地方法栈,方法区,栈不能被删除<blockquote>
+<p>删除方法</p>
+<ul>
+<li><strong>标记清理</strong>，==会产生内存碎片==。</li>
+<li><strong>标记整理</strong>(删了后面的顶上来，减少内存碎片)，==前移空间移动代价太大==。</li>
+<li><strong>复制算法</strong>(分为两个区)，不直接删除，不被删除的复制到新区，==需要2倍的内存==。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="实际："><a href="#实际：" class="headerlink" title="实际："></a>实际：</h3><h5 id="Minor-GC当在-Eden-区分配内存不足时，则会发生-minorGC-，由于-Java-对象多数是朝生夕灭的特性，所以-minorGC通常会比较频繁，效率也比较高。"><a href="#Minor-GC当在-Eden-区分配内存不足时，则会发生-minorGC-，由于-Java-对象多数是朝生夕灭的特性，所以-minorGC通常会比较频繁，效率也比较高。" class="headerlink" title="Minor GC当在 Eden 区分配内存不足时，则会发生 minorGC ，由于 Java 对象多数是朝生夕灭的特性，所以 minorGC通常会比较频繁，效率也比较高。"></a>Minor GC当在 Eden 区分配内存不足时，则会发生 minorGC ，由于 Java 对象多数是朝生夕灭的特性，所以 minorGC通常会比较频繁，效率也比较高。</h5><ul>
+<li>年轻代：<strong>E区</strong>(伊甸园，满了触发YoungGC,用复制算法)，，<strong>两个Survive区</strong>(S0.S1) 8：1：1，两个S区交替工作（E+S1到S0,E+S0到S1）。每次Young GC完年龄会加一，满15岁就直接都去老年代区了。ParNew垃圾收集器(复制)。<h5 id="Full-GC"><a href="#Full-GC" class="headerlink" title="Full GC"></a>Full GC</h5></li>
+<li>老年代：只有一块，存满15岁到去老年代区的对象。和大对象，Old满了就和年轻的一起Full GC,发生STOPPED WORLD,整个Java程序直接暂停，就用标记清理或者标记整理。CMS垃圾收集器(标记清理)。</li>
+</ul>
+<p><strong>和GC Root无关的才能被删除</strong></p>
 
-  
-  
+    </div>
 
-  
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-05-14T00:06:50+08:00"
-              content="2019-05-14">
-          05-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2019/05/14/CV-AND-SOP/" itemprop="url">
-            <span itemprop="name">CV And SoP</span>
-          </a>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/JVM/" rel="tag"># JVM</a>
+            
+          </div>
         
-      </h2>
 
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-05-11T15:50:59+08:00"
-              content="2019-05-11">
-          05-11
-        </time>
-      </div>
-
-      <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/05/11/GRE/" itemprop="url">
-            <span itemprop="name">GGG</span>
-          </a>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/02/08/Principle-of-JVM/" rel="next" title="Principle of JVM">
+                  <i class="fa fa-chevron-left"></i> Principle of JVM
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/02/17/2019-2In-TaiwanTech/" rel="prev" title="2019-2In TaiwanTech">
+                  2019-2In TaiwanTech <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
         
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-19T19:59:53+08:00"
-              content="2019-04-19">
-          04-19
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/19/Application/" itemprop="url">
-            <span itemprop="name">Application</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-19T19:59:30+08:00"
-              content="2019-04-19">
-          04-19
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/19/TOFEL/" itemprop="url">
-            <span itemprop="name">TOFEL</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-    </div>
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -474,6 +471,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -486,6 +488,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么我们要了解JVM"><span class="nav-number">1.</span> <span class="nav-text">为什么我们要了解JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#私有线程区域："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">私有线程区域：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程共享区域："><span class="nav-number">1.0.0.2.</span> <span class="nav-text">线程共享区域：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GC"><span class="nav-number">1.0.1.</span> <span class="nav-text">GC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际："><span class="nav-number">1.0.2.</span> <span class="nav-text">实际：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Minor-GC当在-Eden-区分配内存不足时，则会发生-minorGC-，由于-Java-对象多数是朝生夕灭的特性，所以-minorGC通常会比较频繁，效率也比较高。"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">Minor GC当在 Eden 区分配内存不足时，则会发生 minorGC ，由于 Java 对象多数是朝生夕灭的特性，所以 minorGC通常会比较频繁，效率也比较高。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Full-GC"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">Full GC</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 

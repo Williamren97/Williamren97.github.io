@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/15/Garbage-Collection-In-JVM/</loc>
+    
+    <lastmod>2020-02-28T17:57:53.607Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/12/27/EveryThing-About-Operation-System/</loc>
     
     <lastmod>2020-02-27T09:17:33.579Z</lastmod>
