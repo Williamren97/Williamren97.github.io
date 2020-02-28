@@ -44,13 +44,16 @@
     <link href="http://yoursite.com/2020/02/15/Garbage-Collection-In-JVM/"/>
     <id>http://yoursite.com/2020/02/15/Garbage-Collection-In-JVM/</id>
     <published>2020-02-14T17:52:18.000Z</published>
-    <updated>2020-02-28T17:57:53.607Z</updated>
+    <updated>2020-02-28T18:02:57.624Z</updated>
     
     <content type="html"><![CDATA[<h1 id="为什么我们要了解JVM"><a href="#为什么我们要了解JVM" class="headerlink" title="为什么我们要了解JVM"></a>为什么我们要了解JVM</h1><p><img src="https://i.loli.net/2020/02/29/HvzDCcBqPuLmiOR.jpg" alt="FULLGC.jpg"></p><p><img src="https://i.loli.net/2020/02/26/rY2Q6bXhUDLNSkR.png" alt="JVM.png"></p><h4 id="私有线程区域："><a href="#私有线程区域：" class="headerlink" title="私有线程区域："></a>私有线程区域：</h4><ul><li>栈：函数当前运行过程中的一些函数变量。存对象的引用类型和地址</li><li>本地方法栈：存放C++运行时的native栈。</li><li>程序计数器：指向当前程序运行的位置。<h4 id="线程共享区域："><a href="#线程共享区域：" class="headerlink" title="线程共享区域："></a>线程共享区域：</h4></li><li>堆：存对象(最终)，老年代。</li><li>方法区：存储元数据信息，在JDK1.7前作永久代，1.8以后改为元数据空间，存储静态变量和常量、类加载器。</li></ul><p>Java的基础数据和指针都是值类型，所以直接存到内存里面去，不是去存地址寻址。</p><h3 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h3><ul><li>GC Root本地方法栈,方法区,栈不能被删除<blockquote><p>删除方法</p><ul><li><strong>标记清理</strong>，==会产生内存碎片==。</li><li><strong>标记整理</strong>(删了后面的顶上来，减少内存碎片)，==前移空间移动代价太大==。</li><li><strong>复制算法</strong>(分为两个区)，不直接删除，不被删除的复制到新区，==需要2倍的内存==。</li></ul></blockquote></li></ul><h3 id="实际："><a href="#实际：" class="headerlink" title="实际："></a>实际：</h3><h5 id="Minor-GC当在-Eden-区分配内存不足时，则会发生-minorGC-，由于-Java-对象多数是朝生夕灭的特性，所以-minorGC通常会比较频繁，效率也比较高。"><a href="#Minor-GC当在-Eden-区分配内存不足时，则会发生-minorGC-，由于-Java-对象多数是朝生夕灭的特性，所以-minorGC通常会比较频繁，效率也比较高。" class="headerlink" title="Minor GC当在 Eden 区分配内存不足时，则会发生 minorGC ，由于 Java 对象多数是朝生夕灭的特性，所以 minorGC通常会比较频繁，效率也比较高。"></a>Minor GC当在 Eden 区分配内存不足时，则会发生 minorGC ，由于 Java 对象多数是朝生夕灭的特性，所以 minorGC通常会比较频繁，效率也比较高。</h5><ul><li>年轻代：<strong>E区</strong>(伊甸园，满了触发YoungGC,用复制算法)，，<strong>两个Survive区</strong>(S0.S1) 8：1：1，两个S区交替工作（E+S1到S0,E+S0到S1）。每次Young GC完年龄会加一，满15岁就直接都去老年代区了。ParNew垃圾收集器(复制)。<h5 id="Full-GC"><a href="#Full-GC" class="headerlink" title="Full GC"></a>Full GC</h5></li><li>老年代：只有一块，存满15岁到去老年代区的对象。和大对象，Old满了就和年轻的一起Full GC,发生STOPPED WORLD,整个Java程序直接暂停，就用标记清理或者标记整理。CMS垃圾收集器(标记清理)。</li></ul><p><strong>和GC Root无关的才能被删除</strong></p>]]></content>
     
     <summary type="html">
     
-      Garbage Collection In JVM
+      
+      
+        &lt;h1 id=&quot;为什么我们要了解JVM&quot;&gt;&lt;a href=&quot;#为什么我们要了解JVM&quot; class=&quot;headerlink&quot; title=&quot;为什么我们要了解JVM&quot;&gt;&lt;/a&gt;为什么我们要了解JVM&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/
+      
     
     </summary>
     
