@@ -75,7 +75,7 @@
 <meta property="og:description" content="Find Everything about HashMap IN There.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://img1.sycdn.imooc.com/5d56493300011c0e19151612.png">
-<meta property="og:updated_time" content="2020-03-03T07:25:21.808Z">
+<meta property="og:updated_time" content="2020-03-13T17:36:41.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Everything About HashMap">
 <meta name="twitter:description" content="Find Everything about HashMap IN There.">
@@ -340,7 +340,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-03 15:25:21" itemprop="dateModified" datetime="2020-03-03T15:25:21+08:00">2020-03-03</time>
+                <time title="Modified: 2020-03-14 01:36:41" itemprop="dateModified" datetime="2020-03-14T01:36:41+08:00">2020-03-14</time>
               </span>
             
           
@@ -440,9 +440,15 @@
 </ul>
 <h2 id="8-如果HashMap的大小超过了负载因子-load-factor-定义的容量，怎么办？"><a href="#8-如果HashMap的大小超过了负载因子-load-factor-定义的容量，怎么办？" class="headerlink" title="8.如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？"></a>8.如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？</h2><p>　　默认的负载因子大小为0.75，也就是说，当一个map填满了75%的bucket时候，和其它集合类(如ArrayList等)一样，将会创建原来HashMap大小的两倍的bucket数组，来重新调整map的大小，并将原来的对象放入新的bucket数组中。这个过程叫作rehashing，因为它调用hash方法找到新的bucket位置。这个值只可能在两个地方，一个是原下标的位置，另一种是在下标为 <strong>&lt;原下标+原容量&gt;</strong> 的位置　　</p>
 <h2 id="9-重新调整HashMap大小存在什么问题吗？"><a href="#9-重新调整HashMap大小存在什么问题吗？" class="headerlink" title="9.重新调整HashMap大小存在什么问题吗？"></a>9.重新调整HashMap大小存在什么问题吗？</h2><ul>
-<li>当重新调整HashMap大小的时候，确实存在条件竞争，因为如果两个线程都发现HashMap需要重新调整大小了，它们会同时试着调整大小。在调整大小的过程中，存储在链表中的元素的次序会反过来，因为移动到新的bucket位置的时候，HashMap并不会将元素放在链表的尾部，而是放在头部，这是为了避免尾部遍历(tail traversing)。因为直接插入的效率更高。如果条件竞争发生了，那么就死循环了。(多线程的环境下不使用HashMap）。</li>
+<li>当扩容重新调整HashMap大小的时候，确实存在条件竞争，因为如果两个线程都发现HashMap需要重新调整大小了，它们会同时试着调整大小。在调整大小的过程中，存储在链表中的元素的次序会反过来，因为移动到新的bucket位置的时候，HashMap并不会将元素放在链表的尾部，而是放在头部，这是为了避免尾部遍历(tail traversing)。因为直接插入的效率更高。如果条件竞争发生了，那么就死循环了。(多线程的环境下不使用HashMap）。</li>
 <li>为什么多线程会导致死循环，它是怎么发生的？<br>HashMap的容量是有限的。当经过多次元素插入，使得HashMap达到一定饱和度时，Key映射位置发生冲突的几率会逐渐提高。这时候，HashMap需要扩展它的长度，也就是进行Resize。1.扩容：创建一个新的Entry空数组，长度是原数组的2倍。2.ReHash：遍历原Entry数组，把所有的Entry重新Hash到新数组。</li>
 </ul>
+<blockquote>
+<p> <strong>HashMap 扩容的时候会调用 resize() 方法，就是这里的并发操作容易在一个桶上形成环形链表；这样当获取一个不存在的 key 时，计算出的 index 正好是环形链表的下标就会出现死循环。</strong></p>
+</blockquote>
+<blockquote>
+<p>在HashMap1.7之前是头插法，在扩容的过程中，可能会造成一个resize()的方法，然后调用transfer()方法，把里面的Entry进行了Rehash，在过程中，可能会造成链表的循环，在一下次Get()中出现死循环，或者出现没有加锁，所以数据不安全</p>
+</blockquote>
 <h2 id="10-HashTable"><a href="#10-HashTable" class="headerlink" title="10.HashTable"></a>10.HashTable</h2><p>数组 + 链表方式存储<br>默认容量： 11(质数为宜)</p>
 <h4 id="Put"><a href="#Put" class="headerlink" title="Put:"></a><code>Put:</code></h4><ul>
 <li>对key的hashCode()做hash运算，计算index; 如果没碰撞直接放到bucket里； 如果碰撞了，以链表的形式存在buckets后； 如果碰撞导致链表过长(大于等于TREEIFY_THRESHOLD)，就把链表转换成红黑树(JDK1.8中的改动)； 如果节点已经存在就替换old value(保证key的唯一性) 如果bucket满了(超过load factor*current capacity)，就要resize。</li>
