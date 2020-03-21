@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/03/21/Everything-About-TreeMap/</loc>
+    
+    <lastmod>2020-03-21T06:11:03.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/08/Everything-about-ArrayList/</loc>
+    
+    <lastmod>2020-03-21T06:09:41.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/21/Everything-About-ConcurrentHashMap/</loc>
+    
+    <lastmod>2020-03-21T06:09:34.180Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/03/21/Everything-About-HashSet/</loc>
     
     <lastmod>2020-03-21T05:44:54.525Z</lastmod>
@@ -96,13 +117,6 @@
     <loc>http://yoursite.com/2020/01/13/SortAlgorithm/</loc>
     
     <lastmod>2020-02-17T10:23:38.067Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/08/Everything-about-ArrayList/</loc>
-    
-    <lastmod>2020-02-17T10:21:40.603Z</lastmod>
     
   </url>
   
