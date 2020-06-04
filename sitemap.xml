@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/04/Binary-Search/</loc>
+    
+    <lastmod>2020-06-04T02:36:07.572Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/02/17/2019-2In-TaiwanTech/</loc>
     
-    <lastmod>2020-03-29T18:20:05.494Z</lastmod>
+    <lastmod>2020-03-30T04:19:58.148Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/04/19/TOEFL/</loc>
+    
+    <lastmod>2020-03-29T19:02:27.192Z</lastmod>
     
   </url>
   
@@ -215,13 +229,6 @@
     <loc>http://yoursite.com/2019/11/05/CV/</loc>
     
     <lastmod>2019-11-05T06:55:17.236Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/19/TOFEL/</loc>
-    
-    <lastmod>2019-10-20T09:15:36.575Z</lastmod>
     
   </url>
   
