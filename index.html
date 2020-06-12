@@ -423,11 +423,19 @@
                 
               
 
-              <time title="Created: 2020-06-04 10:28:54 / Modified: 10:40:00" itemprop="dateCreated datePublished" datetime="2020-06-04T10:28:54+08:00">2020-06-04</time>
+              <time title="Created: 2020-06-04 10:28:54" itemprop="dateCreated datePublished" datetime="2020-06-04T10:28:54+08:00">2020-06-04</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-08 13:37:47" itemprop="dateModified" datetime="2020-06-08T13:37:47+08:00">2020-06-08</time>
+              </span>
             
           
 
@@ -464,6 +472,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 注意：针对特殊测试用例，例如 2147395599</span></span><br><span class="line">        <span class="comment">// 要把搜索的范围设置成长整型</span></span><br><span class="line">        <span class="keyword">long</span> left = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">long</span> right = x / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="comment">// 注意：这里一定取右中位数，如果取左中位数，代码会进入死循环</span></span><br><span class="line">            <span class="comment">// long mid = left + (right - left + 1) / 2;</span></span><br><span class="line">            <span class="keyword">long</span> mid = (left + right + <span class="number">1</span>) &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">long</span> square = mid * mid;</span><br><span class="line">            <span class="keyword">if</span> (square &gt; x) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 因为一定存在，因此无需后处理</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="https://mp.weixin.qq.com/s/fIDeC5yQUJUO4KCwfjziow" target="_blank" rel="noopener">二分查找</a></p>
 <p><a href="https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/" target="_blank" rel="noopener">Binary Search Solution  in Leetcode</a></p>
+<p><a href="https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-xiang-jie-by-labuladong/" target="_blank" rel="noopener">二分查找细节详解_labuladong</a></p>
 
         
       
