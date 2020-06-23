@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/23/String-LEETCODE-100-DAY2/</loc>
+    
+    <lastmod>2020-06-23T06:42:00.047Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/22/Binary-Search-and-LinkedList-LEETCODE-100-DAY1/</loc>
     
-    <lastmod>2020-06-22T12:32:30.306Z</lastmod>
+    <lastmod>2020-06-23T01:17:03.252Z</lastmod>
     
   </url>
   
