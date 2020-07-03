@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/28/Tree-LEETCODE-100-DAY7/</loc>
+    
+    <lastmod>2020-07-03T07:52:32.501Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/07/01/Tree-and-Stack-LEETCODE-100-DAY10/</loc>
     
     <lastmod>2020-07-02T08:50:25.789Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2020/06/29/Tree-LEETCODE-100-DAY8/</loc>
     
     <lastmod>2020-06-29T12:06:16.471Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/28/Tree-LEETCODE-100-DAY7/</loc>
-    
-    <lastmod>2020-06-29T01:41:05.412Z</lastmod>
     
   </url>
   
